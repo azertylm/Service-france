@@ -1,0 +1,10 @@
+{
+  "name": "Service France",
+  "description": "Le portail citoyen d'utilité publique : AutoBailleur (gestion locative 0% commission, indexation IRL INSEE, quittances A4 & régularisation charges décret 87-713), Vigilance Succession, ÉtatDesLieux Protect, Résil-Express, Tuteur Numérique, ScanGarantie, Balise 114, Décodeur de Droits Sociaux, ClairContrat, MémoSanté, PlumeCitoyenne et Patrimoine en Poche.",
+  "requestFramePermissions": [
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
