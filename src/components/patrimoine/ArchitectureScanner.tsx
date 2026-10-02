@@ -13,6 +13,7 @@ import {
   Compass,
 } from 'lucide-react';
 import { DecodedArchitecture } from '../../types/patrimoine';
+import { sovereignFetch } from '../../utils/apiClient';
 
 interface ArchitectureScannerProps {
   onSiteSelected?: (siteId: string) => void;
@@ -64,7 +65,7 @@ export const ArchitectureScanner: React.FC<ArchitectureScannerProps> = ({ onSite
     setAnalysisResult(null);
 
     try {
-      const response = await fetch('/api/analyze-architecture', {
+      const response = await sovereignFetch('/api/analyze-architecture', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

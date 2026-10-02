@@ -18,6 +18,7 @@ import {
 import { ProductWarranty, WarrantyCategory, ExtractedWarrantyData } from '../../types/garantie';
 import { compressTicketImage, calculateWarrantyEndDate } from '../../utils/garantieUtils';
 import { SAMPLE_WARRANTIES } from '../../data/garantieSamples';
+import { sovereignFetch } from '../../utils/apiClient';
 
 interface ScanTicketModalProps {
   onClose: () => void;
@@ -59,7 +60,7 @@ export const ScanTicketModal: React.FC<ScanTicketModalProps> = ({ onClose, onSav
       setSelectedImage(compressedDataUrl);
 
       // 2. Call server extraction endpoint
-      const response = await fetch('/api/scan-receipt', {
+      const response = await sovereignFetch('/api/scan-receipt', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

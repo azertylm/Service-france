@@ -31,6 +31,7 @@ import {
 } from 'lucide-react';
 import { DemarcheGuide, DemarcheCategory, RequiredDocument, RoadmapStep } from '../../types/tuteur';
 import { PRELOADED_DEMARCHES } from '../../data/tuteurPreloaded';
+import { sovereignFetch } from '../../utils/apiClient';
 
 interface TuteurHubProps {
   onNavigateToPlumeWithPrompt?: (prompt: string, category?: any) => void;
@@ -112,7 +113,7 @@ export const TuteurHub: React.FC<TuteurHubProps> = ({ onNavigateToPlumeWithPromp
     setGenerationError(null);
 
     try {
-      const response = await fetch('/api/tuteur-demarche', {
+      const response = await sovereignFetch('/api/tuteur-demarche', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ query: queryText.trim() }),

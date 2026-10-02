@@ -104,16 +104,16 @@ export function generateWarrantyIcs(warranty: ProductWarranty): string {
   const endEvent = formatDate(new Date(reminderDate.getTime() + 60 * 60 * 1000)); // 1 hour event
 
   const title = `🚨 RAPPEL : Fin de garantie dans 30 jours — ${warranty.brand} ${warranty.productName}`;
-  const description = `Rappel automatique France Service :\\nLa garantie légale de conformité (2 ans) pour votre ${warranty.brand} ${warranty.productName} acheté chez ${warranty.store} le ${warranty.purchaseDate} arrive à échéance le ${warranty.warrantyEndDate}.\\n\\nVérifiez le bon fonctionnement de l appareil. En cas de panne ou défaut naissant, demandez une prise en charge SAV gratuite sans frais avant cette date.\\nNuméro de ticket/facture : ${warranty.receiptNumber || 'N/A'}`;
+  const description = `Rappel automatique papierpapier.fr :\\nLa garantie légale de conformité (2 ans) pour votre ${warranty.brand} ${warranty.productName} acheté chez ${warranty.store} le ${warranty.purchaseDate} arrive à échéance le ${warranty.warrantyEndDate}.\\n\\nVérifiez le bon fonctionnement de l appareil. En cas de panne ou défaut naissant, demandez une prise en charge SAV gratuite sans frais avant cette date.\\nNuméro de ticket/facture : ${warranty.receiptNumber || 'N/A'}`;
 
   return [
     'BEGIN:VCALENDAR',
     'VERSION:2.0',
-    'PRODID:-//France Service//ScanGarantie v1.0//FR',
+    'PRODID:-//papierpapier.fr//ScanGarantie v1.0//FR',
     'CALSCALE:GREGORIAN',
     'METHOD:PUBLISH',
     'BEGIN:VEVENT',
-    `UID:scangarantie-${warranty.id}@franceservice.local`,
+    `UID:scangarantie-${warranty.id}@papierpapier.fr`,
     `DTSTAMP:${nowFormatted}`,
     `DTSTART:${startEvent}`,
     `DTEND:${endEvent}`,

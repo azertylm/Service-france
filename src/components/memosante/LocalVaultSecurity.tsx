@@ -35,7 +35,7 @@ export const LocalVaultSecurity: React.FC<LocalVaultSecurityProps> = ({
 
   const handleExportJson = () => {
     const exportBundle = {
-      app: 'MémoSanté — Service France',
+      app: 'MémoSanté — papierpapier.fr',
       exportedAt: new Date().toISOString(),
       version: '1.0',
       data: {

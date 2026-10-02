@@ -11,7 +11,9 @@ import {
   Eye,
   Printer,
   Calendar,
+  ExternalLink,
 } from 'lucide-react';
+import { sovereignFetch } from '../../utils/apiClient';
 import { GeneratedLetter, SavedLetter, AdministrativeCategory } from '../../types/plume';
 import { LETTER_PRESETS } from '../../data/plumePresets';
 import { LetterWriterForm } from './LetterWriterForm';
@@ -65,7 +67,7 @@ export const PlumeHub: React.FC<PlumeHubProps> = ({
     setErrorMessage(null);
 
     try {
-      const response = await fetch('/api/generate-administrative-letter', {
+      const response = await sovereignFetch('/api/generate-administrative-letter', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
@@ -336,6 +338,22 @@ export const PlumeHub: React.FC<PlumeHubProps> = ({
           )}
         </div>
       )}
+
+      {/* Mandatory Hub Link */}
+      <div className="bg-slate-900 text-white rounded-2xl p-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
+        <span className="text-slate-300">
+          PlumeCitoyenne est propulsée exclusivement par <strong>Mistral AI</strong> (France / Europe RGPD) · Brique de la suite Alphabette
+        </span>
+        <a
+          href="http://alphabette.fr"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-300 hover:text-white font-bold flex items-center gap-1.5 transition-colors shrink-0"
+        >
+          <span>Découvrir toutes les applications de la suite sur http://alphabette.fr</span>
+          <ExternalLink className="w-3.5 h-3.5" />
+        </a>
+      </div>
     </div>
   );
 };

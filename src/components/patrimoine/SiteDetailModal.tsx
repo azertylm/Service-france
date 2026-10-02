@@ -15,6 +15,7 @@ import {
   Calendar,
   User,
   Share2,
+  ExternalLink,
 } from 'lucide-react';
 import { ArchitecturalSite } from '../../types/patrimoine';
 import { BatteryFriendlyCompass } from './BatteryFriendlyCompass';
@@ -94,7 +95,7 @@ export const SiteDetailModal: React.FC<SiteDetailModalProps> = ({
 
   const handleShare = () => {
     if (navigator.clipboard) {
-      navigator.clipboard.writeText(`${site.name} — ${site.shortTagline} (Guide Patrimoine en Poche - Service France)`);
+      navigator.clipboard.writeText(`${site.name} — ${site.shortTagline} (Guide Patrimoine en Poche - papierpapier.fr)`);
       setCopiedLink(true);
       setTimeout(() => setCopiedLink(false), 2000);
     }
@@ -317,17 +318,30 @@ export const SiteDetailModal: React.FC<SiteDetailModalProps> = ({
         </div>
 
         {/* Footer */}
-        <div className="p-4 bg-slate-50 border-t border-slate-200 flex items-center justify-between text-xs text-slate-500 shrink-0">
-          <span>Patrimoine en Poche • Service France (0% publicité)</span>
-          <button
-            onClick={() => {
-              stopAudio();
-              onClose();
-            }}
-            className="px-4 py-2 bg-slate-900 text-white hover:bg-slate-800 rounded-lg font-medium text-xs transition-colors"
-          >
-            Fermer la fiche
-          </button>
+        <div className="p-4 bg-slate-900 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-300 shrink-0">
+          <div className="flex items-center gap-2">
+            <span>Patrimoine en Poche · 100% Mistral AI (0% publicité)</span>
+          </div>
+          <div className="flex items-center gap-3">
+            <a
+              href="http://alphabette.fr"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-300 hover:text-white font-bold flex items-center gap-1 transition-colors"
+            >
+              <span>Suite Alphabette sur alphabette.fr</span>
+              <ExternalLink className="w-3.5 h-3.5" />
+            </a>
+            <button
+              onClick={() => {
+                stopAudio();
+                onClose();
+              }}
+              className="px-4 py-1.5 bg-white text-slate-950 hover:bg-slate-100 rounded-lg font-bold text-xs transition-colors"
+            >
+              Fermer la fiche
+            </button>
+          </div>
         </div>
       </div>
     </div>

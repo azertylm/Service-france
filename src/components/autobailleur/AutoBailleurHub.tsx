@@ -959,7 +959,7 @@ ${landlordInfo.fullName}`;
               {/* Signature block */}
               <div className="flex justify-between items-end pt-4">
                 <div className="text-[11px] text-slate-400">
-                  Document généré via Service France • AutoBailleur
+                  Document généré via papierpapier.fr • AutoBailleur
                 </div>
                 <div className="text-right space-y-3">
                   <span className="text-xs font-bold text-slate-700 block">
@@ -1393,6 +1393,22 @@ ${landlordInfo.fullName}`;
           </div>
         </div>
       )}
+
+      {/* Mandatory Hub Link */}
+      <div className="bg-slate-900 text-white rounded-2xl p-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs mt-8">
+        <span className="text-slate-300">
+          AutoBailleur est une brique officielle de l'écosystème <strong>Alphabette</strong> (100% Souverain & RGPD)
+        </span>
+        <a
+          href="http://alphabette.fr"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-300 hover:text-white font-bold flex items-center gap-1.5 transition-colors shrink-0"
+        >
+          <span>Découvrir toutes les applications de la suite sur http://alphabette.fr</span>
+          <ExternalLink className="w-3.5 h-3.5" />
+        </a>
+      </div>
     </div>
   );
 };

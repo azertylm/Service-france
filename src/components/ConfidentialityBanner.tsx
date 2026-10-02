@@ -77,13 +77,23 @@ export const ConfidentialityBanner: React.FC = () => {
                 </div>
               </div>
 
+              <div className="flex items-start gap-3">
+                <ShieldCheck className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
+                <div>
+                  <h4 className="font-medium text-slate-900">Souveraineté européenne & RGPD natif (Mistral AI)</h4>
+                  <p className="text-xs text-slate-500 mt-0.5">
+                    Toutes les applications de la suite Alphabette reposent exclusivement sur Mistral AI (entreprise française, infrastructures en Europe). Vos données ne quittent pas le cadre juridique de l'Union européenne.
+                  </p>
+                </div>
+              </div>
+
               {/* Solennel Zero-Knowledge Quote */}
               <div className="p-3 bg-emerald-50 rounded-xl border border-emerald-200 text-xs text-emerald-950 space-y-1">
                 <blockquote className="italic font-medium">
                   « Vos données ne quittent pas votre appareil de manière lisible. ALPHABETTE SASU n'a aucun moyen technique d'accéder à vos documents, analyses ou courriers. »
                 </blockquote>
                 <div className="text-[10px] text-emerald-800 font-semibold text-right">
-                  — Valentin RICHAUD, Fondateur d'ALPHABETTE SASU (La Grande-Motte)
+                  — Valentin RICHAUD, Fondateur d'ALPHABETTE SASU (La Grande-Motte) · <a href="http://alphabette.fr" target="_blank" rel="noopener noreferrer" className="underline hover:text-emerald-950">alphabette.fr</a>
                 </div>
               </div>
             </div>

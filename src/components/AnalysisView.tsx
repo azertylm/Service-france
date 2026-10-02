@@ -23,7 +23,9 @@ import {
   Check,
   CornerDownRight,
   Sparkles,
+  ExternalLink,
 } from 'lucide-react';
+import { sovereignFetch } from '../utils/apiClient';
 
 interface AnalysisViewProps {
   analysis: ContractAnalysis;
@@ -79,7 +81,7 @@ export const AnalysisView: React.FC<AnalysisViewProps> = ({
     setQuestionText('');
 
     try {
-      const res = await fetch('/api/ask-contract-question', {
+      const res = await sovereignFetch('/api/ask-contract-question', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -591,6 +593,30 @@ export const AnalysisView: React.FC<AnalysisViewProps> = ({
               )}
             </button>
           </div>
+        </div>
+
+        {/* Mandatory Alphabette Hub Callout */}
+        <div className="bg-slate-900 text-white rounded-2xl p-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
+          <div className="flex items-center gap-2">
+            <span className="flex h-3 w-4 rounded-xs overflow-hidden border border-white/20">
+              <span className="w-1.5 bg-[#002654]" />
+              <span className="w-1 bg-white" />
+              <span className="w-1.5 bg-[#CE1126]" />
+            </span>
+            <span className="text-slate-300">
+              Analyse souveraine propulsée par <strong>Mistral AI</strong> (France / Europe RGPD) · Brique de la suite Alphabette
+            </span>
+          </div>
+
+          <a
+            href="http://alphabette.fr"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-300 hover:text-white font-bold flex items-center gap-1.5 transition-colors shrink-0"
+          >
+            <span>Découvrir toutes les applications de la suite sur http://alphabette.fr</span>
+            <ExternalLink className="w-3.5 h-3.5" />
+          </a>
         </div>
       </div>
     </div>

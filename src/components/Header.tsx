@@ -25,6 +25,11 @@ import {
   EyeOff,
   FileX,
   ShieldAlert,
+  Car,
+  Key,
+  Crown,
+  Layers,
+  ExternalLink,
 } from 'lucide-react';
 
 export type MainService =
@@ -33,6 +38,7 @@ export type MainService =
   | 'resiliation'
   | 'etatdeslieux'
   | 'autobailleur'
+  | 'permisprotect'
   | 'succession'
   | 'tuteur'
   | 'droits'
@@ -53,6 +59,9 @@ interface HeaderProps {
   savedContractsCount: number;
   onOpenZeroKnowledge: () => void;
   onOpenKeychain: () => void;
+  onOpenPricing?: () => void;
+  onOpenByok?: () => void;
+  onOpenSynergy?: () => void;
 }
 
 export const Header: React.FC<HeaderProps> = ({
@@ -64,6 +73,9 @@ export const Header: React.FC<HeaderProps> = ({
   savedContractsCount,
   onOpenZeroKnowledge,
   onOpenKeychain,
+  onOpenPricing,
+  onOpenByok,
+  onOpenSynergy,
 }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -89,7 +101,7 @@ export const Header: React.FC<HeaderProps> = ({
               onClick={() => handleSelectService('accueil')}
               className="font-black tracking-wider uppercase text-slate-100 text-[11px] sm:text-xs hover:text-white transition-colors truncate"
             >
-              France Service
+              papierpapier.fr
             </button>
             <span className="text-slate-600 hidden sm:inline">|</span>
             <span className="text-slate-400 hidden sm:inline text-[11px] truncate">
@@ -122,7 +134,7 @@ export const Header: React.FC<HeaderProps> = ({
                 title="Garantie de non-accès et synchronisation chiffrée E2EE"
               >
                 <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
-                <span>Zéro Connaissance</span>
+                <span>Zéro Donnée</span>
               </button>
 
               {/* Trousseau Administratif */}
@@ -132,8 +144,56 @@ export const Header: React.FC<HeaderProps> = ({
                 title="Trousseau d'identité administrative locale"
               >
                 <FileKey className="w-3.5 h-3.5 text-amber-400" />
-                <span>Trousseau Local</span>
+                <span>Trousseau</span>
               </button>
+
+              {/* Mistral BYOK Modal */}
+              {onOpenByok && (
+                <button
+                  onClick={onOpenByok}
+                  className="text-[11px] text-blue-300 bg-blue-950/80 hover:bg-blue-900/80 px-2 py-1 rounded border border-blue-800/80 flex items-center gap-1 transition-all font-medium"
+                  title="Configuration Mistral AI souveraine (BYOK / Ollama Mac)"
+                >
+                  <Key className="w-3.5 h-3.5 text-blue-400" />
+                  <span>Mistral BYOK</span>
+                </button>
+              )}
+
+              {/* Tarifs & Bouquet Alphabette */}
+              {onOpenPricing && (
+                <button
+                  onClick={onOpenPricing}
+                  className="text-[11px] text-amber-300 bg-amber-900/70 hover:bg-amber-800/80 px-2.5 py-1 rounded-md border border-amber-500/50 flex items-center gap-1.5 transition-all font-bold shadow-xs active:scale-95"
+                  title="Grille tarifaire officielle et Pass Bouquet Alphabette (dès 39 € / an)"
+                >
+                  <Crown className="w-3.5 h-3.5 text-amber-400" />
+                  <span>Tarifs & Bouquet</span>
+                </button>
+              )}
+
+              {/* Synergie des données */}
+              {onOpenSynergy && (
+                <button
+                  onClick={onOpenSynergy}
+                  className="text-[11px] text-indigo-300 bg-indigo-950/80 hover:bg-indigo-900/80 px-2 py-1 rounded border border-indigo-800/80 flex items-center gap-1 transition-all"
+                  title="Passerelle d'échange de données inter-applications Alphabette"
+                >
+                  <Layers className="w-3.5 h-3.5 text-indigo-400" />
+                  <span>Synergie</span>
+                </button>
+              )}
+
+              {/* Direct Link to alphabette.fr */}
+              <a
+                href="http://alphabette.fr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[11px] text-slate-300 hover:text-white bg-slate-800/80 hover:bg-slate-700/80 px-2 py-1 rounded border border-slate-700 flex items-center gap-1 transition-all ml-0.5"
+                title="Découvrir toutes les applications de la suite sur http://alphabette.fr"
+              >
+                <span>alphabette.fr</span>
+                <ExternalLink className="w-3 h-3 text-slate-400" />
+              </a>
 
               {/* Quick switcher buttons (desktop only) */}
               <div className="flex items-center bg-slate-800/90 rounded-lg p-0.5 border border-slate-700 ml-1">
@@ -336,6 +396,16 @@ export const Header: React.FC<HeaderProps> = ({
           🔑 AutoBailleur
         </button>
         <button
+          onClick={() => handleSelectService('permisprotect')}
+          className={`px-2.5 py-1 rounded-md font-semibold transition-all shrink-0 flex items-center gap-1 ${
+            currentService === 'permisprotect'
+              ? 'bg-indigo-600 text-white font-bold'
+              : 'text-slate-300 hover:text-white bg-slate-900/60'
+          }`}
+        >
+          🚗 PermisProtect
+        </button>
+        <button
           onClick={() => handleSelectService('succession')}
           className={`px-2.5 py-1 rounded-md font-semibold transition-all shrink-0 flex items-center gap-1 ${
             currentService === 'succession'
@@ -422,7 +492,7 @@ export const Header: React.FC<HeaderProps> = ({
         <div className="lg:hidden bg-slate-900 text-white border-b border-slate-800 p-4 space-y-4 animate-in slide-in-from-top-2 duration-200">
           <div className="space-y-1">
             <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400">
-              Services de France Service
+              Services de papierpapier.fr
             </span>
             <div className="grid grid-cols-1 gap-1.5 pt-1">
               <button
@@ -502,6 +572,23 @@ export const Header: React.FC<HeaderProps> = ({
                 </div>
                 <span className="text-[10px] bg-emerald-500/20 text-emerald-300 px-1.5 py-0.5 rounded">
                   IRL & Quittances
+                </span>
+              </button>
+
+              <button
+                onClick={() => handleSelectService('permisprotect')}
+                className={`p-2.5 rounded-xl text-left flex items-center justify-between text-xs font-bold transition-all ${
+                  currentService === 'permisprotect'
+                    ? 'bg-indigo-600 text-white'
+                    : 'bg-slate-800 text-slate-200 hover:bg-slate-700'
+                }`}
+              >
+                <div className="flex items-center gap-2">
+                  <Car className="w-4 h-4 text-indigo-400" />
+                  <span>🚗 PermisProtect — Suivi Points & Contestation PV</span>
+                </div>
+                <span className="text-[10px] bg-indigo-500/20 text-indigo-300 px-1.5 py-0.5 rounded">
+                  ANTAI & Délais
                 </span>
               </button>
 
@@ -631,28 +718,78 @@ export const Header: React.FC<HeaderProps> = ({
             </div>
           </div>
 
-          <div className="pt-2 border-t border-slate-800 grid grid-cols-2 gap-2">
-            <button
-              onClick={() => {
-                onOpenKeychain();
-                setMobileMenuOpen(false);
-              }}
-              className="p-2.5 bg-slate-800 hover:bg-slate-700 text-amber-300 font-bold text-xs rounded-xl flex items-center justify-center gap-1.5 border border-slate-700"
-            >
-              <FileKey className="w-4 h-4 text-amber-400" />
-              <span>Trousseau</span>
-            </button>
+          <div className="pt-2 border-t border-slate-800 space-y-2">
+            <div className="grid grid-cols-2 gap-2">
+              <button
+                onClick={() => {
+                  onOpenKeychain();
+                  setMobileMenuOpen(false);
+                }}
+                className="p-2.5 bg-slate-800 hover:bg-slate-700 text-amber-300 font-bold text-xs rounded-xl flex items-center justify-center gap-1.5 border border-slate-700"
+              >
+                <FileKey className="w-4 h-4 text-amber-400" />
+                <span>Trousseau</span>
+              </button>
 
-            <button
-              onClick={() => {
-                onOpenZeroKnowledge();
-                setMobileMenuOpen(false);
-              }}
-              className="p-2.5 bg-slate-800 hover:bg-slate-700 text-emerald-300 font-bold text-xs rounded-xl flex items-center justify-center gap-1.5 border border-slate-700"
-            >
-              <ShieldCheck className="w-4 h-4 text-emerald-400" />
-              <span>Zéro Données</span>
-            </button>
+              <button
+                onClick={() => {
+                  onOpenZeroKnowledge();
+                  setMobileMenuOpen(false);
+                }}
+                className="p-2.5 bg-slate-800 hover:bg-slate-700 text-emerald-300 font-bold text-xs rounded-xl flex items-center justify-center gap-1.5 border border-slate-700"
+              >
+                <ShieldCheck className="w-4 h-4 text-emerald-400" />
+                <span>Zéro Données</span>
+              </button>
+            </div>
+
+            {/* Alphabette Ecosystem Actions */}
+            <div className="bg-slate-950/80 rounded-2xl p-3 border border-slate-800 space-y-2">
+              <div className="flex items-center justify-between">
+                <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400">
+                  Écosystème Alphabette (Mistral AI)
+                </span>
+                <span className="text-[10px] text-emerald-400 font-semibold">RGPD Natif</span>
+              </div>
+
+              <div className="grid grid-cols-2 gap-2">
+                {onOpenByok && (
+                  <button
+                    onClick={() => {
+                      onOpenByok();
+                      setMobileMenuOpen(false);
+                    }}
+                    className="p-2 bg-blue-950/60 hover:bg-blue-900/60 text-blue-300 font-bold text-xs rounded-xl flex items-center justify-center gap-1.5 border border-blue-800/60"
+                  >
+                    <Key className="w-3.5 h-3.5 text-blue-400" />
+                    <span>Mistral BYOK</span>
+                  </button>
+                )}
+
+                {onOpenPricing && (
+                  <button
+                    onClick={() => {
+                      onOpenPricing();
+                      setMobileMenuOpen(false);
+                    }}
+                    className="p-2 bg-amber-950/60 hover:bg-amber-900/60 text-amber-300 font-bold text-xs rounded-xl flex items-center justify-center gap-1.5 border border-amber-800/60"
+                  >
+                    <Crown className="w-3.5 h-3.5 text-amber-400" />
+                    <span>Tarifs (39€-199€)</span>
+                  </button>
+                )}
+              </div>
+
+              <a
+                href="http://alphabette.fr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full py-2 bg-slate-900 hover:bg-slate-800 text-slate-200 hover:text-white font-bold text-xs rounded-xl flex items-center justify-center gap-2 border border-slate-700 transition-colors"
+              >
+                <span>Découvrir toutes les applications sur alphabette.fr</span>
+                <ExternalLink className="w-3.5 h-3.5 text-blue-400" />
+              </a>
+            </div>
           </div>
         </div>
       )}
@@ -910,12 +1047,12 @@ export const Header: React.FC<HeaderProps> = ({
                 className="flex items-center gap-2 text-left focus:outline-hidden group min-w-0"
               >
                 <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-lg bg-slate-900 text-white flex items-center justify-center font-black text-xs sm:text-sm shadow-xs shrink-0 group-hover:scale-105 transition-transform">
-                  FS
+                  PP
                 </div>
                 <div className="min-w-0">
                   <div className="flex items-center gap-1.5">
                     <span className="text-base sm:text-xl font-black tracking-tight text-slate-900 font-serif-title truncate">
-                      France Service
+                      papierpapier.fr
                     </span>
                     <span className="text-[9px] sm:text-[10px] font-bold uppercase tracking-wider text-slate-700 bg-slate-100 px-1.5 py-0.5 rounded shrink-0">
                       ALPHABETTE SASU

@@ -47,6 +47,7 @@ import {
 } from '../../data/vetusteGrids';
 import { stampPhotoWithTimestamp } from '../../utils/edlPhotoWatermark';
 import { generateDepositDisputeLetter, calculateDepositTimeline } from '../../utils/depositDisputeGenerator';
+import { sovereignFetch } from '../../utils/apiClient';
 
 interface EtatDesLieuxHubProps {
   onNavigateToPlumeWithPrompt?: (prompt: string, category?: any) => void;
@@ -223,7 +224,7 @@ export const EtatDesLieuxHub: React.FC<EtatDesLieuxHubProps> = ({
     setWearAnalysisResult(null);
 
     try {
-      const res = await fetch('/api/etatdeslieux-analyze', {
+      const res = await sovereignFetch('/api/etatdeslieux-analyze', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

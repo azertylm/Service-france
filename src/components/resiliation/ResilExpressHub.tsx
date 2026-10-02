@@ -36,6 +36,7 @@ import {
 } from '../../types/resiliation';
 import { RESILIATION_PROVIDERS } from '../../data/resiliationCatalog';
 import { generateCancellationLetter } from '../../utils/lrarGenerator';
+import { sovereignFetch } from '../../utils/apiClient';
 
 interface ResilExpressHubProps {
   onNavigateToPlumeWithPrompt?: (prompt: string, category?: any) => void;
@@ -225,7 +226,7 @@ export const ResilExpressHub: React.FC<ResilExpressHubProps> = ({
       reader.readAsDataURL(file);
       const dataUrl = await base64Promise;
 
-      const res = await fetch('/api/resil-scan', {
+      const res = await sovereignFetch('/api/resil-scan', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

@@ -18,10 +18,19 @@ import { TuteurHub } from './components/tuteur/TuteurHub';
 import { ResilExpressHub } from './components/resiliation/ResilExpressHub';
 import { EtatDesLieuxHub } from './components/etatdeslieux/EtatDesLieuxHub';
 import { AutoBailleurHub } from './components/autobailleur/AutoBailleurHub';
+import { PermisProtectHub } from './components/permis/PermisProtectHub';
 import { VigilanceSuccessionHub } from './components/succession/VigilanceSuccessionHub';
 import { ZeroKnowledgeModal } from './components/security/ZeroKnowledgeModal';
 import { AdministrativeKeychainModal } from './components/security/AdministrativeKeychainModal';
+import { AlphabetteFooter } from './components/alphabette/AlphabetteFooter';
+import { AlphabettePricingModal } from './components/alphabette/AlphabettePricingModal';
+import { KeychainByokModal } from './components/alphabette/KeychainByokModal';
+import { AlphabetteQuotaExceededModal } from './components/alphabette/AlphabetteQuotaExceededModal';
+import { AlphabetteTrialBanner } from './components/alphabette/AlphabetteTrialBanner';
+import { AlphabetteDataSynergyModal } from './components/alphabette/AlphabetteDataSynergyModal';
+import { sovereignFetch } from './utils/apiClient';
 import { ContractAnalysis, SavedContract, SampleContract } from './types/contract';
+import { getDailyQuotaStatus } from './utils/alphabetteAccess';
 import { Scale, Compass, PenTool, AlertCircle, RefreshCw, ShieldCheck, Coins, HeartPulse, FileX, ShieldAlert } from 'lucide-react';
 
 const STORAGE_KEY_CONTRACTS = 'claircontrat_saved_history_v1';
@@ -36,6 +45,7 @@ export default function App() {
         saved === 'resiliation' ||
         saved === 'etatdeslieux' ||
         saved === 'autobailleur' ||
+        saved === 'permisprotect' ||
         saved === 'succession' ||
         saved === 'tuteur' ||
         saved === 'droits' ||
@@ -68,6 +78,22 @@ export default function App() {
   // Security modals state
   const [isZeroKnowledgeOpen, setIsZeroKnowledgeOpen] = useState(false);
   const [isKeychainOpen, setIsKeychainOpen] = useState(false);
+
+  // Alphabette modals state
+  const [isPricingOpen, setIsPricingOpen] = useState(false);
+  const [isByokOpen, setIsByokOpen] = useState(false);
+  const [isSynergyOpen, setIsSynergyOpen] = useState(false);
+  const [isQuotaModalOpen, setIsQuotaModalOpen] = useState(false);
+
+  useEffect(() => {
+    const handleQuotaExceeded = () => {
+      setIsQuotaModalOpen(true);
+    };
+    window.addEventListener('alphabette-quota-exceeded', handleQuotaExceeded as EventListener);
+    return () => {
+      window.removeEventListener('alphabette-quota-exceeded', handleQuotaExceeded as EventListener);
+    };
+  }, []);
 
   // Saved contracts in localStorage
   const [savedContracts, setSavedContracts] = useState<SavedContract[]>(() => {
@@ -105,7 +131,7 @@ export default function App() {
     setErrorMessage(null);
 
     try {
-      const response = await fetch('/api/analyze-contract', {
+      const response = await sovereignFetch('/api/analyze-contract', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),
@@ -200,6 +226,15 @@ export default function App() {
         savedContractsCount={savedContracts.length}
         onOpenZeroKnowledge={() => setIsZeroKnowledgeOpen(true)}
         onOpenKeychain={() => setIsKeychainOpen(true)}
+        onOpenPricing={() => setIsPricingOpen(true)}
+        onOpenByok={() => setIsByokOpen(true)}
+        onOpenSynergy={() => setIsSynergyOpen(true)}
+      />
+
+      {/* Alphabette Sovereign Trial & Access Banner */}
+      <AlphabetteTrialBanner
+        onOpenPricing={() => setIsPricingOpen(true)}
+        onOpenByok={() => setIsByokOpen(true)}
       />
 
       {/* Show confidentiality banner only when in ClairContrat */}
@@ -207,12 +242,15 @@ export default function App() {
 
       {/* Main Content Area */}
       <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {/* VIEW 1: Service France Home / Portal */}
+        {/* VIEW 1: papierpapier.fr Home / Portal */}
         {currentService === 'accueil' && (
           <ServiceFranceHome
             onSelectService={(srv) => setCurrentService(srv)}
             onOpenZeroKnowledge={() => setIsZeroKnowledgeOpen(true)}
             onOpenKeychain={() => setIsKeychainOpen(true)}
+            onOpenPricing={() => setIsPricingOpen(true)}
+            onOpenByok={() => setIsByokOpen(true)}
+            onOpenSynergy={() => setIsSynergyOpen(true)}
           />
         )}
 
@@ -234,6 +272,11 @@ export default function App() {
         {/* VIEW: AutoBailleur */}
         {currentService === 'autobailleur' && (
           <AutoBailleurHub onNavigateToPlumeWithPrompt={handleNavigateToPlumeWithPrompt} />
+        )}
+
+        {/* VIEW: PermisProtect */}
+        {currentService === 'permisprotect' && (
+          <PermisProtectHub onNavigateToPlumeWithPrompt={handleNavigateToPlumeWithPrompt} />
         )}
 
         {/* VIEW: Vigilance Succession */}
@@ -350,7 +393,7 @@ export default function App() {
         )}
       </main>
 
-      {/* Global Service France Footer */}
+      {/* Global papierpapier.fr Footer */}
       <footer className="bg-white border-t border-slate-200 py-8 px-4 sm:px-6 lg:px-8 text-xs text-slate-500 print:hidden">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="space-y-1.5 text-center md:text-left">
@@ -360,7 +403,7 @@ export default function App() {
                 <span className="w-1 bg-white" />
                 <span className="w-1.5 bg-[#CE1126]" />
               </span>
-              <span className="font-bold text-slate-900 text-sm">Service France</span>
+              <span className="font-bold text-slate-900 text-sm">papierpapier.fr</span>
               <span className="text-slate-300">·</span>
               <span className="text-slate-600 font-medium">
                 Le portail citoyen d'utilité publique
@@ -411,6 +454,13 @@ export default function App() {
               className="hover:text-slate-900 transition-colors font-medium text-emerald-800"
             >
               AutoBailleur
+            </button>
+            <span className="text-slate-300">•</span>
+            <button
+              onClick={() => setCurrentService('permisprotect')}
+              className="hover:text-slate-900 transition-colors font-medium text-indigo-700"
+            >
+              PermisProtect
             </button>
             <span className="text-slate-300">•</span>
             <button
@@ -471,10 +521,16 @@ export default function App() {
           </div>
 
           <div className="text-center md:text-right max-w-sm text-[10px] text-slate-400 leading-relaxed">
-            <strong>France Service</strong> · Conçue et éditée par ALPHABETTE SASU (fondée par Valentin RICHAUD à La Grande-Motte). Respect strict de la souveraineté citoyenne et architecture zéro connaissance.
+            <strong>papierpapier.fr</strong> · Conçue et éditée par ALPHABETTE SASU (fondée par Valentin RICHAUD à La Grande-Motte). Respect strict de la souveraineté citoyenne et architecture zéro connaissance.
           </div>
         </div>
       </footer>
+
+      {/* Mandatory Official Alphabette Ecosystem Footer */}
+      <AlphabetteFooter
+        onOpenPricing={() => setIsPricingOpen(true)}
+        onOpenByok={() => setIsByokOpen(true)}
+      />
 
       {/* Zero Knowledge & E2EE Sync Modal */}
       <ZeroKnowledgeModal
@@ -493,6 +549,52 @@ export default function App() {
       <AdministrativeKeychainModal
         isOpen={isKeychainOpen}
         onClose={() => setIsKeychainOpen(false)}
+      />
+
+      {/* Alphabette Official Pricing & Bouquet Modal */}
+      <AlphabettePricingModal
+        isOpen={isPricingOpen}
+        onClose={() => setIsPricingOpen(false)}
+        onOpenByok={() => {
+          setIsPricingOpen(false);
+          setIsByokOpen(true);
+        }}
+      />
+
+      {/* Multi-Provider Keychain & BYOK Modal */}
+      <KeychainByokModal
+        isOpen={isByokOpen}
+        onClose={() => setIsByokOpen(false)}
+        onOpenPricing={() => {
+          setIsByokOpen(false);
+          setIsPricingOpen(true);
+        }}
+      />
+
+      {/* Quota Exceeded Modal (Rule 429) */}
+      <AlphabetteQuotaExceededModal
+        isOpen={isQuotaModalOpen}
+        onClose={() => setIsQuotaModalOpen(false)}
+        onOpenPricing={() => {
+          setIsQuotaModalOpen(false);
+          setIsPricingOpen(true);
+        }}
+        onOpenKeychain={() => {
+          setIsQuotaModalOpen(false);
+          setIsByokOpen(true);
+        }}
+        dailyCount={getDailyQuotaStatus().count}
+        maxLimit={getDailyQuotaStatus().maxLimit}
+      />
+
+      {/* Alphabette Cross-App Data Synergy Modal */}
+      <AlphabetteDataSynergyModal
+        isOpen={isSynergyOpen}
+        onClose={() => setIsSynergyOpen(false)}
+        onOpenPricing={() => {
+          setIsSynergyOpen(false);
+          setIsPricingOpen(true);
+        }}
       />
     </div>
   );

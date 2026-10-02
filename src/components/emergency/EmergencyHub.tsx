@@ -249,7 +249,7 @@ export const EmergencyHub: React.FC<EmergencyHubProps> = ({ onBackToPortal }) =>
                 onClick={onBackToPortal}
                 className="px-4 py-2 bg-white/10 hover:bg-white/20 text-rose-200 hover:text-white text-xs font-semibold rounded-xl transition-colors text-center"
               >
-                ← Retour au portail France Service
+                ← Retour au portail papierpapier.fr
               </button>
             )}
           </div>

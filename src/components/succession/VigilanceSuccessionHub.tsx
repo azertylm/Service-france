@@ -238,7 +238,7 @@ export const VigilanceSuccessionHub: React.FC<VigilanceSuccessionHubProps> = ({
     fullPack += `DOSSIER COMPLET SUCCESSION : PACK COURRIERS OFFICIELS D'INFORMATION\n`;
     fullPack += `Défunt : ${formData.deceasedFullName} (Décès le ${formData.deceasedDeathDate})\n`;
     fullPack += `Déclarant : ${formData.declarantFullName} (${formData.declarantRelationship})\n`;
-    fullPack += `Généré le : ${new Date().toLocaleDateString('fr-FR')} via Vigilance Succession - Service France\n`;
+    fullPack += `Généré le : ${new Date().toLocaleDateString('fr-FR')} via Vigilance Succession - papierpapier.fr\n`;
     fullPack += `========================================================================\n\n`;
 
     SUCCESSION_ORGANISMS.forEach((org, idx) => {

@@ -241,7 +241,7 @@ export const AllergiesTracker: React.FC<AllergiesTrackerProps> = ({
                     FICHE MÉDICALE D'URGENCE VACCINALE & ALLERGOLOGIQUE
                   </span>
                 </div>
-                <span className="text-[11px] font-bold text-slate-500">Service France</span>
+                <span className="text-[11px] font-bold text-slate-500">papierpapier.fr</span>
               </div>
 
               {/* Patient Identity */}
@@ -314,7 +314,7 @@ export const AllergiesTracker: React.FC<AllergiesTrackerProps> = ({
 
               <div className="pt-2 border-t border-slate-200 flex items-center justify-between text-[10px] text-slate-400">
                 <span>Médecin traitant : {activeMember.treatingDoctor || 'Non spécifié'}</span>
-                <span>Document 100% privé généré localement sur Service France</span>
+                <span>Document 100% privé généré localement sur papierpapier.fr</span>
               </div>
             </div>
           </div>

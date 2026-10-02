@@ -16,6 +16,7 @@ import {
 } from 'lucide-react';
 import { MedicalReportExplanation } from '../../types/memosante';
 import { SAMPLE_REPORTS_PRESETS } from '../../data/memosantePresets';
+import { sovereignFetch } from '../../utils/apiClient';
 
 interface MedicalReportDecoderProps {
   onSaveToVault?: (explanation: MedicalReportExplanation) => void;
@@ -66,7 +67,7 @@ export const MedicalReportDecoder: React.FC<MedicalReportDecoderProps> = ({ onSa
     setHasSaved(false);
 
     try {
-      const response = await fetch('/api/explain-medical-report', {
+      const response = await sovereignFetch('/api/explain-medical-report', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

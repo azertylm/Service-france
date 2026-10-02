@@ -1199,6 +1199,22 @@ ${driverProfile.fullName}`;
           </div>
         </div>
       )}
+
+      {/* Mandatory Hub Link */}
+      <div className="bg-slate-900 text-white rounded-2xl p-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs mt-8">
+        <span className="text-slate-300">
+          PermisProtect est une brique officielle de l'écosystème <strong>Alphabette</strong> (100% Souverain & RGPD)
+        </span>
+        <a
+          href="http://alphabette.fr"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-300 hover:text-white font-bold flex items-center gap-1.5 transition-colors shrink-0"
+        >
+          <span>Découvrir toutes les applications de la suite sur http://alphabette.fr</span>
+          <ExternalLink className="w-3.5 h-3.5" />
+        </a>
+      </div>
     </div>
   );
 };

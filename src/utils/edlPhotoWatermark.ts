@@ -118,7 +118,7 @@ export async function stampPhotoWithTimestamp(
         // Subline: Timestamp & Legal notice
         ctx.fillStyle = '#cbd5e1'; // slate-300
         ctx.font = `${fontSizeSub}px system-ui, -apple-system, sans-serif`;
-        let subline = `🕒 ${timestampLabel} • France Service — Décret n° 2016-382`;
+        let subline = `🕒 ${timestampLabel} • papierpapier.fr — Décret n° 2016-382`;
         if (options.meterReading) {
           subline += ` • ⚡ Relevé ${options.meterReading.typeLabel}: ${options.meterReading.indexValue} ${options.meterReading.unit}`;
         }

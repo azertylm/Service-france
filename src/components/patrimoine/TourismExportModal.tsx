@@ -61,7 +61,7 @@ export const TourismExportModal: React.FC<TourismExportModalProps> = ({ circuit,
             <div>
               <div className="flex items-center gap-2 mb-1">
                 <span className="text-xs font-bold tracking-widest uppercase bg-slate-900 text-white px-2 py-0.5 rounded">
-                  Service France
+                  papierpapier.fr
                 </span>
                 <span className="text-xs font-semibold text-amber-700 uppercase tracking-wider">
                   Patrimoine en Poche
@@ -151,7 +151,7 @@ export const TourismExportModal: React.FC<TourismExportModalProps> = ({ circuit,
             <div className="flex items-center gap-2">
               <ShieldCheck className="w-4 h-4 text-emerald-600" />
               <span>
-                Charte d'utilité publique Service France : aucun partenariat rémunéré ni promotion de commerce.
+                Charte d'utilité publique papierpapier.fr : aucun partenariat rémunéré ni promotion de commerce.
               </span>
             </div>
             <span className="font-mono text-[10px]">Version prête pour affichage et distribution accueil</span>
