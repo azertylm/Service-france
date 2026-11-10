@@ -14,6 +14,9 @@ export default defineConfig(() => {
     resolve: {
       // Correspondance exacte (^nom$) : « vite/modulepreload-polyfill » ne doit pas être remplacé.
       alias: [
+        // Base commune Alphabette (double barre, BIG) : copie embarquée dans src/shell.
+        { find: '@alphabette/shell/style.css', replacement: path.resolve(__dirname, 'src/shell/shell.css') },
+        { find: '@alphabette/shell', replacement: path.resolve(__dirname, 'src/shell/index.ts') },
         { find: '@', replacement: path.resolve(__dirname, '.') },
         ...(STATIQUE
           ? ['express', 'path', 'url', 'vite', 'dotenv'].map((nom) => ({

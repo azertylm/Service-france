@@ -48,3 +48,9 @@
     padding: 0 !important;
   }
 }
+
+/* Double barre Alphabette : le contenu de l'application garde ses propres marges,
+   et son propre réglage de thème (le bouton Jour / Nuit de la barre est masqué
+   pour ne pas laisser croire qu'il change toute la page). */
+.ab-shell > .ab-content { padding: 0; }
+.ab-bar .ab-theme--jour, .ab-bar .ab-theme--nuit { display: none; }
