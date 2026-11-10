@@ -85,7 +85,7 @@ function lireJson(brut: string): any {
 
 async function messageErreur(response: Response): Promise<string> {
   const texte = await response.text().catch(() => '');
-  if (response.status === 401 || response.status === 403) {
+  if (response.status === 401 || response.status === 403 || /api[ _-]?key/i.test(texte)) {
     return 'Clé IA refusée par le fournisseur : vérifiez-la dans « Ma clé IA ».';
   }
   if (response.status === 429) {
