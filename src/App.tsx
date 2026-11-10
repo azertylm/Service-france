@@ -89,9 +89,13 @@ export default function App() {
     const handleQuotaExceeded = () => {
       setIsQuotaModalOpen(true);
     };
+    // Analyse IA demandée sans clé (version hébergée) : on ouvre directement l'écran « Ma clé IA ».
+    const handleCleRequise = () => setIsByokOpen(true);
     window.addEventListener('alphabette-quota-exceeded', handleQuotaExceeded as EventListener);
+    window.addEventListener('alphabette-cle-requise', handleCleRequise);
     return () => {
       window.removeEventListener('alphabette-quota-exceeded', handleQuotaExceeded as EventListener);
+      window.removeEventListener('alphabette-cle-requise', handleCleRequise);
     };
   }, []);
 
@@ -555,7 +559,7 @@ export default function App() {
       <AlphabettePricingModal
         isOpen={isPricingOpen}
         onClose={() => setIsPricingOpen(false)}
-        onOpenByok={() => {
+        onOpenKeychain={() => {
           setIsPricingOpen(false);
           setIsByokOpen(true);
         }}

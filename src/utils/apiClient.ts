@@ -3,11 +3,29 @@
 // ==============================================================================
 import { getMistralHeaders, incrementDailyQuota, getDailyQuotaStatus } from './alphabetteAccess';
 
+const STATIQUE = (import.meta as any).env?.VITE_ALPHABETTE_STATIC === '1';
+
+/** Message affiché quand une analyse IA est demandée sans clé (version hébergée sans serveur). */
+export const MESSAGE_CLE_REQUISE =
+  "Cette fonction utilise une intelligence artificielle : ajoutez d'abord votre propre clé IA (bouton « Ma clé IA »). " +
+  "Mistral AI, entreprise française, propose une formule gratuite sans carte bancaire sur console.mistral.ai. " +
+  "Votre clé reste dans ce navigateur. Les guides, modèles et numéros utiles de l'application restent gratuits et accessibles sans clé.";
+
 /**
  * Enhanced fetch wrapper that checks daily quotas, attaches sovereign API headers (BYOK or Managed),
  * and intercepts quota exhaustion (Rule 429).
  */
 export async function sovereignFetch(url: string, options: RequestInit = {}): Promise<Response> {
+  // Version hébergée sans serveur : aucune clé « maison » n'existe. Sans clé personnelle,
+  // on le dit clairement au lieu de renvoyer une analyse d'exemple qui ne serait pas la vôtre.
+  if (STATIQUE && !getMistralHeaders()['x-ai-api-key']) {
+    window.dispatchEvent(new CustomEvent('alphabette-cle-requise'));
+    return new Response(JSON.stringify({ success: false, error: MESSAGE_CLE_REQUISE }), {
+      status: 400,
+      headers: { 'Content-Type': 'application/json' },
+    });
+  }
+
   // Check daily quota before dispatching request if using internal key / trial
   const quotaAllowed = incrementDailyQuota();
   if (!quotaAllowed) {

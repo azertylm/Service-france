@@ -341,7 +341,7 @@ export const ServiceFranceHome: React.FC<ServiceFranceHomeProps> = ({
               className="px-3 py-1.5 bg-emerald-50 hover:bg-emerald-100 text-emerald-900 text-xs font-semibold rounded-xl border border-emerald-200 flex items-center gap-1.5 transition-colors shadow-xs"
             >
               <Smartphone className="w-3.5 h-3.5 text-emerald-600" />
-              <span>Synchronisation sécurisée (E2EE)</span>
+              <span>Confidentialité de vos données</span>
             </button>
           )}
 
@@ -546,7 +546,7 @@ export const ServiceFranceHome: React.FC<ServiceFranceHomeProps> = ({
               className="px-4 py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs rounded-xl flex items-center justify-center gap-2 transition-all shadow-md"
             >
               <Smartphone className="w-4 h-4" />
-              <span>Synchro multi-appareils (E2EE)</span>
+              <span>Confidentialité de vos données</span>
             </button>
           )}
 

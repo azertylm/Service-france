@@ -302,7 +302,7 @@ contractTitle, contractType, parties (partyA, partyB), summary, riskLevel (FAIBL
   } catch (error: any) {
     console.error("Error in /api/analyze-contract:", error);
     return res.status(500).json({
-      error: "Erreur lors de l'analyse du document par Mistral AI : " + (error?.message || "Veuillez réessayer."),
+      error: error?.message || "Erreur lors de l'analyse du document. Veuillez réessayer.",
     });
   }
 });
@@ -355,7 +355,7 @@ Réponds de manière directe, cite la règle de droit applicable et donne 2 cons
   } catch (error: any) {
     console.error("Error in /api/ask-contract-question:", error);
     return res.status(500).json({
-      error: "Erreur lors de la réponse juridique : " + (error?.message || "Veuillez réessayer."),
+      error: error?.message || "Erreur lors de la réponse juridique. Veuillez réessayer.",
     });
   }
 });
@@ -412,7 +412,7 @@ Description : ${text || 'Photo ci-jointe'}`;
     return res.json({ success: true, analysis, sovereignProvider: "Mistral AI" });
   } catch (error: any) {
     console.error("Error in /api/analyze-architecture:", error);
-    return res.status(500).json({ error: "Erreur lors du décodage architectural." });
+    return res.status(500).json({ error: error?.message || "Erreur lors du décodage architectural." });
   }
 });
 
@@ -437,7 +437,7 @@ app.post('/api/ask-patrimoine-question', async (req, res) => {
       answer: typeof result === 'string' ? result : (result.answer || JSON.stringify(result)),
     });
   } catch (e: any) {
-    return res.status(500).json({ error: "Erreur lors de la réponse patrimoniale." });
+    return res.status(500).json({ error: e?.message || "Erreur lors de la réponse patrimoniale." });
   }
 });
 
@@ -514,7 +514,7 @@ Tonalité : ${tone || 'Courtoise, ferme et juridiquement motivée'}`;
     return res.json({ success: true, letterData, sovereignProvider: "Mistral AI" });
   } catch (error: any) {
     console.error("Error in /api/generate-administrative-letter:", error);
-    return res.status(500).json({ error: "Erreur lors de la rédaction administrative." });
+    return res.status(500).json({ error: error?.message || "Erreur lors de la rédaction administrative." });
   }
 });
 
@@ -583,7 +583,7 @@ reportTitle, reportType, generalSummary, decodedTerms (liste d'objets technicalT
     return res.json({ success: true, explanation, sovereignProvider: "Mistral AI" });
   } catch (error: any) {
     console.error("Error in /api/explain-medical-report:", error);
-    return res.status(500).json({ error: "Erreur lors du décodage médical." });
+    return res.status(500).json({ error: error?.message || "Erreur lors du décodage médical." });
   }
 });
 
@@ -640,7 +640,7 @@ Réponds STRICTEMENT au format JSON avec ces clés.`;
     return res.json({ success: true, warrantyData, sovereignProvider: "Mistral AI" });
   } catch (error: any) {
     console.error("Error in /api/scan-receipt:", error);
-    return res.status(500).json({ error: "Erreur lors du scan du ticket." });
+    return res.status(500).json({ error: error?.message || "Erreur lors du scan du ticket." });
   }
 });
 
@@ -753,7 +753,7 @@ title, category, administration, officialUrl, cost, delaiEstime, description, fr
     });
   } catch (error: any) {
     console.error("Error in /api/tuteur-demarche:", error);
-    return res.status(500).json({ error: "Erreur lors de la génération du guide." });
+    return res.status(500).json({ error: error?.message || "Erreur lors de la génération du guide." });
   }
 });
 
@@ -807,7 +807,7 @@ providerName, category, monthlyAmount, serviceAddress (recipientName, street, po
     return res.json({ success: true, data, sovereignProvider: "Mistral AI" });
   } catch (error: any) {
     console.error("Error in /api/resil-scan:", error);
-    return res.status(500).json({ error: "Erreur lors de l'analyse de résiliation." });
+    return res.status(500).json({ error: error?.message || "Erreur lors de l'analyse de résiliation." });
   }
 });
 
@@ -882,7 +882,7 @@ Constat : ${contextNotes || 'Traces d\'usage régulier au fil du temps'}`;
     return res.json({ success: true, data, sovereignProvider: "Mistral AI" });
   } catch (error: any) {
     console.error("Error in /api/etatdeslieux-analyze:", error);
-    return res.status(500).json({ error: "Erreur lors de l'analyse d'usure." });
+    return res.status(500).json({ error: error?.message || "Erreur lors de l'analyse d'usure." });
   }
 });
 

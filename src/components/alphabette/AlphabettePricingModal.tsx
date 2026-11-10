@@ -19,6 +19,8 @@ import {
   SubscriptionPlan,
 } from '../../utils/alphabetteAccess';
 
+const STATIQUE = (import.meta as any).env?.VITE_ALPHABETTE_STATIC === '1';
+
 interface AlphabettePricingModalProps {
   isOpen: boolean;
   onClose: () => void;
@@ -98,7 +100,11 @@ export const AlphabettePricingModal: React.FC<AlphabettePricingModalProps> = ({
                 <span>
                   Statut actuel :{' '}
                   <strong className="text-amber-300">
-                    {accessState.effectiveTier === 'trial'
+                    {STATIQUE
+                      ? accessState.hasAnyKey
+                        ? 'Votre clé IA personnelle est active'
+                        : 'Sans clé IA : guides et modèles gratuits'
+                      : accessState.effectiveTier === 'trial'
                       ? `Période d'essai (${accessState.trialDaysLeft} jours restants)`
                       : accessState.effectiveTier === 'byok'
                       ? 'Mode BYOK (Clé personnelle active)'
@@ -239,12 +245,14 @@ export const AlphabettePricingModal: React.FC<AlphabettePricingModalProps> = ({
                     <span>Souscrire sur alphabette.fr (15 €)</span>
                     <ExternalLink className="w-4 h-4 text-slate-300" />
                   </a>
-                  <button
+                  {!STATIQUE && (
+<button
                     onClick={() => handleSelectPlan('app_solo_15')}
                     className="w-full py-2 px-3 text-[11px] text-slate-500 hover:text-slate-900 font-semibold transition-colors"
                   >
                     Simuler l'activation (15 € / an)
                   </button>
+                  )}
                 </div>
               </div>
 
@@ -308,12 +316,14 @@ export const AlphabettePricingModal: React.FC<AlphabettePricingModalProps> = ({
                     <span>Souscrire au Bouquet 40 € / an sur alphabette.fr</span>
                     <ExternalLink className="w-4 h-4 text-slate-950" />
                   </a>
-                  <button
+                  {!STATIQUE && (
+<button
                     onClick={() => handleSelectPlan('bouquet_40')}
                     className="w-full py-2 px-3 text-[11px] text-amber-900 hover:text-amber-950 font-semibold transition-colors"
                   >
                     Simuler l'activation du Bouquet 40 € / an
                   </button>
+                  )}
                 </div>
               </div>
             </div>
@@ -363,12 +373,14 @@ export const AlphabettePricingModal: React.FC<AlphabettePricingModalProps> = ({
                     <span>Souscrire sur alphabette.fr (15 €)</span>
                     <ExternalLink className="w-4 h-4 text-slate-300" />
                   </a>
-                  <button
+                  {!STATIQUE && (
+<button
                     onClick={() => handleSelectPlan('app_solo_15')}
                     className="w-full py-2 px-3 text-[11px] text-slate-500 hover:text-slate-900 font-semibold transition-colors"
                   >
                     Simuler l'activation (15 € / an)
                   </button>
+                  )}
                 </div>
               </div>
             </div>

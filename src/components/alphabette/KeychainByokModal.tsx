@@ -21,6 +21,8 @@ import {
   MultiProviderKeys,
 } from '../../utils/alphabetteAccess';
 
+const STATIQUE = (import.meta as any).env?.VITE_ALPHABETTE_STATIC === '1';
+
 interface KeychainByokModalProps {
   isOpen: boolean;
   onClose: () => void;
@@ -56,7 +58,7 @@ const PROVIDER_METADATA: Record<
     name: 'Anthropic (Claude 3.5 Sonnet)',
     consoleUrl: 'https://console.anthropic.com',
     placeholder: 'sk-ant-api03-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
-    defaultModel: 'claude-3-5-sonnet-20241022',
+    defaultModel: 'claude-sonnet-5-5',
     badge: 'Raisonnement Avancé',
   },
   deepseek: {
@@ -137,7 +139,9 @@ export const KeychainByokModal: React.FC<KeychainByokModalProps> = ({
           </h2>
 
           <p className="text-xs text-slate-300 mt-1 leading-relaxed">
-            Configurez vos propres clés d'intelligence artificielle pour un accès illimité et direct sur toutes les applications du bouquet (Proxilien, Info Perso, Focus News, L'Œil de l'Atelier, Papier Papier, IA Débat).
+            {STATIQUE
+              ? "Ajoutez votre propre clé d'intelligence artificielle pour utiliser les analyses de cette application (contrats, courriers, comptes-rendus…). Elle reste enregistrée dans ce navigateur."
+              : "Configurez vos propres clés d'intelligence artificielle pour un accès illimité et direct sur toutes les applications du bouquet (Proxilien, Info Perso, Focus News, L'Œil de l'Atelier, Papier Papier, IA Débat)."}
           </p>
         </div>
 
@@ -145,7 +149,9 @@ export const KeychainByokModal: React.FC<KeychainByokModalProps> = ({
         <div className="bg-indigo-50 border-b border-indigo-200 px-6 py-3.5 text-xs text-indigo-950 flex items-start gap-2.5">
           <ShieldCheck className="w-5 h-5 text-indigo-700 shrink-0 mt-0.5" />
           <div className="leading-relaxed font-medium">
-            « Vous réglez à Alphabette uniquement l'accès au service logiciel (15 € ou 40 €/an). Vos consommations d'IA sont facturées directement à prix coûtant par le fournisseur choisi. »
+            {STATIQUE
+              ? "Les analyses par IA utilisent votre propre clé : c'est le fournisseur choisi qui facture vos consommations, au prix public. Mistral AI (France) propose une formule gratuite, sans carte bancaire."
+              : "« Vous réglez à Alphabette uniquement l'accès au service logiciel (15 € ou 40 €/an). Vos consommations d'IA sont facturées directement à prix coûtant par le fournisseur choisi. »"}
           </div>
         </div>
 
@@ -231,7 +237,9 @@ export const KeychainByokModal: React.FC<KeychainByokModalProps> = ({
                 </button>
               </div>
               <p className="text-[10px] text-slate-400">
-                Chiffré au repos (AES-256) et relayé uniquement côté serveur pour vos requêtes.
+                {STATIQUE
+                  ? "Gardée uniquement dans ce navigateur et envoyée directement au fournisseur choisi, jamais à Alphabette."
+                  : "Gardée dans ce navigateur et relayée par le serveur uniquement pour vos requêtes."}
               </p>
             </div>
 
@@ -259,7 +267,7 @@ export const KeychainByokModal: React.FC<KeychainByokModalProps> = ({
           </div>
 
           {/* Pricing cross-sell */}
-          {onOpenPricing && (
+          {onOpenPricing && !STATIQUE && (
             <div className="p-3.5 rounded-2xl bg-amber-50 border border-amber-200 flex items-center justify-between gap-3 text-amber-950">
               <span className="text-xs">
                 Besoin d'un accès clé en main sans configurer de clé personnelle ?

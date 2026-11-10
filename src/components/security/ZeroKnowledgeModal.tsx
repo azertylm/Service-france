@@ -19,6 +19,10 @@ import {
 } from 'lucide-react';
 import { ProfileSecuritySettings } from '../../types/security';
 
+// Version hébergée sans serveur : aucun relais n'existe pour transférer des données
+// entre appareils, l'onglet « Synchro » n'est donc pas proposé.
+const STATIQUE = (import.meta as any).env?.VITE_ALPHABETTE_STATIC === '1';
+
 interface ZeroKnowledgeModalProps {
   isOpen: boolean;
   onClose: () => void;
@@ -123,6 +127,7 @@ export const ZeroKnowledgeModal: React.FC<ZeroKnowledgeModalProps> = ({
             <span>Garantie Formelle</span>
           </button>
 
+{!STATIQUE && (
           <button
             onClick={() => setActiveTab('sync')}
             className={`py-3 px-3 border-b-2 transition-all flex items-center gap-1.5 ${
@@ -134,6 +139,7 @@ export const ZeroKnowledgeModal: React.FC<ZeroKnowledgeModalProps> = ({
             <Smartphone className="w-3.5 h-3.5 text-indigo-600" />
             <span>Synchro Multi-Appareils (E2EE)</span>
           </button>
+          )}
 
           <button
             onClick={() => setActiveTab('pin')}
@@ -162,8 +168,10 @@ export const ZeroKnowledgeModal: React.FC<ZeroKnowledgeModalProps> = ({
                   </h4>
                 </div>
                 <blockquote className="italic font-medium text-xs sm:text-sm text-slate-900 border-l-3 border-emerald-600 pl-3 leading-relaxed">
-                  « Vos données ne quittent pas votre appareil de manière lisible. ALPHABETTE SASU
-                  n'a aucun moyen technique d'accéder à vos documents, analyses ou courriers. »
+                  « Vos documents, analyses et courriers restent dans le navigateur de votre appareil.
+                  Quand vous lancez une analyse par IA, le document part directement chez le fournisseur
+                  IA que vous avez choisi, jamais chez nous : ALPHABETTE SASU n'a aucun moyen technique
+                  d'y accéder. »
                 </blockquote>
                 <div className="text-[11px] text-emerald-900/80 font-semibold text-right">
                   — Valentin RICHAUD, Fondateur d'ALPHABETTE SASU (La Grande-Motte, Occitanie)
@@ -210,7 +218,7 @@ export const ZeroKnowledgeModal: React.FC<ZeroKnowledgeModalProps> = ({
           )}
 
           {/* TAB 2: MULTI-DEVICE E2EE SYNC */}
-          {activeTab === 'sync' && (
+          {activeTab === 'sync' && !STATIQUE && (
             <div className="space-y-6 animate-in fade-in duration-200">
               <div className="bg-indigo-50/70 border border-indigo-200 rounded-2xl p-4 text-indigo-950 space-y-1.5">
                 <div className="flex items-center gap-2">

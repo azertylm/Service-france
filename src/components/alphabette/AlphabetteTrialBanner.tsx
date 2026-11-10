@@ -11,8 +11,18 @@ import {
 } from 'lucide-react';
 import {
   getAlphabetteAccessState,
-  AlphabetteAccessState,
 } from '../../utils/alphabetteAccess';
+
+const STATIQUE = (import.meta as any).env?.VITE_ALPHABETTE_STATIC === '1';
+
+const NOMS_FOURNISSEURS: Record<string, string> = {
+  mistral: 'Mistral AI',
+  gemini: 'Google Gemini',
+  openai: 'OpenAI',
+  anthropic: 'Anthropic Claude',
+  deepseek: 'DeepSeek',
+  xai: 'xAI Grok',
+};
 
 interface AlphabetteTrialBannerProps {
   onOpenPricing: () => void;
@@ -23,7 +33,7 @@ export const AlphabetteTrialBanner: React.FC<AlphabetteTrialBannerProps> = ({
   onOpenPricing,
   onOpenByok,
 }) => {
-  const [access, setAccess] = useState<AlphabetteAccessState>(getAlphabetteAccessState());
+  const [access, setAccess] = useState<any>(getAlphabetteAccessState());
 
   useEffect(() => {
     const handleUpdate = () => {
@@ -32,6 +42,36 @@ export const AlphabetteTrialBanner: React.FC<AlphabetteTrialBannerProps> = ({
     window.addEventListener('alphabette-access-change', handleUpdate);
     return () => window.removeEventListener('alphabette-access-change', handleUpdate);
   }, []);
+
+  // Version hébergée sans serveur : pas d'essai ni de clé « maison », on dit simplement
+  // ce qui est gratuit et ce qui demande une clé IA personnelle.
+  if (STATIQUE) {
+    return (
+      <div className="bg-slate-900 text-slate-200 py-2 px-4 text-xs border-b border-slate-800">
+        <div className="max-w-7xl mx-auto w-full flex flex-col sm:flex-row items-center justify-between gap-2">
+          {access.hasAnyKey ? (
+            <span className="flex items-center gap-2 text-slate-200">
+              <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0" />
+              Votre clé IA {NOMS_FOURNISSEURS[access.activeProvider] || access.activeProvider} est active : vos documents
+              partent directement chez ce fournisseur, jamais chez Alphabette.
+            </span>
+          ) : (
+            <span className="flex items-center gap-2 text-slate-200">
+              <Key className="w-4 h-4 text-amber-400 shrink-0" />
+              Guides, modèles et numéros utiles : gratuits. Les analyses par IA demandent votre clé IA (Mistral AI propose une
+              formule gratuite).
+            </span>
+          )}
+          <button
+            onClick={onOpenByok}
+            className="shrink-0 text-[11px] font-bold text-slate-950 bg-amber-400 hover:bg-amber-300 px-3 py-1 rounded-lg transition-colors"
+          >
+            {access.hasAnyKey ? 'Changer ma clé IA' : 'Ajouter ma clé IA'}
+          </button>
+        </div>
+      </div>
+    );
+  }
 
   // If Bouquet Intégral or Bouquet BYOK
   if (access.effectiveTier === 'bouquet_integral' || access.effectiveTier === 'bouquet_byok') {

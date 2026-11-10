@@ -131,7 +131,7 @@ export const Header: React.FC<HeaderProps> = ({
               <button
                 onClick={onOpenZeroKnowledge}
                 className="text-[11px] text-emerald-400 bg-emerald-950/80 hover:bg-emerald-900/80 px-2 py-1 rounded border border-emerald-800/80 flex items-center gap-1 transition-all"
-                title="Garantie de non-accès et synchronisation chiffrée E2EE"
+                title="Confidentialité : vos données restent dans ce navigateur"
               >
                 <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
                 <span>Zéro Donnée</span>
@@ -152,10 +152,10 @@ export const Header: React.FC<HeaderProps> = ({
                 <button
                   onClick={onOpenByok}
                   className="text-[11px] text-blue-300 bg-blue-950/80 hover:bg-blue-900/80 px-2 py-1 rounded border border-blue-800/80 flex items-center gap-1 transition-all font-medium"
-                  title="Configuration Mistral AI souveraine (BYOK / Ollama Mac)"
+                  title="Ajouter ou changer votre clé IA (Mistral, Gemini…)"
                 >
                   <Key className="w-3.5 h-3.5 text-blue-400" />
-                  <span>Mistral BYOK</span>
+                  <span>Ma clé IA</span>
                 </button>
               )}
 
@@ -762,7 +762,7 @@ export const Header: React.FC<HeaderProps> = ({
                     className="p-2 bg-blue-950/60 hover:bg-blue-900/60 text-blue-300 font-bold text-xs rounded-xl flex items-center justify-center gap-1.5 border border-blue-800/60"
                   >
                     <Key className="w-3.5 h-3.5 text-blue-400" />
-                    <span>Mistral BYOK</span>
+                    <span>Ma clé IA</span>
                   </button>
                 )}
 

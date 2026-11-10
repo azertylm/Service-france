@@ -38,7 +38,7 @@ export function getAIConfigFromReq(req: any) {
     mistral: 'mistral-small-latest',
     gemini: 'gemini-2.5-flash',
     openai: 'gpt-4o-mini',
-    anthropic: 'claude-3-5-sonnet-20241022',
+    anthropic: 'claude-sonnet-5-5',
     deepseek: 'deepseek-chat',
     xai: 'grok-2-latest',
   };
@@ -70,99 +70,136 @@ export function getAIConfigFromReq(req: any) {
   };
 }
 
+/** Extrait l'objet JSON d'une réponse texte (avec ou sans balises ```json). */
+function lireJson(brut: string): any {
+  const propre = brut.replace(/^```json\s*/i, '').replace(/^```\s*/i, '').replace(/\s*```$/, '').trim();
+  try {
+    return JSON.parse(propre);
+  } catch {
+    const a = brut.indexOf('{');
+    const b = brut.lastIndexOf('}');
+    if (a !== -1 && b > a) return JSON.parse(brut.substring(a, b + 1));
+    throw new Error("La réponse de l'IA n'était pas lisible. Réessayez.");
+  }
+}
+
+async function messageErreur(response: Response): Promise<string> {
+  const texte = await response.text().catch(() => '');
+  if (response.status === 401 || response.status === 403) {
+    return 'Clé IA refusée par le fournisseur : vérifiez-la dans « Ma clé IA ».';
+  }
+  if (response.status === 429) {
+    return 'Limite du fournisseur IA atteinte (formule gratuite ou quota). Patientez une minute puis réessayez.';
+  }
+  return `Le fournisseur IA a répondu une erreur (${response.status}) : ${texte.slice(0, 160)}`;
+}
+
+/**
+ * Appelle le fournisseur IA choisi par l'usager. Aucune réponse « d'exemple » n'est
+ * jamais renvoyée à la place d'une vraie analyse : sans clé, ou si le fournisseur
+ * échoue, une erreur claire est levée et affichée à l'usager.
+ */
 export async function callMistralAI(req: any, options: AIRequestOptions): Promise<any> {
   const config = getAIConfigFromReq(req);
-  const hasImages = options.images && options.images.length > 0;
   const targetModel = options.modelOverride || config.model;
+  const images = options.images || [];
+  const consigneJson =
+    "\n\nIMPORTANT: Réponds STRICTEMENT et EXCLUSIVEMENT au format JSON valide, sans texte d'introduction ni balises markdown additionnelles.";
 
-  if (config.apiKey || config.isLocalOllama) {
-    try {
-      const headers: Record<string, string> = {
-        'Content-Type': 'application/json',
-      };
-      if (config.apiKey) {
-        if (config.provider === 'anthropic') {
-          headers['x-api-key'] = config.apiKey;
-          headers['anthropic-version'] = '2023-06-01';
-        } else if (config.provider === 'gemini') {
-          // Gemini uses query param ?key=
-        } else {
-          headers['Authorization'] = `Bearer ${config.apiKey}`;
-        }
-      }
+  if (!config.apiKey && !config.isLocalOllama) {
+    throw new Error(
+      "Cette fonction utilise une intelligence artificielle : ajoutez votre propre clé IA (bouton « Ma clé IA »). Mistral AI propose une formule gratuite sans carte bancaire."
+    );
+  }
 
-      // Handle OpenAI compatible APIs (Mistral, OpenAI, DeepSeek, xAI, Ollama)
-      if (config.provider !== 'anthropic' && config.provider !== 'gemini') {
-        const messages: any[] = [];
-        if (options.systemPrompt) {
-          messages.push({
-            role: 'system',
-            content: `${options.systemPrompt}\n\nIMPORTANT: Réponds STRICTEMENT et EXCLUSIVEMENT au format JSON valide, sans texte d'introduction ni balises markdown additionnelles.`,
-          });
-        }
-
-        if (hasImages) {
-          const contentParts: any[] = [{ type: 'text', text: options.userPrompt }];
-          for (const img of options.images!) {
-            const base64Url = img.data.startsWith('data:')
-              ? img.data
-              : `data:${img.mimeType || 'image/jpeg'};base64,${img.data}`;
-            contentParts.push({
-              type: 'image_url',
-              image_url: { url: base64Url },
-            });
-          }
-          messages.push({ role: 'user', content: contentParts });
-        } else {
-          messages.push({ role: 'user', content: options.userPrompt });
-        }
-
-        const endpoint = `${config.baseUrl}/chat/completions`;
-        const response = await fetch(endpoint, {
-          method: 'POST',
-          headers,
-          body: JSON.stringify({
-            model: targetModel,
-            messages,
-            response_format: { type: 'json_object' },
-            temperature: options.temperature ?? 0.2,
-          }),
-        });
-
-        if (response.ok) {
-          const json = await response.json();
-          const rawContent = json.choices?.[0]?.message?.content;
-          if (rawContent) {
-            try {
-              const cleanJson = rawContent
-                .replace(/^```json\s*/i, '')
-                .replace(/^```\s*/i, '')
-                .replace(/\s*```$/, '')
-                .trim();
-              return JSON.parse(cleanJson);
-            } catch (pe) {
-              const firstBrace = rawContent.indexOf('{');
-              const lastBrace = rawContent.lastIndexOf('}');
-              if (firstBrace !== -1 && lastBrace !== -1) {
-                return JSON.parse(rawContent.substring(firstBrace, lastBrace + 1));
-              }
-            }
-          }
-        }
-      }
-    } catch (apiErr) {
-      console.warn('Multi-provider API call failed, falling back to sovereign heuristic parser:', apiErr);
+  let response: Response;
+  try {
+    if (config.provider === 'anthropic') {
+      const contenu: any[] = images.map((img) => {
+        const brut = img.data.startsWith('data:') ? img.data.split(',')[1] : img.data;
+        const type = img.data.startsWith('data:') ? img.data.slice(5, img.data.indexOf(';')) : img.mimeType || 'image/jpeg';
+        return type === 'application/pdf'
+          ? { type: 'document', source: { type: 'base64', media_type: type, data: brut } }
+          : { type: 'image', source: { type: 'base64', media_type: type, data: brut } };
+      });
+      contenu.push({ type: 'text', text: options.userPrompt });
+      response = await fetch(`${config.baseUrl}/messages`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'x-api-key': config.apiKey,
+          'anthropic-version': '2023-06-01',
+          'anthropic-dangerous-direct-browser-access': 'true',
+        },
+        body: JSON.stringify({
+          model: targetModel,
+          max_tokens: 8000,
+          temperature: options.temperature ?? 0.2,
+          system: (options.systemPrompt || '') + consigneJson,
+          messages: [{ role: 'user', content: contenu }],
+        }),
+      });
+      if (!response.ok) throw new Error(await messageErreur(response));
+      const json = await response.json();
+      const texte = (json.content || []).filter((c: any) => c.type === 'text').map((c: any) => c.text).join('');
+      return lireJson(texte);
     }
-  }
 
-  // Fallback generator
-  if (options.fallbackGenerator) {
-    return options.fallbackGenerator();
-  }
+    // Mistral, OpenAI, DeepSeek, xAI, Ollama — et Gemini via son point d'accès compatible OpenAI.
+    const estPdf = (img: { data: string; mimeType: string }) =>
+      img.mimeType === 'application/pdf' || img.data.startsWith('data:application/pdf');
+    if (images.some(estPdf)) {
+      throw new Error(
+        "Ce fournisseur IA ne lit pas les fichiers PDF envoyés ainsi. Prenez plutôt le document en photo (ou faites une capture d'écran), ou copiez-collez son texte."
+      );
+    }
+    const messages: any[] = [];
+    if (options.systemPrompt) {
+      messages.push({ role: 'system', content: options.systemPrompt + consigneJson });
+    }
+    if (images.length) {
+      const parts: any[] = [{ type: 'text', text: options.userPrompt }];
+      for (const img of images) {
+        const url = img.data.startsWith('data:') ? img.data : `data:${img.mimeType || 'image/jpeg'};base64,${img.data}`;
+        parts.push({ type: 'image_url', image_url: { url } });
+      }
+      messages.push({ role: 'user', content: parts });
+    } else {
+      messages.push({ role: 'user', content: options.userPrompt });
+    }
 
-  throw new Error(
-    "Service IA indisponible et aucun générateur de secours défini. Renseignez votre clé API dans votre espace Trousseau."
-  );
+    const estGemini = config.provider === 'gemini';
+    const endpoint = estGemini
+      ? `${config.baseUrl.replace(/\/openai$/, '')}/openai/chat/completions`
+      : `${config.baseUrl}/chat/completions`;
+    const headers: Record<string, string> = { 'Content-Type': 'application/json' };
+    if (config.apiKey) headers['Authorization'] = `Bearer ${config.apiKey}`;
+
+    response = await fetch(endpoint, {
+      method: 'POST',
+      headers,
+      body: JSON.stringify({
+        model: targetModel,
+        messages,
+        ...(estGemini ? {} : { response_format: { type: 'json_object' } }),
+        temperature: options.temperature ?? 0.2,
+      }),
+    });
+    if (!response.ok) throw new Error(await messageErreur(response));
+    const json = await response.json();
+    const brut = json.choices?.[0]?.message?.content;
+    if (!brut) throw new Error("Le fournisseur IA n'a renvoyé aucune réponse. Réessayez.");
+    return lireJson(brut);
+  } catch (err: any) {
+    if (err instanceof TypeError) {
+      // fetch() impossible : réseau coupé ou fournisseur injoignable depuis le navigateur.
+      throw new Error(
+        `Impossible de joindre le fournisseur IA (${config.provider}). Vérifiez votre connexion internet puis réessayez.` +
+          (config.provider === 'mistral' ? '' : ' Si le problème continue, essayez Mistral AI dans « Ma clé IA ».')
+      );
+    }
+    throw err;
+  }
 }
 
 export function getMistralConfigFromReq(req: any) {

@@ -246,6 +246,8 @@ export const EtatDesLieuxHub: React.FC<EtatDesLieuxHubProps> = ({
       setWearAnalysisResult(json.data);
     } catch (err: any) {
       console.warn('API error, using local expert fallback:', err);
+      // On montre la vraie raison (clé IA absente, quota…) au-dessus de l'estimation indicative.
+      setWearError(err?.message || null);
       // Fallback expert assessment based on French housing regulations
       const isWallOrPaint = analyzerCategory === 'murs_plafonds';
       const isFloor = analyzerCategory === 'sols_plinthes';
@@ -261,13 +263,15 @@ export const EtatDesLieuxHub: React.FC<EtatDesLieuxHubProps> = ({
 
       const result: WearAnalysisResult = {
         classification: isVetuste ? 'VETUSTE_NORMALE' : 'USAGE_MIXTE',
-        confidenceScore: isVetuste ? 94 : 85,
+        // Estimation par règles simples (sans IA) : aucun pourcentage de « certitude » n'est affiché.
+        confidenceScore: 0,
         title: isVetuste
-          ? "Usure normale liée au temps et à l'occupation : 100% à la charge du bailleur"
-          : "Usure d'usage normal avec éventuel entretien locatif courant",
-        summary: isVetuste
-          ? `Après ${analyzerOccupancyYears} an(s) d'occupation normale, ces marques (${analyzerNotes.slice(0, 80)}...) constituent une vétusté légale au sens du décret n° 2016-382. Le locataire n'a pas à financer une remise à neuf.`
-          : `L'élément présente des signes d'utilisation courante. Si des réparations sont réclamées, le propriétaire doit obligatoirement déduire un abattement pour vétusté proportionnel à la durée d'occupation.`,
+          ? "Estimation indicative (sans IA) : usure normale probable, à la charge du bailleur"
+          : "Estimation indicative (sans IA) : usure d'usage avec éventuel entretien locatif",
+        summary: (isVetuste
+          ? `Après ${analyzerOccupancyYears} an(s) d'occupation normale, ces marques (${analyzerNotes.slice(0, 80)}...) relèvent probablement de la vétusté, qui n'est pas à la charge du locataire (loi du 6 juillet 1989, art. 7). Le locataire n'a pas à financer une remise à neuf.`
+          : `L'élément présente des signes d'utilisation courante. Si des réparations sont réclamées, le propriétaire doit tenir compte de la vétusté liée à la durée d'occupation.`) +
+          " Ce calcul simple ne remplace pas un avis personnalisé : l'ADIL de votre département conseille gratuitement les locataires et les propriétaires.",
         whoPays: isVetuste ? 'PROPRIETAIRE_100' : 'LOCATAIRE_AVEC_VETUSTE',
         whoPaysLabel: isVetuste
           ? 'À la charge exclusive du propriétaire (0 € imputable au locataire)'
@@ -1263,7 +1267,7 @@ export const EtatDesLieuxHub: React.FC<EtatDesLieuxHubProps> = ({
                             : '⚖️ Usage Mixte'}
                         </span>
                         <span className="text-xs font-semibold text-slate-500">
-                          Certitude : {wearAnalysisResult.confidenceScore}%
+                          {wearAnalysisResult.confidenceScore > 0 ? `Certitude : ${wearAnalysisResult.confidenceScore}%` : 'Estimation indicative'}
                         </span>
                       </div>
                       <h3 className="text-lg font-bold text-slate-900 mt-2 font-serif-title">

@@ -92,7 +92,7 @@ export function getProviderConfig(provider: keyof MultiProviderKeys): AIProvider
       mistral: 'mistral-small-latest',
       gemini: 'gemini-2.5-flash',
       openai: 'gpt-4o-mini',
-      anthropic: 'claude-3-5-sonnet-20241022',
+      anthropic: 'claude-sonnet-5-5',
       deepseek: 'deepseek-chat',
       xai: 'grok-2-latest',
     };
