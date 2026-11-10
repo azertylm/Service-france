@@ -157,10 +157,10 @@ export const MedicalReportDecoder: React.FC<MedicalReportDecoderProps> = ({ onSa
           </span>
         </div>
         <blockquote className="italic font-medium text-xs sm:text-sm text-slate-900 border-l-3 border-emerald-600 pl-3 leading-relaxed">
-          « Vos données ne quittent pas votre appareil de manière lisible. ALPHABETTE SASU n'a aucun moyen technique d'accéder à vos documents, analyses ou courriers. »
+          « Vos données ne quittent pas votre appareil de manière lisible. ALPHABETTE n'a aucun moyen technique d'accéder à vos documents, analyses ou courriers. »
         </blockquote>
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 text-[11px] text-emerald-900/80 font-semibold pt-1 border-t border-emerald-200/60">
-          <span>ALPHABETTE SASU (La Grande-Motte, fondateur Valentin RICHAUD)</span>
+          <span>ALPHABETTE (La Grande-Motte, fondateur Valentin RICHAUD)</span>
           <span className="text-amber-900 font-bold">Règle éthique : Aucun diagnostic posé · Renvoi exclusif vers votre médecin ou le 15</span>
         </div>
       </div>

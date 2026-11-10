@@ -34,7 +34,7 @@ export const AlphabetteDataSynergyModal: React.FC<AlphabetteDataSynergyModalProp
       const bundleData: Record<string, any> = {
         format: 'alphabette_citizen_bundle_v1',
         exportedAt: new Date().toISOString(),
-        issuer: 'papierpapier.fr · ALPHABETTE SASU (Valentin RICHAUD)',
+        issuer: 'papierpapier.fr · ALPHABETTE (Valentin RICHAUD)',
         sovereignty: 'Mistral AI Exclusive · Zero-Knowledge Local Storage',
         modules: {},
       };
@@ -229,7 +229,7 @@ export const AlphabetteDataSynergyModal: React.FC<AlphabetteDataSynergyModalProp
         {/* Modal Footer with MANDATORY LINK */}
         <div className="bg-slate-900 text-white px-6 py-3.5 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs">
           <span className="text-slate-400 text-center sm:text-left text-[11px]">
-            ALPHABETTE SASU · Synergie des données 100% souveraine
+            ALPHABETTE · Synergie des données 100% souveraine
           </span>
           <a
             href="http://alphabette.fr"

@@ -90,10 +90,10 @@ export const ConfidentialityBanner: React.FC = () => {
               {/* Solennel Zero-Knowledge Quote */}
               <div className="p-3 bg-emerald-50 rounded-xl border border-emerald-200 text-xs text-emerald-950 space-y-1">
                 <blockquote className="italic font-medium">
-                  « Vos données ne quittent pas votre appareil de manière lisible. ALPHABETTE SASU n'a aucun moyen technique d'accéder à vos documents, analyses ou courriers. »
+                  « Vos données ne quittent pas votre appareil de manière lisible. ALPHABETTE n'a aucun moyen technique d'accéder à vos documents, analyses ou courriers. »
                 </blockquote>
                 <div className="text-[10px] text-emerald-800 font-semibold text-right">
-                  — Valentin RICHAUD, Fondateur d'ALPHABETTE SASU (La Grande-Motte) · <a href="http://alphabette.fr" target="_blank" rel="noopener noreferrer" className="underline hover:text-emerald-950">alphabette.fr</a>
+                  — Valentin RICHAUD, Fondateur d'ALPHABETTE (La Grande-Motte) · <a href="http://alphabette.fr" target="_blank" rel="noopener noreferrer" className="underline hover:text-emerald-950">alphabette.fr</a>
                 </div>
               </div>
             </div>

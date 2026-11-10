@@ -525,7 +525,7 @@ export default function App() {
           </div>
 
           <div className="text-center md:text-right max-w-sm text-[10px] text-slate-400 leading-relaxed">
-            <strong>papierpapier.fr</strong> · Conçue et éditée par ALPHABETTE SASU (fondée par Valentin RICHAUD à La Grande-Motte). Respect strict de la souveraineté citoyenne et architecture zéro connaissance.
+            <strong>papierpapier.fr</strong> · Conçue et éditée par ALPHABETTE (fondée par Valentin RICHAUD à La Grande-Motte). Respect strict de la souveraineté citoyenne et architecture zéro connaissance.
           </div>
         </div>
       </footer>

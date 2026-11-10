@@ -379,7 +379,7 @@ export const MistralByokModal: React.FC<MistralByokModalProps> = ({
         {/* Modal Footer with MANDATORY LINK TO http://alphabette.fr */}
         <div className="bg-slate-900 text-white px-6 py-3.5 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs">
           <span className="text-slate-400 text-center sm:text-left text-[11px]">
-            ALPHABETTE SASU · La Grande-Motte · Mistral AI Exclusif
+            ALPHABETTE · La Grande-Motte · Mistral AI Exclusif
           </span>
           <a
             href="http://alphabette.fr"

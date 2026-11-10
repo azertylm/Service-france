@@ -105,7 +105,7 @@ export const Header: React.FC<HeaderProps> = ({
             </button>
             <span className="text-slate-600 hidden sm:inline">|</span>
             <span className="text-slate-400 hidden sm:inline text-[11px] truncate">
-              ALPHABETTE SASU · La Grande-Motte
+              ALPHABETTE · La Grande-Motte
             </span>
           </div>
 
@@ -1055,7 +1055,7 @@ export const Header: React.FC<HeaderProps> = ({
                       papierpapier.fr
                     </span>
                     <span className="text-[9px] sm:text-[10px] font-bold uppercase tracking-wider text-slate-700 bg-slate-100 px-1.5 py-0.5 rounded shrink-0">
-                      ALPHABETTE SASU
+                      ALPHABETTE
                     </span>
                   </div>
                   <span className="hidden sm:inline-block text-xs text-slate-500 truncate">

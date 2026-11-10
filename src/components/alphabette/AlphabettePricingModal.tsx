@@ -413,7 +413,7 @@ export const AlphabettePricingModal: React.FC<AlphabettePricingModalProps> = ({
         {/* Modal Footer with MANDATORY LINK TO http://alphabette.fr */}
         <div className="bg-slate-900 text-white px-6 py-4 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs shrink-0">
           <span className="text-slate-400 text-center sm:text-left">
-            Édité par ALPHABETTE SASU · La Grande-Motte
+            Édité par ALPHABETTE · La Grande-Motte
           </span>
           <a
             href="http://alphabette.fr"

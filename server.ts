@@ -89,7 +89,7 @@ app.post('/api/analyze-contract', async (req, res) => {
       });
     }
 
-    const systemPrompt = `Tu es le moteur d'intelligence artificielle souverain, sécurisé et bienveillant au cœur de l'application « papierpapier.fr », propulsée exclusivement par la technologie française Mistral AI pour ALPHABETTE SASU (fondée par Valentin RICHAUD à La Grande-Motte).
+    const systemPrompt = `Tu es le moteur d'intelligence artificielle souverain, sécurisé et bienveillant au cœur de l'application « papierpapier.fr », propulsée exclusivement par la technologie française Mistral AI pour ALPHABETTE (fondée par Valentin RICHAUD à La Grande-Motte).
 Au sein de CLAIRCONTRAT (Protection juridique et décryptage documentaire), ta mission républicaine est d'analyser instantanément les contrats du quotidien (baux d'habitation, devis d'artisans, conditions générales d'abonnement, contrats de travail, assurances).
 
 Tu dois restituer systématiquement ton analyse avec une rigueur absolue, en utilisant toujours le vouvoiement avec l'usager, sans aucun verbiage superflu ni jargon incompréhensible :
@@ -318,7 +318,7 @@ app.post('/api/ask-contract-question', async (req, res) => {
       return res.status(400).json({ error: "Question requise." });
     }
 
-    const systemPrompt = `Tu es l'assistant juridique citoyen de « ClairContrat », propulsé par la technologie souveraine Mistral AI (ALPHABETTE SASU).
+    const systemPrompt = `Tu es l'assistant juridique citoyen de « ClairContrat », propulsé par la technologie souveraine Mistral AI (ALPHABETTE).
 Réponds en 2 à 4 paragraphes clairs, bienveillants et rigoureux au regard du droit français (Code civil, Code de la consommation, Loi de 1989).`;
 
     const userPrompt = `Contexte du contrat :

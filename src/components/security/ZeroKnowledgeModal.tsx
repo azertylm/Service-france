@@ -100,7 +100,7 @@ export const ZeroKnowledgeModal: React.FC<ZeroKnowledgeModalProps> = ({
                 </span>
               </div>
               <p className="text-xs text-slate-400 mt-0.5">
-                Édité par ALPHABETTE SASU · Fondée par Valentin RICHAUD à La Grande-Motte
+                Édité par ALPHABETTE · Fondée par Valentin RICHAUD à La Grande-Motte
               </p>
             </div>
           </div>
@@ -170,11 +170,11 @@ export const ZeroKnowledgeModal: React.FC<ZeroKnowledgeModalProps> = ({
                 <blockquote className="italic font-medium text-xs sm:text-sm text-slate-900 border-l-3 border-emerald-600 pl-3 leading-relaxed">
                   « Vos documents, analyses et courriers restent dans le navigateur de votre appareil.
                   Quand vous lancez une analyse par IA, le document part directement chez le fournisseur
-                  IA que vous avez choisi, jamais chez nous : ALPHABETTE SASU n'a aucun moyen technique
+                  IA que vous avez choisi, jamais chez nous : ALPHABETTE n'a aucun moyen technique
                   d'y accéder. »
                 </blockquote>
                 <div className="text-[11px] text-emerald-900/80 font-semibold text-right">
-                  — Valentin RICHAUD, Fondateur d'ALPHABETTE SASU (La Grande-Motte, Occitanie)
+                  — Valentin RICHAUD, Fondateur d'ALPHABETTE (La Grande-Motte, Occitanie)
                 </div>
               </div>
 
@@ -208,7 +208,7 @@ export const ZeroKnowledgeModal: React.FC<ZeroKnowledgeModalProps> = ({
               {/* Legal Notice */}
               <div className="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-1.5 text-[11px] text-slate-500">
                 <p>
-                  <strong>Éditeur responsable :</strong> ALPHABETTE SASU, société par actions simplifiée unipersonnelle, immatriculée au RCS et basée à La Grande-Motte (Hérault).
+                  <strong>Éditeur responsable :</strong> Valentin Richaud (Alphabette), La Grande-Motte (Hérault). Société en cours de création.
                 </p>
                 <p>
                   Conformité stricte au RGPD (Règlement Général sur la Protection des Données) et à la doctrine d'utilité publique et de sobriété numérique républicaine.

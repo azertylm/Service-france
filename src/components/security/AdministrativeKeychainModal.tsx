@@ -108,7 +108,7 @@ export const AdministrativeKeychainModal: React.FC<AdministrativeKeychainModalPr
         <div className="bg-emerald-50 border-b border-emerald-200 px-6 py-3 text-xs text-emerald-950 flex items-center gap-2">
           <ShieldCheck className="w-4 h-4 text-emerald-700 shrink-0" />
           <span>
-            <strong>Garantie ALPHABETTE SASU :</strong> Ces identifiants sont conservés
+            <strong>Garantie ALPHABETTE :</strong> Ces identifiants sont conservés
             strictement dans le stockage chiffré de votre appareil.
           </span>
         </div>

@@ -318,7 +318,7 @@ export const KeychainByokModal: React.FC<KeychainByokModalProps> = ({
         {/* Footer */}
         <div className="bg-slate-900 text-white px-6 py-3.5 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs">
           <span className="text-slate-400 text-xs">
-            ALPHABETTE SASU · La Grande-Motte · Authentification unique bouquet
+            ALPHABETTE · La Grande-Motte · Authentification unique bouquet
           </span>
           <a
             href="http://alphabette.fr"

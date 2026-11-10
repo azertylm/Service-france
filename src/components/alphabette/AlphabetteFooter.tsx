@@ -99,7 +99,7 @@ export const AlphabetteFooter: React.FC<AlphabetteFooterProps> = ({
 
         <div className="border-t border-slate-800/80 pt-4 flex flex-col sm:flex-row items-center justify-between gap-2 text-[11px] text-slate-500">
           <p>
-            Édité par <strong>ALPHABETTE SASU</strong> · Fondée par Valentin RICHAUD à La Grande-Motte (Hérault).
+            Édité par <strong>ALPHABETTE</strong> · Fondée par Valentin RICHAUD à La Grande-Motte (Hérault).
           </p>
           <p>
             Modèles commerciaux Mistral AI sans réutilisation pour l'entraînement · Données hébergées en Union Européenne.

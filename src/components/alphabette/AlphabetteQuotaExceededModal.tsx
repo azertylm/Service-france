@@ -107,7 +107,7 @@ export const AlphabetteQuotaExceededModal: React.FC<AlphabetteQuotaExceededModal
 
         {/* Footer */}
         <div className="bg-slate-900 text-slate-400 px-6 py-3 text-[11px] flex items-center justify-between border-t border-slate-800">
-          <span>ALPHABETTE SASU · La Grande-Motte</span>
+          <span>ALPHABETTE · La Grande-Motte</span>
           <span className="text-amber-300 font-bold">Sécurité & Équité d'accès</span>
         </div>
       </div>

@@ -531,7 +531,7 @@ export const ServiceFranceHome: React.FC<ServiceFranceHomeProps> = ({
           </div>
 
           <blockquote className="text-sm sm:text-base font-bold text-white leading-relaxed italic border-l-3 border-emerald-500 pl-3">
-            « Vos données ne quittent pas votre appareil de manière lisible. ALPHABETTE SASU n'a aucun moyen technique d'accéder à vos documents, analyses ou courriers. »
+            « Vos données ne quittent pas votre appareil de manière lisible. ALPHABETTE n'a aucun moyen technique d'accéder à vos documents, analyses ou courriers. »
           </blockquote>
 
           <p className="text-xs text-slate-300">
