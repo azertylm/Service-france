@@ -208,7 +208,7 @@ export const AlphabetteDataSynergyModal: React.FC<AlphabetteDataSynergyModalProp
               <span>Pourquoi choisir le Bouquet Alphabette complet ?</span>
             </div>
             <p className="text-[11px] text-slate-600 leading-relaxed">
-              En souscrivant au <strong>Pass Bouquet Alphabette</strong> (99 € ou 199 € / an), toutes les applications de la suite communiquent nativement : vos quittances créées sur AutoBailleur alimentent votre décodeur de droits sociaux, et vos contestations ANTAI se lient automatiquement à vos courriers PlumeCitoyenne.
+              En souscrivant au <strong>Pass Bouquet Alphabette</strong> (40 € par an, tarif prévu), toutes les applications de la suite communiquent nativement : vos quittances créées sur AutoBailleur alimentent votre décodeur de droits sociaux, et vos contestations ANTAI se lient automatiquement à vos courriers PlumeCitoyenne.
             </p>
             {onOpenPricing && (
               <button

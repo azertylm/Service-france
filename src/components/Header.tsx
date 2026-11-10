@@ -164,7 +164,7 @@ export const Header: React.FC<HeaderProps> = ({
                 <button
                   onClick={onOpenPricing}
                   className="text-[11px] text-amber-300 bg-amber-900/70 hover:bg-amber-800/80 px-2.5 py-1 rounded-md border border-amber-500/50 flex items-center gap-1.5 transition-all font-bold shadow-xs active:scale-95"
-                  title="Grille tarifaire officielle et Pass Bouquet Alphabette (dès 39 € / an)"
+                  title="Tarifs Alphabette : 15 € par an, ou 40 € par an pour toutes les applications"
                 >
                   <Crown className="w-3.5 h-3.5 text-amber-400" />
                   <span>Tarifs & Bouquet</span>
@@ -775,7 +775,7 @@ export const Header: React.FC<HeaderProps> = ({
                     className="p-2 bg-amber-950/60 hover:bg-amber-900/60 text-amber-300 font-bold text-xs rounded-xl flex items-center justify-center gap-1.5 border border-amber-800/60"
                   >
                     <Crown className="w-3.5 h-3.5 text-amber-400" />
-                    <span>Tarifs (39€-199€)</span>
+                    <span>Tarifs (15 € · 40 €)</span>
                   </button>
                 )}
               </div>

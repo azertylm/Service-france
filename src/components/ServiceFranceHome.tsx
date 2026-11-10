@@ -638,7 +638,7 @@ export const ServiceFranceHome: React.FC<ServiceFranceHomeProps> = ({
               <div className="bg-white/5 border border-white/10 rounded-2xl p-3 space-y-1">
                 <div className="flex items-center gap-1.5 text-blue-400 font-bold text-xs">
                   <span className="w-5 h-5 rounded-full bg-blue-400/20 flex items-center justify-center text-[10px]">2</span>
-                  <span>Mode BYOK (39 € / an)</span>
+                  <span>Avec votre propre clé IA</span>
                 </div>
                 <p className="text-[11px] text-slate-300 leading-snug">
                   Renseignez votre clé Mistral perso ou connectez votre Ollama Mac local à 0 €.
@@ -651,7 +651,7 @@ export const ServiceFranceHome: React.FC<ServiceFranceHomeProps> = ({
                   <span>Bouquet Alphabette</span>
                 </div>
                 <p className="text-[11px] text-amber-200 leading-snug">
-                  <strong>99 € / 199 € par an</strong> pour débloquer TOUTES les applications de la suite !
+                  Tarif prévu : <strong>40 € par an</strong> pour toutes les applications Alphabette (15 € pour une seule).
                 </p>
               </div>
             </div>

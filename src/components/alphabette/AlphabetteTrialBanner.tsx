@@ -134,7 +134,7 @@ export const AlphabetteTrialBanner: React.FC<AlphabetteTrialBannerProps> = ({
               onClick={onOpenPricing}
               className="text-[11px] font-bold text-indigo-700 hover:text-indigo-900"
             >
-              Découvrir le Bouquet (99 € / an)
+              Voir les tarifs (15 € ou 40 € par an)
             </button>
           </div>
         </div>
@@ -158,7 +158,7 @@ export const AlphabetteTrialBanner: React.FC<AlphabetteTrialBannerProps> = ({
             onClick={onOpenPricing}
             className="text-[11px] font-bold text-indigo-700 hover:text-indigo-900 underline"
           >
-            Passer au Bouquet Complet (199 € / an)
+            Voir les tarifs (15 € ou 40 € par an)
           </button>
         </div>
       </div>
@@ -182,7 +182,7 @@ export const AlphabetteTrialBanner: React.FC<AlphabetteTrialBannerProps> = ({
               onClick={onOpenByok}
               className="px-2.5 py-1 bg-white/80 hover:bg-white text-slate-900 rounded-lg text-xs font-bold transition-colors"
             >
-              Saisir ma clé (BYOK 39 €)
+              Saisir ma clé IA
             </button>
             <button
               onClick={onOpenPricing}
@@ -223,7 +223,7 @@ export const AlphabetteTrialBanner: React.FC<AlphabetteTrialBannerProps> = ({
             onClick={onOpenPricing}
             className="text-[11px] font-bold text-amber-400 hover:text-amber-300 transition-colors"
           >
-            Tarifs & Bouquet Alphabette (dès 39 € / an)
+            Tarifs Alphabette (15 € ou 40 € par an)
           </button>
           <span className="text-slate-600 hidden sm:inline">•</span>
           <a

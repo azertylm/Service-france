@@ -81,7 +81,7 @@ export const AlphabetteFooter: React.FC<AlphabetteFooterProps> = ({
                   onClick={onOpenPricing}
                   className="hover:text-amber-300 font-medium text-amber-400 transition-colors underline decoration-amber-600 underline-offset-4 text-[11px]"
                 >
-                  Grille Tarifaire & Bouquet (Dès 39 € / an)
+                  Tarifs (15 € ou 40 € par an)
                 </button>
               </>
             )}

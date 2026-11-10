@@ -315,7 +315,7 @@ export const MistralByokModal: React.FC<MistralByokModalProps> = ({
                   Vous ne souhaitez pas gérer de clé API ?
                 </p>
                 <p className="text-[11px] text-amber-800">
-                  Découvrez l'offre clé en main <strong>Confort (59 € / an)</strong> ou le <strong>Pass Bouquet Intégral (199 € / an)</strong> avec consommation Mistral managée.
+                  Tarifs prévus d'Alphabette : <strong>15 € par an</strong> pour une application, <strong>40 € par an</strong> pour toutes. L'IA utilise toujours votre propre clé.
                 </p>
               </div>
               <button
