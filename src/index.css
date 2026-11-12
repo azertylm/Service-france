@@ -53,4 +53,4 @@
    et son propre réglage de thème (le bouton Jour / Nuit de la barre est masqué
    pour ne pas laisser croire qu'il change toute la page). */
 .ab-shell > .ab-content { padding: 0; }
-.ab-bar .ab-theme--jour, .ab-bar .ab-theme--nuit { display: none; }
+.ab-bar .ab-pico--theme { display: none; } /* Service France n'a pas de mode nuit : le bouton ☀️/🌙 ne ferait rien. */
