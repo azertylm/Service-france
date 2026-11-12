@@ -29,6 +29,7 @@ import {
   X,
 } from 'lucide-react';
 import { MainService } from './Header';
+import { lireMembre, lienInscription } from '@alphabette/shell';
 
 interface ServiceFranceHomeProps {
   onSelectService: (service: MainService) => void;
@@ -279,6 +280,17 @@ export const ServiceFranceHome: React.FC<ServiceFranceHomeProps> = ({
 }) => {
   const [selectedCategory, setSelectedCategory] = useState<ToolCategory>('all');
   const [searchQuery, setSearchQuery] = useState('');
+  // Inscription gratuite par code (cookie partagé par tous les sites alphabette.fr).
+  const [membre, setMembre] = useState(() => lireMembre());
+  React.useEffect(() => {
+    const relire = () => setMembre(lireMembre());
+    window.addEventListener('alphabette:membre', relire);
+    window.addEventListener('focus', relire);
+    return () => {
+      window.removeEventListener('alphabette:membre', relire);
+      window.removeEventListener('focus', relire);
+    };
+  }, []);
 
   const filteredTools = useMemo(() => {
     return TOOLS_CATALOG.filter((tool) => {
@@ -628,10 +640,10 @@ export const ServiceFranceHome: React.FC<ServiceFranceHomeProps> = ({
               <div className="bg-white/5 border border-white/10 rounded-2xl p-3 space-y-1">
                 <div className="flex items-center gap-1.5 text-amber-400 font-bold text-xs">
                   <span className="w-5 h-5 rounded-full bg-amber-400/20 flex items-center justify-center text-[10px]">1</span>
-                  <span>7 Jours Offerts</span>
+                  <span>Gratuit</span>
                 </div>
                 <p className="text-[11px] text-slate-300 leading-snug">
-                  Accès immédiat alimenté par la clé Mistral propriétaire fournie par Alphabette.
+                  Guides, modèles et numéros utiles, sans compte et sans clé.
                 </p>
               </div>
 
@@ -648,10 +660,14 @@ export const ServiceFranceHome: React.FC<ServiceFranceHomeProps> = ({
               <div className="bg-white/5 border border-amber-400/40 rounded-2xl p-3 space-y-1 bg-amber-500/10">
                 <div className="flex items-center gap-1.5 text-amber-300 font-bold text-xs">
                   <Crown className="w-4 h-4 text-amber-400" />
-                  <span>Bouquet Alphabette</span>
+                  <span>{membre ? `Membre : ${membre.prenom}` : 'Bouquet Alphabette'}</span>
                 </div>
                 <p className="text-[11px] text-amber-200 leading-snug">
-                  Tarif prévu : <strong>40 € par an</strong> pour toutes les applications Alphabette (15 € pour une seule).
+                  {membre ? (
+                    <>Vous êtes inscrit(e) avec un code d'invitation : l'accès à toutes les applications Alphabette vous est offert.</>
+                  ) : (
+                    <>Tarif prévu : <strong>40 € par an</strong> pour toutes les applications Alphabette (15 € pour une seule). Vous avez un code d'invitation ? <a href={lienInscription()} className="underline font-bold">Inscription gratuite</a>.</>
+                  )}
                 </p>
               </div>
             </div>
