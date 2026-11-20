@@ -45,6 +45,7 @@ export type MainService =
   | 'garantie'
   | 'patrimoine'
   | 'plume'
+  | 'courrier'
   | 'memosante'
   | 'urgence';
 export type ClairContratTab = 'analyzer' | 'samples' | 'simulator' | 'rights' | 'history';
@@ -308,6 +309,16 @@ export const Header: React.FC<HeaderProps> = ({
                   <span>✍️ Plume</span>
                 </button>
                 <button
+                  onClick={() => handleSelectService('courrier')}
+                  className={`px-2 py-1 rounded text-[11px] font-medium transition-all flex items-center gap-1 ${
+                    currentService === 'courrier'
+                      ? 'bg-amber-500 text-slate-950 font-bold'
+                      : 'text-slate-300 hover:text-white'
+                  }`}
+                >
+                  <span>📬 Courrier</span>
+                </button>
+                <button
                   onClick={() => handleSelectService('patrimoine')}
                   className={`px-2 py-1 rounded text-[11px] font-medium transition-all flex items-center gap-1 ${
                     currentService === 'patrimoine'
@@ -474,6 +485,16 @@ export const Header: React.FC<HeaderProps> = ({
           }`}
         >
           ✍️ Plume
+        </button>
+        <button
+          onClick={() => handleSelectService('courrier')}
+          className={`px-2.5 py-1 rounded-md font-semibold transition-all shrink-0 flex items-center gap-1 ${
+            currentService === 'courrier'
+              ? 'bg-emerald-500 text-slate-950 font-bold'
+              : 'text-slate-300 hover:text-white bg-slate-900/60'
+          }`}
+        >
+          📬 Courrier
         </button>
         <button
           onClick={() => handleSelectService('patrimoine')}
@@ -699,6 +720,19 @@ export const Header: React.FC<HeaderProps> = ({
                 <div className="flex items-center gap-2">
                   <FileText className="w-4 h-4 text-emerald-400" />
                   <span>✍️ PlumeCitoyenne — Écrivain Public</span>
+                </div>
+              </button>
+              <button
+                onClick={() => handleSelectService('courrier')}
+                className={`p-2.5 rounded-xl text-left flex items-center justify-between text-xs font-bold transition-all ${
+                  currentService === 'courrier'
+                    ? 'bg-emerald-500 text-slate-950'
+                    : 'bg-slate-800 text-slate-200 hover:bg-slate-700'
+                }`}
+              >
+                <div className="flex items-center gap-2">
+                  <FileText className="w-4 h-4 text-emerald-400" />
+                  <span>📬 Décodeur de courrier administratif</span>
                 </div>
               </button>
 

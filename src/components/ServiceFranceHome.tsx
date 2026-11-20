@@ -27,6 +27,7 @@ import {
   ChevronRight,
   SlidersHorizontal,
   X,
+  Mail,
 } from 'lucide-react';
 import { MainService } from './Header';
 import { lireMembre, lienInscription } from '@alphabette/shell';
@@ -203,6 +204,22 @@ const TOOLS_CATALOG: ToolItem[] = [
     features: ['Sauvegarde ticket thermique', 'Export rappel iCal / Google Cal', 'Générateur réclamation SAV gratuit'],
     ctaLabel: 'Enregistrer un ticket',
     keywords: ['ticket', 'facture', 'garantie', 'achat', 'sav', 'reparation', 'panne', 'electromenager', 'consommation'],
+  },
+  {
+    id: 'courrier',
+    title: 'Décodeur de courrier',
+    badge: 'Nouveau',
+    badgeStyle: 'bg-indigo-100 text-indigo-900 border-indigo-200',
+    icon: Mail,
+    iconBg: 'bg-indigo-700 text-white',
+    accentBorder: 'hover:border-indigo-600 hover:shadow-indigo-600/10',
+    category: 'demarches',
+    categoryLabel: 'Courriers & Démarches',
+    tagline: 'Comprendre un courrier administratif',
+    description: 'Collez, dictez ou photographiez un courrier (CAF, impôts, amende, bailleur…) : résumé en 3 phrases, date limite et démarches étape par étape.',
+    features: ['Résumé en 3 phrases', 'Dictée vocale ou photo', 'Démarches pas à pas, à imprimer'],
+    ctaLabel: 'Décoder un courrier',
+    keywords: ['courrier', 'lettre', 'comprendre', 'decoder', 'caf', 'impots', 'amende', 'administration', 'recu', 'dicter'],
   },
   {
     id: 'plume',

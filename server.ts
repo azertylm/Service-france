@@ -519,6 +519,76 @@ Tonalité : ${tone || 'Courtoise, ferme et juridiquement motivée'}`;
 });
 
 // ==============================================================================
+// MODULE : DÉCODEUR DE COURRIER ADMINISTRATIF (résumé en 3 phrases + démarches)
+// ==============================================================================
+const CATEGORIES_COURRIER = [
+  'CAF & Aides sociales', 'Impôts & DGFIP', 'CPAM & Santé', 'Amendes & Mobilité (ANTAI)',
+  'Logement & Bailleur', 'Litiges de voisinage', 'France Travail & Emploi', 'Autre démarche',
+];
+app.post('/api/decode-courrier', async (req, res) => {
+  try {
+    const { text, file } = req.body || {};
+    const texte = typeof text === 'string' ? text.slice(0, 12000) : '';
+    if (!texte.trim() && !(file && file.data)) {
+      return res.status(400).json({ success: false, error: "Collez, dictez ou photographiez d'abord votre courrier." });
+    }
+
+    const systemPrompt = `Tu es le « Décodeur de courrier » de Service France (écosystème Alphabette, indépendant de l'administration).
+Tu expliques un courrier administratif à une personne qui n'est pas à l'aise avec ce vocabulaire : français très simple, vouvoiement, phrases courtes, aucun jargon (ou expliqué entre parenthèses).
+RÈGLES STRICTES :
+1. N'invente RIEN : montants, dates, références et délais viennent uniquement du courrier. S'ils n'y sont pas, écris "non indiqué dans le courrier".
+2. Pas d'avis juridique définitif : tu aides à comprendre et à agir ; en cas de doute, renvoie vers l'organisme lui-même ou un espace France services (accompagnement public gratuit).
+3. Si le courrier présente des signes d'arnaque (paiement par lien, SMS ou carte cadeau, menace immédiate, adresse d'expéditeur douteuse), dis-le clairement dans "vigilance" et conseille de vérifier en tapant soi-même l'adresse du site officiel.
+Réponds en JSON avec exactement ces clés :
+{
+ "expediteur": "qui écrit (organisme ou entreprise)",
+ "objet": "de quoi il s'agit, en 6 à 12 mots",
+ "resume": ["phrase 1", "phrase 2", "phrase 3"],
+ "echeance": "la date limite ou le délai à respecter, ou \"non indiqué dans le courrier\"",
+ "urgence": "faible | moyenne | forte",
+ "actions": [{"titre": "verbe à l'infinitif, court", "detail": "comment faire, une ou deux phrases"}],
+ "documents": ["pièce à préparer"],
+ "vigilance": "un point d'attention (ou chaîne vide)",
+ "reponse_ecrite": true,
+ "categorie": "une valeur parmi : ${CATEGORIES_COURRIER.join(' | ')}"
+}
+"resume" contient exactement 3 phrases. "actions" : 2 à 6 étapes dans l'ordre. "reponse_ecrite" vaut true seulement si une réponse écrite (lettre, recours, réclamation) est utile.`;
+
+    const userPrompt = texte.trim()
+      ? `Voici le courrier reçu (collé ou dicté par la personne) :\n"""\n${texte}\n"""`
+      : 'Le courrier reçu est sur la photo jointe.';
+    const images: Array<{ data: string; mimeType: string }> = [];
+    if (file && typeof file.data === 'string') images.push({ data: file.data, mimeType: file.mimeType || 'image/jpeg' });
+
+    const brut = await callMistralAI(req, { systemPrompt, userPrompt, images, temperature: 0.2 });
+    const chaine = (x: any, max = 600) => (typeof x === 'string' ? x.trim().slice(0, max) : '');
+    const resume = (Array.isArray(brut?.resume) ? brut.resume : [brut?.resume]).map((x: any) => chaine(x, 400)).filter(Boolean).slice(0, 3);
+    const decodage = {
+      expediteur: chaine(brut?.expediteur, 160) || 'Expéditeur non identifié',
+      objet: chaine(brut?.objet, 200),
+      resume,
+      echeance: chaine(brut?.echeance, 300) || 'non indiqué dans le courrier',
+      urgence: ['faible', 'moyenne', 'forte'].includes(brut?.urgence) ? brut.urgence : 'moyenne',
+      actions: (Array.isArray(brut?.actions) ? brut.actions : [])
+        .map((a: any) => ({ titre: chaine(a?.titre ?? a, 140), detail: chaine(a?.detail, 500) }))
+        .filter((a: any) => a.titre)
+        .slice(0, 6),
+      documents: (Array.isArray(brut?.documents) ? brut.documents : []).map((d: any) => chaine(d, 160)).filter(Boolean).slice(0, 8),
+      vigilance: chaine(brut?.vigilance, 500),
+      reponseEcrite: brut?.reponse_ecrite === true,
+      categorie: CATEGORIES_COURRIER.includes(brut?.categorie) ? brut.categorie : 'Autre démarche',
+    };
+    if (!decodage.resume.length || !decodage.actions.length) {
+      return res.status(502).json({ success: false, error: "L'IA n'a pas renvoyé un décodage complet. Réessayez." });
+    }
+    return res.json({ success: true, decodage });
+  } catch (error: any) {
+    console.error('Error in /api/decode-courrier:', error);
+    return res.status(500).json({ success: false, error: error?.message || 'Erreur lors du décodage du courrier.' });
+  }
+});
+
+// ==============================================================================
 // MODULE : MÉMOSANTÉ (Vulgarisation des comptes-rendus médicaux)
 // ==============================================================================
 app.post('/api/explain-medical-report', async (req, res) => {

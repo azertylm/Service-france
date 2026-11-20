@@ -10,6 +10,7 @@ import { SamplesView } from './components/SamplesView';
 import { ServiceFranceHome } from './components/ServiceFranceHome';
 import { PatrimoineHub } from './components/patrimoine/PatrimoineHub';
 import { PlumeHub } from './components/plume/PlumeHub';
+import { CourrierDecoderHub } from './components/courrier/CourrierDecoderHub';
 import { MemoSanteHub } from './components/memosante/MemoSanteHub';
 import { DroitsSociauxHub } from './components/droits/DroitsSociauxHub';
 import { EmergencyHub } from './components/emergency/EmergencyHub';
@@ -52,6 +53,7 @@ export default function App() {
         saved === 'garantie' ||
         saved === 'patrimoine' ||
         saved === 'plume' ||
+        saved === 'courrier' ||
         saved === 'memosante' ||
         saved === 'urgence' ||
         saved === 'accueil'
@@ -307,6 +309,11 @@ export default function App() {
             initialPrompt={plumePrefill?.prompt}
             initialCategory={plumePrefill?.category}
           />
+        )}
+
+        {/* VIEW : Décodeur de courrier administratif */}
+        {currentService === 'courrier' && (
+          <CourrierDecoderHub onNavigateToPlumeWithPrompt={handleNavigateToPlumeWithPrompt} />
         )}
 
         {/* VIEW 5: MémoSanté */}
