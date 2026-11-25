@@ -95,7 +95,7 @@ export const ZeroKnowledgeModal: React.FC<ZeroKnowledgeModalProps> = ({
                 <h3 className="text-base sm:text-lg font-black tracking-tight text-white">
                   Sécurité Souveraine & Zéro Connaissance
                 </h3>
-                <span className="text-[10px] uppercase font-bold bg-emerald-950 text-emerald-300 border border-emerald-700/60 px-2 py-0.5 rounded-full">
+                <span className="text-[0.625rem] uppercase font-bold bg-emerald-950 text-emerald-300 border border-emerald-700/60 px-2 py-0.5 rounded-full">
                   Zero-Knowledge
                 </span>
               </div>
@@ -173,7 +173,7 @@ export const ZeroKnowledgeModal: React.FC<ZeroKnowledgeModalProps> = ({
                   IA que vous avez choisi, jamais chez nous : ALPHABETTE n'a aucun moyen technique
                   d'y accéder. »
                 </blockquote>
-                <div className="text-[11px] text-emerald-900/80 font-semibold text-right">
+                <div className="text-[0.6875rem] text-emerald-900/80 font-semibold text-right">
                   — Valentin RICHAUD, Fondateur d'ALPHABETTE (La Grande-Motte, Occitanie)
                 </div>
               </div>
@@ -183,7 +183,7 @@ export const ZeroKnowledgeModal: React.FC<ZeroKnowledgeModalProps> = ({
                 <div className="p-3.5 rounded-xl border border-slate-200 bg-slate-50 space-y-1.5">
                   <ServerOff className="w-4 h-4 text-emerald-600" />
                   <strong className="block text-slate-900 font-bold text-xs">Stockage Local Strict</strong>
-                  <p className="text-[11px] text-slate-600 leading-relaxed">
+                  <p className="text-[0.6875rem] text-slate-600 leading-relaxed">
                     Toutes vos analyses, courriers et contrats restent enregistrés dans le navigateur de votre appareil.
                   </p>
                 </div>
@@ -191,7 +191,7 @@ export const ZeroKnowledgeModal: React.FC<ZeroKnowledgeModalProps> = ({
                 <div className="p-3.5 rounded-xl border border-slate-200 bg-slate-50 space-y-1.5">
                   <Lock className="w-4 h-4 text-indigo-600" />
                   <strong className="block text-slate-900 font-bold text-xs">Zéro Connaissance</strong>
-                  <p className="text-[11px] text-slate-600 leading-relaxed">
+                  <p className="text-[0.6875rem] text-slate-600 leading-relaxed">
                     Aucun serveur central ne détient les clés de lecture de vos dossiers intimes.
                   </p>
                 </div>
@@ -199,14 +199,14 @@ export const ZeroKnowledgeModal: React.FC<ZeroKnowledgeModalProps> = ({
                 <div className="p-3.5 rounded-xl border border-slate-200 bg-slate-50 space-y-1.5">
                   <CheckCircle2 className="w-4 h-4 text-teal-600" />
                   <strong className="block text-slate-900 font-bold text-xs">Zéro Publicité</strong>
-                  <p className="text-[11px] text-slate-600 leading-relaxed">
+                  <p className="text-[0.6875rem] text-slate-600 leading-relaxed">
                     Aucun tracker, aucune revente d'adresses ou de pathologies à des tiers ou assurances.
                   </p>
                 </div>
               </div>
 
               {/* Legal Notice */}
-              <div className="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-1.5 text-[11px] text-slate-500">
+              <div className="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-1.5 text-[0.6875rem] text-slate-500">
                 <p>
                   <strong>Éditeur responsable :</strong> Valentin Richaud (Alphabette), La Grande-Motte (Hérault). Société en cours de création.
                 </p>
@@ -243,7 +243,7 @@ export const ZeroKnowledgeModal: React.FC<ZeroKnowledgeModalProps> = ({
                   </h4>
                   <button
                     onClick={handleGenerateNewCode}
-                    className="text-[11px] text-indigo-600 hover:text-indigo-800 font-semibold flex items-center gap-1"
+                    className="text-[0.6875rem] text-indigo-600 hover:text-indigo-800 font-semibold flex items-center gap-1"
                   >
                     <RefreshCw className="w-3 h-3" />
                     Régénérer
@@ -267,7 +267,7 @@ export const ZeroKnowledgeModal: React.FC<ZeroKnowledgeModalProps> = ({
                   </div>
 
                   <div className="space-y-2 flex-1 text-center sm:text-left">
-                    <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">
+                    <span className="text-[0.625rem] font-bold text-slate-400 uppercase tracking-wider block">
                       Code de transfert éphémère (Valide 15 minutes)
                     </span>
                     <div className="font-mono text-sm sm:text-base font-black tracking-wider text-slate-900 bg-white p-2.5 rounded-lg border border-slate-300 inline-block">
@@ -359,17 +359,17 @@ export const ZeroKnowledgeModal: React.FC<ZeroKnowledgeModalProps> = ({
                       <div>
                         <div className="flex items-center gap-2">
                           <strong className="text-sm font-bold text-slate-900">{prof.name}</strong>
-                          <span className="text-[10px] font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded-full">
+                          <span className="text-[0.625rem] font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded-full">
                             {prof.relationship}
                           </span>
                           {hasExistingPin && (
-                            <span className="text-[10px] font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-md flex items-center gap-1">
+                            <span className="text-[0.625rem] font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-md flex items-center gap-1">
                               <Lock className="w-3 h-3" />
                               PIN actif
                             </span>
                           )}
                         </div>
-                        <p className="text-[11px] text-slate-500 mt-0.5">
+                        <p className="text-[0.6875rem] text-slate-500 mt-0.5">
                           {hasExistingPin
                             ? 'Dossier verrouillé localement.'
                             : 'Accès libre sans mot de passe.'}
@@ -414,7 +414,7 @@ export const ZeroKnowledgeModal: React.FC<ZeroKnowledgeModalProps> = ({
                       </div>
 
                       {pinSavedSuccess === prof.id && (
-                        <div className="text-[11px] text-emerald-700 font-bold sm:col-span-2">
+                        <div className="text-[0.6875rem] text-emerald-700 font-bold sm:col-span-2">
                           ✓ PIN enregistré avec succès pour {prof.name} !
                         </div>
                       )}
@@ -427,7 +427,7 @@ export const ZeroKnowledgeModal: React.FC<ZeroKnowledgeModalProps> = ({
                 <button
                   type="button"
                   onClick={() => setShowPin(!showPin)}
-                  className="text-slate-500 hover:text-slate-800 text-[11px] flex items-center gap-1 font-semibold"
+                  className="text-slate-500 hover:text-slate-800 text-[0.6875rem] flex items-center gap-1 font-semibold"
                 >
                   {showPin ? <EyeOff className="w-3.5 h-3.5" /> : <Eye className="w-3.5 h-3.5" />}
                   <span>{showPin ? 'Masquer les chiffres' : 'Afficher les chiffres'}</span>
@@ -439,7 +439,7 @@ export const ZeroKnowledgeModal: React.FC<ZeroKnowledgeModalProps> = ({
 
         {/* Footer */}
         <div className="p-4 sm:p-5 bg-slate-50 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
-          <div className="flex items-center gap-1.5 text-slate-500 text-[11px]">
+          <div className="flex items-center gap-1.5 text-slate-500 text-[0.6875rem]">
             <Lock className="w-3.5 h-3.5 text-emerald-600" />
             <span>Chiffrement souverain local actif · Zéro connaissance garantie</span>
           </div>

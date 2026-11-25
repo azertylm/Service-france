@@ -126,7 +126,7 @@ export const AlphabetteDataSynergyModal: React.FC<AlphabetteDataSynergyModalProp
             <span className="p-1 rounded-md bg-blue-500/20 text-blue-300">
               <Database className="w-4 h-4" />
             </span>
-            <span className="text-[11px] font-black uppercase tracking-wider text-blue-300">
+            <span className="text-[0.6875rem] font-black uppercase tracking-wider text-blue-300">
               Synergie des Données & Bouquet Alphabette
             </span>
           </div>
@@ -152,7 +152,7 @@ export const AlphabetteDataSynergyModal: React.FC<AlphabetteDataSynergyModalProp
                 <h4 className="font-bold text-slate-900 text-sm">
                   Exporter mon Dossier Citoyen
                 </h4>
-                <p className="text-[11px] text-slate-500 leading-relaxed">
+                <p className="text-[0.6875rem] text-slate-500 leading-relaxed">
                   Générez une archive JSON standardisée de vos contrats, quittances, avis ANTAI, relevés médicaux et tickets de garantie.
                 </p>
               </div>
@@ -176,7 +176,7 @@ export const AlphabetteDataSynergyModal: React.FC<AlphabetteDataSynergyModalProp
                 <h4 className="font-bold text-slate-900 text-sm">
                   Importer un Dossier Alphabette
                 </h4>
-                <p className="text-[11px] text-slate-500 leading-relaxed">
+                <p className="text-[0.6875rem] text-slate-500 leading-relaxed">
                   Restaurez ou synchronisez instantanément votre dossier provenant d'une autre application ou machine de la suite.
                 </p>
               </div>
@@ -207,7 +207,7 @@ export const AlphabetteDataSynergyModal: React.FC<AlphabetteDataSynergyModalProp
               <Crown className="w-4 h-4 text-amber-600" />
               <span>Pourquoi choisir le Bouquet Alphabette complet ?</span>
             </div>
-            <p className="text-[11px] text-slate-600 leading-relaxed">
+            <p className="text-[0.6875rem] text-slate-600 leading-relaxed">
               En souscrivant au <strong>Pass Bouquet Alphabette</strong> (40 € par an, tarif prévu), toutes les applications de la suite communiquent nativement : vos quittances créées sur AutoBailleur alimentent votre décodeur de droits sociaux, et vos contestations ANTAI se lient automatiquement à vos courriers PlumeCitoyenne.
             </p>
             {onOpenPricing && (
@@ -228,7 +228,7 @@ export const AlphabetteDataSynergyModal: React.FC<AlphabetteDataSynergyModalProp
 
         {/* Modal Footer with MANDATORY LINK */}
         <div className="bg-slate-900 text-white px-6 py-3.5 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs">
-          <span className="text-slate-400 text-center sm:text-left text-[11px]">
+          <span className="text-slate-400 text-center sm:text-left text-[0.6875rem]">
             ALPHABETTE · Synergie des données 100% souveraine
           </span>
           <a

@@ -33,7 +33,7 @@ export const AlphabetteQuotaExceededModal: React.FC<AlphabetteQuotaExceededModal
           </button>
 
           <div className="flex items-center gap-2 mb-2">
-            <span className="px-2.5 py-0.5 rounded-full bg-black/20 text-amber-200 text-[11px] font-black uppercase tracking-wider border border-amber-300/30 flex items-center gap-1">
+            <span className="px-2.5 py-0.5 rounded-full bg-black/20 text-amber-200 text-[0.6875rem] font-black uppercase tracking-wider border border-amber-300/30 flex items-center gap-1">
               <ShieldAlert className="w-3.5 h-3.5" />
               <span>Coupe-circuit Quota Quotidien (Règle 429)</span>
             </span>
@@ -106,7 +106,7 @@ export const AlphabetteQuotaExceededModal: React.FC<AlphabetteQuotaExceededModal
         </div>
 
         {/* Footer */}
-        <div className="bg-slate-900 text-slate-400 px-6 py-3 text-[11px] flex items-center justify-between border-t border-slate-800">
+        <div className="bg-slate-900 text-slate-400 px-6 py-3 text-[0.6875rem] flex items-center justify-between border-t border-slate-800">
           <span>ALPHABETTE · La Grande-Motte</span>
           <span className="text-amber-300 font-bold">Sécurité & Équité d'accès</span>
         </div>

@@ -133,7 +133,7 @@ export const VaccineTracker: React.FC<VaccineTrackerProps> = ({
             <p className="text-xs font-bold text-slate-700">
               Aucun vaccin enregistré pour cette sélection
             </p>
-            <p className="text-[11px] text-slate-500">
+            <p className="text-[0.6875rem] text-slate-500">
               Cliquez sur « Ajouter un vaccin » pour renseigner vos dates de rappels ou injections.
             </p>
           </div>
@@ -147,7 +147,7 @@ export const VaccineTracker: React.FC<VaccineTrackerProps> = ({
                 <div className="space-y-2">
                   <div className="flex items-start justify-between gap-2">
                     <div>
-                      <span className="text-[10px] font-bold text-slate-500 uppercase tracking-wider block">
+                      <span className="text-[0.625rem] font-bold text-slate-500 uppercase tracking-wider block">
                         {getMemberName(v.memberId)}
                       </span>
                       <h4 className="text-sm font-bold text-slate-900">{v.vaccineName}</h4>
@@ -158,7 +158,7 @@ export const VaccineTracker: React.FC<VaccineTrackerProps> = ({
 
                   <div className="grid grid-cols-2 gap-2 text-xs text-slate-600 pt-1 border-t border-slate-100">
                     <div>
-                      <span className="text-[10px] text-slate-400 block font-semibold">
+                      <span className="text-[0.625rem] text-slate-400 block font-semibold">
                         Dernière injection
                       </span>
                       <span className="font-medium text-slate-800">
@@ -167,7 +167,7 @@ export const VaccineTracker: React.FC<VaccineTrackerProps> = ({
                     </div>
 
                     <div>
-                      <span className="text-[10px] text-slate-400 block font-semibold">
+                      <span className="text-[0.625rem] text-slate-400 block font-semibold">
                         Prochain rappel
                       </span>
                       <span className="font-bold text-emerald-800">
@@ -177,7 +177,7 @@ export const VaccineTracker: React.FC<VaccineTrackerProps> = ({
                   </div>
 
                   {v.notes && (
-                    <p className="text-[11px] text-slate-500 italic bg-slate-50 p-2 rounded-lg">
+                    <p className="text-[0.6875rem] text-slate-500 italic bg-slate-50 p-2 rounded-lg">
                       « {v.notes} »
                     </p>
                   )}
@@ -210,7 +210,7 @@ export const VaccineTracker: React.FC<VaccineTrackerProps> = ({
               <h4 className="text-xs font-bold uppercase tracking-wider text-slate-900">
                 Repères officiels du Calendrier Vaccinal Français
               </h4>
-              <p className="text-[11px] text-slate-500">
+              <p className="text-[0.6875rem] text-slate-500">
                 Recommandations en vigueur de la Haute Autorité de Santé (HAS) et du Ministère de la Santé
               </p>
             </div>
@@ -230,11 +230,11 @@ export const VaccineTracker: React.FC<VaccineTrackerProps> = ({
                   <div className="flex items-center gap-2">
                     <span className="font-bold text-xs text-slate-900">{rec.targetDisease}</span>
                     {rec.mandatory ? (
-                      <span className="text-[9px] uppercase font-bold px-1.5 py-0.5 rounded bg-amber-100 text-amber-800">
+                      <span className="text-[0.5625rem] uppercase font-bold px-1.5 py-0.5 rounded bg-amber-100 text-amber-800">
                         Obligatoire / Essentiel
                       </span>
                     ) : (
-                      <span className="text-[9px] uppercase font-bold px-1.5 py-0.5 rounded bg-slate-100 text-slate-600">
+                      <span className="text-[0.5625rem] uppercase font-bold px-1.5 py-0.5 rounded bg-slate-100 text-slate-600">
                         Recommandé
                       </span>
                     )}

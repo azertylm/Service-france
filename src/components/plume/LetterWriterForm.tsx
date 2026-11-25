@@ -153,7 +153,7 @@ export const LetterWriterForm: React.FC<LetterWriterFormProps> = ({
           <span className="text-xs font-bold uppercase tracking-wider text-amber-400 bg-amber-950/70 px-2.5 py-1 rounded border border-amber-800/80">
             L'écrivain public administratif citoyen
           </span>
-          <span className="text-[11px] font-semibold text-emerald-300 bg-emerald-950/70 px-2 py-0.5 rounded border border-emerald-800/80 flex items-center gap-1">
+          <span className="text-[0.6875rem] font-semibold text-emerald-300 bg-emerald-950/70 px-2 py-0.5 rounded border border-emerald-800/80 flex items-center gap-1">
             <ShieldCheck className="w-3.5 h-3.5" />
             Rempart contre le non-recours aux droits
           </span>
@@ -286,7 +286,7 @@ export const LetterWriterForm: React.FC<LetterWriterFormProps> = ({
         {/* Optional citizen references */}
         <div className="space-y-2 pt-1">
           <div className="flex items-center justify-between">
-            <span className="text-[11px] font-bold text-slate-500 uppercase tracking-wider">
+            <span className="text-[0.6875rem] font-bold text-slate-500 uppercase tracking-wider">
               Coordonnées de l'usager
             </span>
             <button
@@ -315,7 +315,7 @@ export const LetterWriterForm: React.FC<LetterWriterFormProps> = ({
                   console.warn(e);
                 }
               }}
-              className="text-[11px] font-bold text-amber-700 hover:text-amber-800 bg-amber-50 hover:bg-amber-100 border border-amber-200 px-2.5 py-1 rounded-lg transition-colors flex items-center gap-1"
+              className="text-[0.6875rem] font-bold text-amber-700 hover:text-amber-800 bg-amber-50 hover:bg-amber-100 border border-amber-200 px-2.5 py-1 rounded-lg transition-colors flex items-center gap-1"
             >
               <span>⚡ Pré-remplir depuis mon trousseau</span>
             </button>

@@ -73,7 +73,7 @@ export const CircuitViewer: React.FC<CircuitViewerProps> = ({
           <span className="text-xs font-bold uppercase tracking-wider text-amber-400 bg-amber-950/60 px-2.5 py-1 rounded border border-amber-800/80">
             {circuit.commune} • {circuit.transportMode}
           </span>
-          <div className="flex items-center gap-1.5 text-[11px] text-emerald-400 bg-emerald-950/60 px-2.5 py-1 rounded border border-emerald-800/60">
+          <div className="flex items-center gap-1.5 text-[0.6875rem] text-emerald-400 bg-emerald-950/60 px-2.5 py-1 rounded border border-emerald-800/60">
             <Zap className="w-3 h-3" />
             <span>Batterie préservée (sans suivi GPS continu)</span>
           </div>
@@ -198,12 +198,12 @@ export const CircuitViewer: React.FC<CircuitViewerProps> = ({
                       <div className="flex flex-wrap items-center gap-2">
                         <span className="text-xs font-semibold text-slate-500">{site.style}</span>
                         {site.label && (
-                          <span className="text-[10px] font-bold bg-amber-50 text-amber-800 border border-amber-200 px-2 py-0.5 rounded-full">
+                          <span className="text-[0.625rem] font-bold bg-amber-50 text-amber-800 border border-amber-200 px-2 py-0.5 rounded-full">
                             {site.label}
                           </span>
                         )}
                         {isQuizDone && (
-                          <span className="text-[10px] font-bold bg-emerald-50 text-emerald-800 border border-emerald-200 px-2 py-0.5 rounded-full flex items-center gap-1">
+                          <span className="text-[0.625rem] font-bold bg-emerald-50 text-emerald-800 border border-emerald-200 px-2 py-0.5 rounded-full flex items-center gap-1">
                             <CheckCircle className="w-3 h-3" />
                             Énigme résolue ({site.badgeToUnlock.icon})
                           </span>

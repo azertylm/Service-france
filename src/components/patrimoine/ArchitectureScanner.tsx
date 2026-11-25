@@ -156,7 +156,7 @@ export const ArchitectureScanner: React.FC<ArchitectureScannerProps> = ({ onSite
                 <div className="text-xs font-semibold text-slate-700">
                   Prendre une photo ou importer un cliché
                 </div>
-                <span className="text-[11px] text-slate-400">JPG, PNG, WebP (bâtiment, brise-soleil, linteau)</span>
+                <span className="text-[0.6875rem] text-slate-400">JPG, PNG, WebP (bâtiment, brise-soleil, linteau)</span>
               </div>
             )}
           </div>
@@ -216,7 +216,7 @@ export const ArchitectureScanner: React.FC<ArchitectureScannerProps> = ({ onSite
 
         {/* Quick presets for immediate demonstration */}
         <div className="pt-2 border-t border-slate-100">
-          <span className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider block mb-2">
+          <span className="text-[0.6875rem] font-semibold text-slate-400 uppercase tracking-wider block mb-2">
             Exemples concrets du terrain à tester instantanément :
           </span>
           <div className="flex flex-wrap gap-2">
@@ -273,7 +273,7 @@ export const ArchitectureScanner: React.FC<ArchitectureScannerProps> = ({ onSite
         <div className="bg-white rounded-2xl border-2 border-amber-500/40 shadow-xl overflow-hidden animate-in fade-in slide-in-from-bottom-2 duration-300">
           <div className="bg-slate-900 text-white p-5 sm:p-6 border-b border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
             <div>
-              <span className="text-[11px] font-bold uppercase tracking-wider text-amber-400 bg-amber-950/60 px-2.5 py-1 rounded border border-amber-800/80">
+              <span className="text-[0.6875rem] font-bold uppercase tracking-wider text-amber-400 bg-amber-950/60 px-2.5 py-1 rounded border border-amber-800/80">
                 {analysisResult.styleFamily}
               </span>
               <h3 className="text-xl sm:text-2xl font-bold text-white mt-1.5">

@@ -148,7 +148,7 @@ export const AllergiesTracker: React.FC<AllergiesTrackerProps> = ({
             <p className="text-xs font-bold text-slate-700">
               Aucune allergie répertoriée pour cette sélection
             </p>
-            <p className="text-[11px] text-slate-500">
+            <p className="text-[0.6875rem] text-slate-500">
               Enregistrez vos intolérances médicamenteuses ou alimentaires pour générer votre carte d'urgence.
             </p>
           </div>
@@ -164,7 +164,7 @@ export const AllergiesTracker: React.FC<AllergiesTrackerProps> = ({
                   <div className="space-y-2.5">
                     <div className="flex items-start justify-between gap-2">
                       <div>
-                        <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">
+                        <span className="text-[0.625rem] font-bold text-slate-400 uppercase tracking-wider block">
                           {mem ? `${mem.name} (${mem.relationship})` : 'Proche'}
                         </span>
                         <h4 className="text-base font-black text-slate-900">{alg.allergen}</h4>
@@ -241,19 +241,19 @@ export const AllergiesTracker: React.FC<AllergiesTrackerProps> = ({
                     FICHE MÉDICALE D'URGENCE VACCINALE & ALLERGOLOGIQUE
                   </span>
                 </div>
-                <span className="text-[11px] font-bold text-slate-500">papierpapier.fr</span>
+                <span className="text-[0.6875rem] font-bold text-slate-500">papierpapier.fr</span>
               </div>
 
               {/* Patient Identity */}
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 bg-slate-50 p-4 rounded-2xl">
                 <div>
-                  <span className="text-[10px] uppercase font-bold text-slate-400 block">
+                  <span className="text-[0.625rem] uppercase font-bold text-slate-400 block">
                     Patient
                   </span>
                   <span className="font-bold text-sm text-slate-900">{activeMember.name}</span>
                 </div>
                 <div>
-                  <span className="text-[10px] uppercase font-bold text-slate-400 block">
+                  <span className="text-[0.625rem] uppercase font-bold text-slate-400 block">
                     Date de naissance
                   </span>
                   <span className="font-bold text-xs text-slate-800">
@@ -261,7 +261,7 @@ export const AllergiesTracker: React.FC<AllergiesTrackerProps> = ({
                   </span>
                 </div>
                 <div>
-                  <span className="text-[10px] uppercase font-bold text-slate-400 block">
+                  <span className="text-[0.625rem] uppercase font-bold text-slate-400 block">
                     Groupe Sanguin
                   </span>
                   <span className="font-black text-sm text-rose-700">
@@ -269,7 +269,7 @@ export const AllergiesTracker: React.FC<AllergiesTrackerProps> = ({
                   </span>
                 </div>
                 <div>
-                  <span className="text-[10px] uppercase font-bold text-slate-400 block">
+                  <span className="text-[0.625rem] uppercase font-bold text-slate-400 block">
                     Contact d'Urgence
                   </span>
                   <span className="font-bold text-xs text-slate-900">
@@ -299,10 +299,10 @@ export const AllergiesTracker: React.FC<AllergiesTrackerProps> = ({
                         <div>
                           <strong className="text-rose-950 font-bold">{a.allergen}</strong> (
                           {a.type})
-                          <p className="text-[11px] text-slate-600">{a.reactionDescription}</p>
+                          <p className="text-[0.6875rem] text-slate-600">{a.reactionDescription}</p>
                         </div>
                         {a.emergencyAction && (
-                          <div className="font-bold text-rose-800 text-[11px]">
+                          <div className="font-bold text-rose-800 text-[0.6875rem]">
                             {a.emergencyAction}
                           </div>
                         )}
@@ -312,7 +312,7 @@ export const AllergiesTracker: React.FC<AllergiesTrackerProps> = ({
                 )}
               </div>
 
-              <div className="pt-2 border-t border-slate-200 flex items-center justify-between text-[10px] text-slate-400">
+              <div className="pt-2 border-t border-slate-200 flex items-center justify-between text-[0.625rem] text-slate-400">
                 <span>Médecin traitant : {activeMember.treatingDoctor || 'Non spécifié'}</span>
                 <span>Document 100% privé généré localement sur papierpapier.fr</span>
               </div>

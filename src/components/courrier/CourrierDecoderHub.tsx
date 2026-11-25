@@ -260,7 +260,7 @@ export const CourrierDecoderHub: React.FC<Props> = ({ onNavigateToPlumeWithPromp
                   <span className="w-8 h-8 shrink-0 rounded-full bg-indigo-700 text-white font-black flex items-center justify-center" aria-hidden="true">{i + 1}</span>
                   <div>
                     <p className="font-bold text-slate-900 text-base">{a.titre}</p>
-                    {a.detail && <p className="text-slate-700 text-[15px] leading-relaxed">{a.detail}</p>}
+                    {a.detail && <p className="text-slate-700 text-[0.9375rem] leading-relaxed">{a.detail}</p>}
                   </div>
                 </li>
               ))}

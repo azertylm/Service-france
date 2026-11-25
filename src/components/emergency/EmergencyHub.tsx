@@ -388,7 +388,7 @@ export const EmergencyHub: React.FC<EmergencyHubProps> = ({ onBackToPortal }) =>
                           <span className="text-2xl font-black text-slate-900 tracking-tight">
                             {item.number}
                           </span>
-                          <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-slate-100 text-slate-700">
+                          <span className="text-[0.625rem] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-slate-100 text-slate-700">
                             {item.badge}
                           </span>
                         </div>
@@ -400,7 +400,7 @@ export const EmergencyHub: React.FC<EmergencyHubProps> = ({ onBackToPortal }) =>
 
                     {item.isDiscreet && (
                       <span
-                        className="text-[10px] font-bold bg-purple-100 text-purple-900 px-2 py-0.5 rounded-md shrink-0 border border-purple-200"
+                        className="text-[0.625rem] font-bold bg-purple-100 text-purple-900 px-2 py-0.5 rounded-md shrink-0 border border-purple-200"
                         title="Cet appel n'apparaît pas sur les relevés téléphoniques de votre opérateur"
                       >
                         Invisible facture
@@ -420,7 +420,7 @@ export const EmergencyHub: React.FC<EmergencyHubProps> = ({ onBackToPortal }) =>
 
                   {/* When to call bullets */}
                   <div className="bg-slate-50 rounded-2xl p-3 space-y-1.5 border border-slate-100">
-                    <strong className="text-[10px] uppercase font-bold text-slate-500 tracking-wider block">
+                    <strong className="text-[0.625rem] uppercase font-bold text-slate-500 tracking-wider block">
                       Quand contacter :
                     </strong>
                     <ul className="text-xs text-slate-700 space-y-1">
@@ -525,7 +525,7 @@ export const EmergencyHub: React.FC<EmergencyHubProps> = ({ onBackToPortal }) =>
                   </div>
                   <button
                     onClick={handleCopyCoords}
-                    className="px-2.5 py-1 bg-white border border-emerald-300 hover:bg-emerald-100 rounded-lg text-[11px] font-semibold flex items-center gap-1 shrink-0"
+                    className="px-2.5 py-1 bg-white border border-emerald-300 hover:bg-emerald-100 rounded-lg text-[0.6875rem] font-semibold flex items-center gap-1 shrink-0"
                   >
                     {copiedCoords ? <Check className="w-3 h-3 text-emerald-700" /> : <Copy className="w-3 h-3" />}
                     <span>{copiedCoords ? 'Copié !' : 'Copier'}</span>
@@ -632,7 +632,7 @@ export const EmergencyHub: React.FC<EmergencyHubProps> = ({ onBackToPortal }) =>
           {/* Header & Metronome Bar */}
           <div className="bg-white rounded-3xl p-6 sm:p-7 border border-slate-200 shadow-xs flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
             <div>
-              <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-900 text-[10px] font-bold uppercase mb-1">
+              <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-900 text-[0.625rem] font-bold uppercase mb-1">
                 <Check className="w-3 h-3 text-emerald-700" />
                 <span>Base médicale locale sans réseau</span>
               </div>
@@ -654,7 +654,7 @@ export const EmergencyHub: React.FC<EmergencyHubProps> = ({ onBackToPortal }) =>
                 />
                 <div>
                   <span className="text-xs font-bold block">Rythme Massage Cardiaque</span>
-                  <span className="text-[10px] text-slate-400">110 BPM (Stayin' Alive)</span>
+                  <span className="text-[0.625rem] text-slate-400">110 BPM (Stayin' Alive)</span>
                 </div>
               </div>
 
@@ -676,7 +676,7 @@ export const EmergencyHub: React.FC<EmergencyHubProps> = ({ onBackToPortal }) =>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
             {/* Left Protocol Menu */}
             <div className="lg:col-span-4 bg-white rounded-3xl p-4 border border-slate-200 shadow-xs space-y-2">
-              <span className="text-[11px] uppercase font-bold text-slate-400 tracking-wider px-2 block">
+              <span className="text-[0.6875rem] uppercase font-bold text-slate-400 tracking-wider px-2 block">
                 Situations d'urgence ({filteredProtocols.length})
               </span>
 
@@ -698,7 +698,7 @@ export const EmergencyHub: React.FC<EmergencyHubProps> = ({ onBackToPortal }) =>
                           {proto.title}
                         </span>
                         <span
-                          className={`text-[10px] line-clamp-1 ${
+                          className={`text-[0.625rem] line-clamp-1 ${
                             isSelected ? 'text-slate-300' : 'text-slate-500'
                           }`}
                         >
@@ -707,7 +707,7 @@ export const EmergencyHub: React.FC<EmergencyHubProps> = ({ onBackToPortal }) =>
                       </div>
 
                       <span
-                        className={`text-[9px] uppercase font-bold px-1.5 py-0.5 rounded shrink-0 ${
+                        className={`text-[0.5625rem] uppercase font-bold px-1.5 py-0.5 rounded shrink-0 ${
                           proto.urgencyLevel === 'vitale'
                             ? isSelected
                               ? 'bg-rose-500 text-white'

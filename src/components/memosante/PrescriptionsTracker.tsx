@@ -107,7 +107,7 @@ export const PrescriptionsTracker: React.FC<PrescriptionsTrackerProps> = ({
             <p className="text-xs font-bold text-slate-700">
               Aucun traitement enregistré actuellement
             </p>
-            <p className="text-[11px] text-slate-500">
+            <p className="text-[0.6875rem] text-slate-500">
               Ajoutez vos médicaments réguliers ou ponctuels pour ne plus oublier vos renouvellements.
             </p>
           </div>
@@ -123,7 +123,7 @@ export const PrescriptionsTracker: React.FC<PrescriptionsTrackerProps> = ({
                 <div className="space-y-2.5">
                   <div className="flex items-start justify-between gap-2">
                     <div>
-                      <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">
+                      <span className="text-[0.625rem] font-bold text-slate-400 uppercase tracking-wider block">
                         {getMemberName(rx.memberId)}
                       </span>
                       <h4 className="text-base font-black text-slate-900">{rx.medicationName}</h4>
@@ -153,7 +153,7 @@ export const PrescriptionsTracker: React.FC<PrescriptionsTrackerProps> = ({
                     <p>
                       <strong>Fréquence :</strong> {rx.frequency}
                     </p>
-                    <div className="grid grid-cols-2 gap-2 text-[11px] text-slate-500 pt-1 border-t border-slate-200/60">
+                    <div className="grid grid-cols-2 gap-2 text-[0.6875rem] text-slate-500 pt-1 border-t border-slate-200/60">
                       <span>Début : {rx.startDate}</span>
                       <span>Fin : {rx.endDate || 'Chronique / Continu'}</span>
                     </div>
@@ -169,7 +169,7 @@ export const PrescriptionsTracker: React.FC<PrescriptionsTrackerProps> = ({
                   )}
 
                   {rx.prescribingDoctor && (
-                    <p className="text-[11px] text-slate-400">
+                    <p className="text-[0.6875rem] text-slate-400">
                       Prescrit par : {rx.prescribingDoctor}
                     </p>
                   )}

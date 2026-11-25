@@ -125,7 +125,7 @@ L'appareil a moins de 2 ans et relève de la garantie légale de conformité (Co
                 <span className="text-xs uppercase font-extrabold text-amber-400 tracking-wider">
                   Garantie Légale de Conformité (2 ans)
                 </span>
-                <span className="text-[10px] bg-amber-500/20 text-amber-300 px-2 py-0.5 rounded-full border border-amber-500/30">
+                <span className="text-[0.625rem] bg-amber-500/20 text-amber-300 px-2 py-0.5 rounded-full border border-amber-500/30">
                   Art. L. 217-3 à L. 217-14
                 </span>
               </div>
@@ -249,7 +249,7 @@ L'appareil a moins de 2 ans et relève de la garantie légale de conformité (Co
 
               {/* Coordinates prefill */}
               <div className="pt-2 border-t border-slate-200 space-y-1.5">
-                <span className="font-bold text-slate-700 block text-[11px]">
+                <span className="font-bold text-slate-700 block text-[0.6875rem]">
                   Vos coordonnées pour l'en-tête du courrier :
                 </span>
                 <div className="grid grid-cols-2 gap-1.5">

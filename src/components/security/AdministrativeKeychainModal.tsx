@@ -86,7 +86,7 @@ export const AdministrativeKeychainModal: React.FC<AdministrativeKeychainModalPr
                 <h3 className="text-base sm:text-lg font-black tracking-tight text-white">
                   Trousseau d'Identité Administrative
                 </h3>
-                <span className="text-[10px] uppercase font-bold bg-amber-950 text-amber-300 border border-amber-700/60 px-2 py-0.5 rounded-full">
+                <span className="text-[0.625rem] uppercase font-bold bg-amber-950 text-amber-300 border border-amber-700/60 px-2 py-0.5 rounded-full">
                   100% Local
                 </span>
               </div>
@@ -117,7 +117,7 @@ export const AdministrativeKeychainModal: React.FC<AdministrativeKeychainModalPr
         <form onSubmit={handleSubmit} className="p-6 overflow-y-auto space-y-5 flex-1 text-xs">
           {/* Identity */}
           <div className="space-y-3">
-            <h4 className="font-bold text-slate-900 uppercase tracking-wider text-[11px] flex items-center gap-1.5 border-b border-slate-100 pb-1.5">
+            <h4 className="font-bold text-slate-900 uppercase tracking-wider text-[0.6875rem] flex items-center gap-1.5 border-b border-slate-100 pb-1.5">
               <User className="w-3.5 h-3.5 text-slate-600" />
               État Civil du Titulaire
             </h4>
@@ -159,7 +159,7 @@ export const AdministrativeKeychainModal: React.FC<AdministrativeKeychainModalPr
 
           {/* Coordinates */}
           <div className="space-y-3">
-            <h4 className="font-bold text-slate-900 uppercase tracking-wider text-[11px] flex items-center gap-1.5 border-b border-slate-100 pb-1.5">
+            <h4 className="font-bold text-slate-900 uppercase tracking-wider text-[0.6875rem] flex items-center gap-1.5 border-b border-slate-100 pb-1.5">
               <MapPin className="w-3.5 h-3.5 text-slate-600" />
               Coordonnées postales & Contact
             </h4>
@@ -226,7 +226,7 @@ export const AdministrativeKeychainModal: React.FC<AdministrativeKeychainModalPr
 
           {/* Official Administrative Numbers */}
           <div className="space-y-3">
-            <h4 className="font-bold text-slate-900 uppercase tracking-wider text-[11px] flex items-center gap-1.5 border-b border-slate-100 pb-1.5">
+            <h4 className="font-bold text-slate-900 uppercase tracking-wider text-[0.6875rem] flex items-center gap-1.5 border-b border-slate-100 pb-1.5">
               <Building className="w-3.5 h-3.5 text-slate-600" />
               Numéros Administratifs Clés
             </h4>

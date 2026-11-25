@@ -234,7 +234,7 @@ export const PlumeHub: React.FC<PlumeHubProps> = ({
                       {preset.situation}
                     </p>
 
-                    <div className="text-[11px] text-slate-500 pt-1">
+                    <div className="text-[0.6875rem] text-slate-500 pt-1">
                       <strong>Destinataire type :</strong> {preset.recipientDescription}
                     </div>
                   </div>

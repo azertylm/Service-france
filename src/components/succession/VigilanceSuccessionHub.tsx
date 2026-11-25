@@ -293,31 +293,31 @@ export const VigilanceSuccessionHub: React.FC<VigilanceSuccessionHubProps> = ({
           {/* Quick Metrics Bar */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-3">
             <div className="bg-stone-800/80 border border-stone-700/80 rounded-2xl p-3">
-              <span className="block text-[11px] text-stone-400 uppercase font-semibold">Temps écoulé</span>
+              <span className="block text-[0.6875rem] text-stone-400 uppercase font-semibold">Temps écoulé</span>
               <span className="text-lg font-black text-amber-300">
                 {daysSinceDeath} jour{daysSinceDeath > 1 ? 's' : ''}
               </span>
-              <span className="block text-[10px] text-stone-400 mt-0.5">depuis le décès</span>
+              <span className="block text-[0.625rem] text-stone-400 mt-0.5">depuis le décès</span>
             </div>
 
             <div className="bg-stone-800/80 border border-stone-700/80 rounded-2xl p-3">
-              <span className="block text-[11px] text-stone-400 uppercase font-semibold">Progression</span>
+              <span className="block text-[0.6875rem] text-stone-400 uppercase font-semibold">Progression</span>
               <span className="text-lg font-black text-emerald-400">
                 {completedCount} / {totalOrganismsCount}
               </span>
-              <span className="block text-[10px] text-stone-400 mt-0.5">organismes traités</span>
+              <span className="block text-[0.625rem] text-stone-400 mt-0.5">organismes traités</span>
             </div>
 
             <div className="bg-stone-800/80 border border-stone-700/80 rounded-2xl p-3">
-              <span className="block text-[11px] text-stone-400 uppercase font-semibold">Courriers prêts</span>
+              <span className="block text-[0.6875rem] text-stone-400 uppercase font-semibold">Courriers prêts</span>
               <span className="text-lg font-black text-sky-300">{totalOrganismsCount}</span>
-              <span className="block text-[10px] text-stone-400 mt-0.5">modèles pré-remplis</span>
+              <span className="block text-[0.625rem] text-stone-400 mt-0.5">modèles pré-remplis</span>
             </div>
 
             <div className="bg-stone-800/80 border border-stone-700/80 rounded-2xl p-3">
-              <span className="block text-[11px] text-stone-400 uppercase font-semibold">Anti-Prélèvement</span>
+              <span className="block text-[0.6875rem] text-stone-400 uppercase font-semibold">Anti-Prélèvement</span>
               <span className="text-lg font-black text-rose-300">{blockersCount} organismes</span>
-              <span className="block text-[10px] text-stone-400 mt-0.5">cessation de plein droit</span>
+              <span className="block text-[0.625rem] text-stone-400 mt-0.5">cessation de plein droit</span>
             </div>
           </div>
         </div>
@@ -416,7 +416,7 @@ export const VigilanceSuccessionHub: React.FC<VigilanceSuccessionHubProps> = ({
                   style={{ width: `${progressionPercent}%` }}
                 />
               </div>
-              <div className="flex justify-between text-[11px] text-slate-500 font-medium">
+              <div className="flex justify-between text-[0.6875rem] text-slate-500 font-medium">
                 <span>{completedCount} démarches clôturées</span>
                 <span>{totalOrganismsCount - completedCount} formalités restantes</span>
               </div>
@@ -452,7 +452,7 @@ export const VigilanceSuccessionHub: React.FC<VigilanceSuccessionHubProps> = ({
                   >
                     <span>{TIMEFRAME_LABELS[tf].badge}</span>
                     <span
-                      className={`text-[10px] px-1.5 py-0.2 rounded-full ${
+                      className={`text-[0.625rem] px-1.5 py-0.2 rounded-full ${
                         selectedTimeframe === tf ? 'bg-amber-700 text-white' : 'bg-slate-200 text-slate-700'
                       }`}
                     >
@@ -528,11 +528,11 @@ export const VigilanceSuccessionHub: React.FC<VigilanceSuccessionHubProps> = ({
                                     >
                                       {org.name}
                                     </h4>
-                                    <span className="text-[10px] font-bold uppercase px-2 py-0.5 rounded-md bg-slate-100 text-slate-700">
+                                    <span className="text-[0.625rem] font-bold uppercase px-2 py-0.5 rounded-md bg-slate-100 text-slate-700">
                                       {org.categoryLabel}
                                     </span>
                                     {org.stopsDirectDebits && (
-                                      <span className="text-[10px] font-bold uppercase px-2 py-0.5 rounded-md bg-rose-100 text-rose-800 flex items-center gap-1">
+                                      <span className="text-[0.625rem] font-bold uppercase px-2 py-0.5 rounded-md bg-rose-100 text-rose-800 flex items-center gap-1">
                                         <Ban className="w-3 h-3" />
                                         Bloque prélèvements
                                       </span>
@@ -544,7 +544,7 @@ export const VigilanceSuccessionHub: React.FC<VigilanceSuccessionHubProps> = ({
                               </div>
 
                               <div className="text-right shrink-0">
-                                <span className="inline-block text-[11px] font-semibold text-amber-800 bg-amber-50 border border-amber-200 px-2.5 py-1 rounded-lg">
+                                <span className="inline-block text-[0.6875rem] font-semibold text-amber-800 bg-amber-50 border border-amber-200 px-2.5 py-1 rounded-lg">
                                   Délai : {org.legalDeadline}
                                 </span>
                               </div>
@@ -557,7 +557,7 @@ export const VigilanceSuccessionHub: React.FC<VigilanceSuccessionHubProps> = ({
                                   <Info className="w-3.5 h-3.5 text-sky-600 shrink-0" />
                                   <span>Fondement juridique & Enjeu :</span>
                                 </div>
-                                <p className="text-[11px] text-slate-600 font-mono">{org.legalBasis}</p>
+                                <p className="text-[0.6875rem] text-slate-600 font-mono">{org.legalBasis}</p>
                                 <p className="text-slate-700 text-xs italic">{org.whyCrucial}</p>
                               </div>
 
@@ -566,7 +566,7 @@ export const VigilanceSuccessionHub: React.FC<VigilanceSuccessionHubProps> = ({
                                   <FileText className="w-3.5 h-3.5 text-amber-600 shrink-0" />
                                   <span>Pièces impératives à joindre :</span>
                                 </div>
-                                <ul className="space-y-1 text-slate-600 text-[11px]">
+                                <ul className="space-y-1 text-slate-600 text-[0.6875rem]">
                                   {org.documentsRequired.map((doc, idx) => (
                                     <li key={idx} className="flex items-start gap-1.5">
                                       <span className="text-amber-500 font-bold">•</span>
@@ -580,10 +580,10 @@ export const VigilanceSuccessionHub: React.FC<VigilanceSuccessionHubProps> = ({
                             {/* Practical Tips */}
                             {org.tips && org.tips.length > 0 && (
                               <div className="bg-amber-50/60 border-l-3 border-amber-500 p-2.5 rounded-r-xl text-xs space-y-1">
-                                <strong className="text-amber-950 font-bold block text-[11px]">
+                                <strong className="text-amber-950 font-bold block text-[0.6875rem]">
                                   Conseils pratiques & pièges à éviter :
                                 </strong>
-                                <ul className="space-y-0.5 text-stone-700 text-[11px]">
+                                <ul className="space-y-0.5 text-stone-700 text-[0.6875rem]">
                                   {org.tips.map((tip, idx) => (
                                     <li key={idx} className="flex items-start gap-1.5">
                                       <span className="text-amber-600">💡</span>
@@ -705,7 +705,7 @@ export const VigilanceSuccessionHub: React.FC<VigilanceSuccessionHubProps> = ({
                           />
                           <span className="truncate text-slate-900">{org.name}</span>
                         </div>
-                        <span className="text-[10px] text-slate-500 block truncate">
+                        <span className="text-[0.625rem] text-slate-500 block truncate">
                           {org.categoryLabel} • {org.legalDeadline}
                         </span>
                       </div>
@@ -764,14 +764,14 @@ export const VigilanceSuccessionHub: React.FC<VigilanceSuccessionHubProps> = ({
                 {/* Registered mail tag */}
                 <div className="flex justify-between items-start border-b border-slate-100 pb-4">
                   <div className="space-y-1">
-                    <span className="inline-block bg-slate-900 text-white font-mono text-[10px] font-bold px-2 py-0.5 rounded">
+                    <span className="inline-block bg-slate-900 text-white font-mono text-[0.625rem] font-bold px-2 py-0.5 rounded">
                       LETTRE RECOMMANDÉE AVEC A.R.
                     </span>
-                    <p className="text-[11px] text-slate-500 font-mono">
+                    <p className="text-[0.6875rem] text-slate-500 font-mono">
                       Fondement légal : {currentOrganism.legalBasis}
                     </p>
                   </div>
-                  <div className="text-right text-[11px] text-slate-500">
+                  <div className="text-right text-[0.6875rem] text-slate-500">
                     Fait le {new Date().toLocaleDateString('fr-FR')}
                   </div>
                 </div>
@@ -779,7 +779,7 @@ export const VigilanceSuccessionHub: React.FC<VigilanceSuccessionHubProps> = ({
                 {/* Sender & Recipient addresses */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-2">
                   <div className="bg-slate-50 p-4 rounded-xl border border-slate-100 space-y-1">
-                    <strong className="block text-[11px] uppercase tracking-wider text-slate-400 font-bold">
+                    <strong className="block text-[0.6875rem] uppercase tracking-wider text-slate-400 font-bold">
                       Expéditeur (Déclarant / Ayant droit) :
                     </strong>
                     <div className="font-bold text-slate-900 text-xs sm:text-sm">
@@ -788,16 +788,16 @@ export const VigilanceSuccessionHub: React.FC<VigilanceSuccessionHubProps> = ({
                     <div className="text-slate-600 text-xs leading-relaxed">
                       {formData.declarantAddress}
                     </div>
-                    <div className="text-slate-500 text-[11px] pt-1 font-mono">
+                    <div className="text-slate-500 text-[0.6875rem] pt-1 font-mono">
                       Tél : {formData.declarantPhone || '—'} | Email : {formData.declarantEmail || '—'}
                     </div>
-                    <div className="text-sky-700 text-[11px] font-medium pt-0.5">
+                    <div className="text-sky-700 text-[0.6875rem] font-medium pt-0.5">
                       Qualité : {formData.declarantRelationship}
                     </div>
                   </div>
 
                   <div className="bg-sky-50/60 p-4 rounded-xl border border-sky-100 space-y-1">
-                    <strong className="block text-[11px] uppercase tracking-wider text-sky-700 font-bold">
+                    <strong className="block text-[0.6875rem] uppercase tracking-wider text-sky-700 font-bold">
                       Destinataire officiel :
                     </strong>
                     <div className="font-bold text-slate-900 text-xs sm:text-sm">
@@ -824,7 +824,7 @@ export const VigilanceSuccessionHub: React.FC<VigilanceSuccessionHubProps> = ({
                 <div className="pt-6 border-t border-slate-100 flex justify-between items-end">
                   <div className="text-xs text-slate-500 space-y-1">
                     <strong className="block text-slate-700 font-semibold">Pièces jointes obligatoires :</strong>
-                    <ul className="space-y-0.5 list-disc list-inside text-[11px]">
+                    <ul className="space-y-0.5 list-disc list-inside text-[0.6875rem]">
                       {currentOrganism.documentsRequired.map((doc, idx) => (
                         <li key={idx}>{doc}</li>
                       ))}
@@ -834,7 +834,7 @@ export const VigilanceSuccessionHub: React.FC<VigilanceSuccessionHubProps> = ({
                   <div className="text-right space-y-3">
                     <p className="text-xs font-semibold text-slate-700">{formData.declarantFullName}</p>
                     <div className="h-10 border-b border-dashed border-slate-300 w-36 ml-auto" />
-                    <span className="text-[10px] text-slate-400 italic">Signature de l'ayant droit</span>
+                    <span className="text-[0.625rem] text-slate-400 italic">Signature de l'ayant droit</span>
                   </div>
                 </div>
 
@@ -929,21 +929,21 @@ export const VigilanceSuccessionHub: React.FC<VigilanceSuccessionHubProps> = ({
                     <div className="space-y-1">
                       <div className="flex items-center gap-2">
                         <span className="font-bold text-slate-900">{org.name}</span>
-                        <span className="text-[10px] bg-slate-100 text-slate-600 font-semibold px-2 py-0.5 rounded">
+                        <span className="text-[0.625rem] bg-slate-100 text-slate-600 font-semibold px-2 py-0.5 rounded">
                           {org.categoryLabel}
                         </span>
                       </div>
-                      <p className="text-slate-500 text-[11px]">{org.whyCrucial}</p>
+                      <p className="text-slate-500 text-[0.6875rem]">{org.whyCrucial}</p>
                     </div>
 
                     <div className="flex items-center gap-3 shrink-0">
                       {isBlocked ? (
-                        <span className="px-2.5 py-1 rounded-lg bg-rose-50 border border-rose-200 text-rose-800 font-bold flex items-center gap-1 text-[11px]">
+                        <span className="px-2.5 py-1 rounded-lg bg-rose-50 border border-rose-200 text-rose-800 font-bold flex items-center gap-1 text-[0.6875rem]">
                           <Ban className="w-3 h-3 text-rose-600" />
                           <span>Prélèvement à stopper</span>
                         </span>
                       ) : (
-                        <span className="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-600 font-medium text-[11px]">
+                        <span className="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-600 font-medium text-[0.6875rem]">
                           Pas de prélèvement direct
                         </span>
                       )}
@@ -991,7 +991,7 @@ export const VigilanceSuccessionHub: React.FC<VigilanceSuccessionHubProps> = ({
             </div>
 
             <div className="flex items-center gap-2">
-              <span className="text-[11px] text-emerald-700 bg-emerald-50 border border-emerald-200 px-3 py-1 rounded-xl font-bold flex items-center gap-1.5">
+              <span className="text-[0.6875rem] text-emerald-700 bg-emerald-50 border border-emerald-200 px-3 py-1 rounded-xl font-bold flex items-center gap-1.5">
                 <KeyRound className="w-3.5 h-3.5 text-emerald-600" />
                 <span>Stockage 100% local (Zero-Knowledge)</span>
               </span>

@@ -168,7 +168,7 @@ export const ScanTicketModal: React.FC<ScanTicketModalProps> = ({ onClose, onSav
                 <span className="text-xs uppercase font-extrabold text-amber-400 tracking-wider">
                   Numérisation de preuve d'achat
                 </span>
-                <span className="text-[10px] bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded-full border border-emerald-500/30">
+                <span className="text-[0.625rem] bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded-full border border-emerald-500/30">
                   Anti-effacement thermique
                 </span>
               </div>
@@ -252,7 +252,7 @@ export const ScanTicketModal: React.FC<ScanTicketModalProps> = ({ onClose, onSav
                   <CheckCircle2 className="w-4 h-4" />
                   <span>Ticket capturé et optimisé contre l'effacement</span>
                 </p>
-                <p className="text-[11px] text-slate-400">
+                <p className="text-[0.6875rem] text-slate-400">
                   Cliquez pour changer de photo
                 </p>
               </div>
@@ -265,7 +265,7 @@ export const ScanTicketModal: React.FC<ScanTicketModalProps> = ({ onClose, onSav
                   <p className="text-xs font-bold text-slate-800">
                     Prendre une photo ou importer un ticket de caisse / facture
                   </p>
-                  <p className="text-[11px] text-slate-500">
+                  <p className="text-[0.6875rem] text-slate-500">
                     Appareil photo smartphone, fichier JPG, PNG ou PDF
                   </p>
                 </div>

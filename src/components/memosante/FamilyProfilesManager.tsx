@@ -87,7 +87,7 @@ export const FamilyProfilesManager: React.FC<FamilyProfilesManagerProps> = ({
           >
             <div className="space-y-4">
               <div className="flex items-center justify-between">
-                <span className="text-[10px] font-bold uppercase tracking-wider text-emerald-800 bg-emerald-100 px-2.5 py-1 rounded-full">
+                <span className="text-[0.625rem] font-bold uppercase tracking-wider text-emerald-800 bg-emerald-100 px-2.5 py-1 rounded-full">
                   {member.relationship}
                 </span>
 
@@ -107,7 +107,7 @@ export const FamilyProfilesManager: React.FC<FamilyProfilesManagerProps> = ({
 
               <div className="bg-slate-50 p-3.5 rounded-2xl space-y-2 text-xs text-slate-700">
                 <div>
-                  <span className="text-[10px] font-bold text-slate-400 uppercase block">
+                  <span className="text-[0.625rem] font-bold text-slate-400 uppercase block">
                     Médecin traitant
                   </span>
                   <span className="font-semibold text-slate-900">
@@ -117,7 +117,7 @@ export const FamilyProfilesManager: React.FC<FamilyProfilesManagerProps> = ({
 
                 {member.emergencyContact && (
                   <div>
-                    <span className="text-[10px] font-bold text-slate-400 uppercase block">
+                    <span className="text-[0.625rem] font-bold text-slate-400 uppercase block">
                       Contact d'urgence
                     </span>
                     <span className="font-medium text-slate-800">{member.emergencyContact}</span>
@@ -125,7 +125,7 @@ export const FamilyProfilesManager: React.FC<FamilyProfilesManagerProps> = ({
                 )}
 
                 {member.notes && (
-                  <p className="text-[11px] text-slate-500 italic pt-1 border-t border-slate-200">
+                  <p className="text-[0.6875rem] text-slate-500 italic pt-1 border-t border-slate-200">
                     {member.notes}
                   </p>
                 )}

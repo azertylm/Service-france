@@ -24,7 +24,7 @@ export const AlphabetteFooter: React.FC<AlphabetteFooterProps> = ({
             <div>
               <p className="text-sm sm:text-base font-bold text-white flex items-center justify-center md:justify-start gap-2">
                 <span>Écosystème Logiciel Alphabette</span>
-                <span className="text-[10px] uppercase font-black tracking-wider bg-blue-500/30 text-blue-300 px-2 py-0.5 rounded-full border border-blue-400/20">
+                <span className="text-[0.625rem] uppercase font-black tracking-wider bg-blue-500/30 text-blue-300 px-2 py-0.5 rounded-full border border-blue-400/20">
                   Hub Central
                 </span>
               </p>
@@ -69,7 +69,7 @@ export const AlphabetteFooter: React.FC<AlphabetteFooterProps> = ({
             {onOpenByok && (
               <button
                 onClick={onOpenByok}
-                className="hover:text-white transition-colors underline decoration-slate-600 underline-offset-4 text-[11px]"
+                className="hover:text-white transition-colors underline decoration-slate-600 underline-offset-4 text-[0.6875rem]"
               >
                 Configuration IA (BYOK)
               </button>
@@ -79,7 +79,7 @@ export const AlphabetteFooter: React.FC<AlphabetteFooterProps> = ({
                 <span>•</span>
                 <button
                   onClick={onOpenPricing}
-                  className="hover:text-amber-300 font-medium text-amber-400 transition-colors underline decoration-amber-600 underline-offset-4 text-[11px]"
+                  className="hover:text-amber-300 font-medium text-amber-400 transition-colors underline decoration-amber-600 underline-offset-4 text-[0.6875rem]"
                 >
                   Tarifs (15 € ou 40 € par an)
                 </button>
@@ -97,7 +97,7 @@ export const AlphabetteFooter: React.FC<AlphabetteFooterProps> = ({
           </div>
         </div>
 
-        <div className="border-t border-slate-800/80 pt-4 flex flex-col sm:flex-row items-center justify-between gap-2 text-[11px] text-slate-500">
+        <div className="border-t border-slate-800/80 pt-4 flex flex-col sm:flex-row items-center justify-between gap-2 text-[0.6875rem] text-slate-500">
           <p>
             Édité par <strong>ALPHABETTE</strong> · Fondée par Valentin RICHAUD à La Grande-Motte (Hérault).
           </p>

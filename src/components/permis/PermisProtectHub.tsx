@@ -354,27 +354,27 @@ ${driverProfile.fullName}`;
           {/* Quick Metrics Bar */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-3">
             <div className="bg-slate-800/80 border border-indigo-800/50 rounded-2xl p-3">
-              <span className="block text-[11px] text-indigo-300/80 uppercase font-semibold">Délai minoré ANTAI</span>
+              <span className="block text-[0.6875rem] text-indigo-300/80 uppercase font-semibold">Délai minoré ANTAI</span>
               <span className="text-lg font-black text-emerald-400">30 jours</span>
-              <span className="block text-[10px] text-slate-400 mt-0.5">Par télépaiement en ligne</span>
+              <span className="block text-[0.625rem] text-slate-400 mt-0.5">Par télépaiement en ligne</span>
             </div>
 
             <div className="bg-slate-800/80 border border-indigo-800/50 rounded-2xl p-3">
-              <span className="block text-[11px] text-indigo-300/80 uppercase font-semibold">1 point perdu</span>
+              <span className="block text-[0.6875rem] text-indigo-300/80 uppercase font-semibold">1 point perdu</span>
               <span className="text-lg font-black text-amber-300">6 mois</span>
-              <span className="block text-[10px] text-slate-400 mt-0.5">Récupération sans récidive</span>
+              <span className="block text-[0.625rem] text-slate-400 mt-0.5">Récupération sans récidive</span>
             </div>
 
             <div className="bg-slate-800/80 border border-indigo-800/50 rounded-2xl p-3">
-              <span className="block text-[11px] text-indigo-300/80 uppercase font-semibold">Contestation</span>
+              <span className="block text-[0.6875rem] text-indigo-300/80 uppercase font-semibold">Contestation</span>
               <span className="text-lg font-black text-sky-300">45 à 60 j</span>
-              <span className="block text-[10px] text-slate-400 mt-0.5">Article 529-2 CPP</span>
+              <span className="block text-[0.625rem] text-slate-400 mt-0.5">Article 529-2 CPP</span>
             </div>
 
             <div className="bg-slate-800/80 border border-indigo-800/50 rounded-2xl p-3">
-              <span className="block text-[11px] text-indigo-300/80 uppercase font-semibold">Stage de points</span>
+              <span className="block text-[0.6875rem] text-indigo-300/80 uppercase font-semibold">Stage de points</span>
               <span className="text-lg font-black text-purple-300">+4 points</span>
-              <span className="block text-[10px] text-slate-400 mt-0.5">Max 1 par an et 1 jour</span>
+              <span className="block text-[0.625rem] text-slate-400 mt-0.5">Max 1 par an et 1 jour</span>
             </div>
           </div>
         </div>
@@ -447,7 +447,7 @@ ${driverProfile.fullName}`;
                   <FileText className="w-4 h-4 text-indigo-600" />
                   <span>1. Saisie des mentions de l'avis</span>
                 </h3>
-                <span className="text-[10px] text-slate-500 font-mono">Formulaire ANTAI</span>
+                <span className="text-[0.625rem] text-slate-500 font-mono">Formulaire ANTAI</span>
               </div>
 
               <div className="space-y-1.5">
@@ -467,7 +467,7 @@ ${driverProfile.fullName}`;
                     </option>
                   ))}
                 </select>
-                <span className="text-[11px] text-slate-500 block">
+                <span className="text-[0.6875rem] text-slate-500 block">
                   {selectedInfraction.legalArticle} • {selectedInfraction.description}
                 </span>
               </div>
@@ -518,7 +518,7 @@ ${driverProfile.fullName}`;
                     }
                     className="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-xl text-xs font-semibold text-slate-900 focus:bg-white"
                   />
-                  <span className="text-[10px] text-slate-500">Date en haut à droite</span>
+                  <span className="text-[0.625rem] text-slate-500">Date en haut à droite</span>
                 </div>
                 <div className="space-y-1">
                   <label className="text-xs font-semibold text-slate-700 block">
@@ -566,7 +566,7 @@ ${driverProfile.fullName}`;
                 </div>
 
                 <div className="space-y-1 pt-1 border-t border-slate-200">
-                  <label className="text-[11px] font-semibold text-slate-700 block">
+                  <label className="text-[0.6875rem] font-semibold text-slate-700 block">
                     Mode de règlement envisagé :
                   </label>
                   <div className="grid grid-cols-2 gap-2 text-xs">
@@ -616,7 +616,7 @@ ${driverProfile.fullName}`;
               <div className="bg-white rounded-2xl border border-slate-200 p-6 shadow-xs space-y-5">
                 <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 border-b border-slate-100 pb-4">
                   <div>
-                    <span className="text-[11px] font-bold uppercase tracking-wider text-slate-500">
+                    <span className="text-[0.6875rem] font-bold uppercase tracking-wider text-slate-500">
                       Bilan de l'infraction
                     </span>
                     <h4 className="text-lg font-black text-slate-900 mt-0.5">
@@ -647,7 +647,7 @@ ${driverProfile.fullName}`;
                   {/* Minorée */}
                   <div className="p-3.5 rounded-2xl bg-emerald-50 border border-emerald-200 space-y-1">
                     <div className="flex items-center justify-between">
-                      <span className="text-[10px] font-bold uppercase tracking-wider text-emerald-800">
+                      <span className="text-[0.625rem] font-bold uppercase tracking-wider text-emerald-800">
                         Tarif Minoré
                       </span>
                       <span className="text-xs bg-emerald-200 text-emerald-900 font-bold px-1.5 py-0.5 rounded">
@@ -657,10 +657,10 @@ ${driverProfile.fullName}`;
                     <div className="text-2xl font-black text-emerald-900">
                       {selectedInfraction.fineMinoree} €
                     </div>
-                    <div className="text-[11px] text-emerald-800 font-medium">
+                    <div className="text-[0.6875rem] text-emerald-800 font-medium">
                       Jusqu'au {datesCalc.dateLimitMinoree.toLocaleDateString('fr-FR')}
                     </div>
-                    <div className="text-[10px] font-bold text-emerald-700">
+                    <div className="text-[0.625rem] font-bold text-emerald-700">
                       {datesCalc.daysRemainingMinoree >= 0
                         ? `Il vous reste ${datesCalc.daysRemainingMinoree} jour(s)`
                         : 'Délai dépassé'}
@@ -670,7 +670,7 @@ ${driverProfile.fullName}`;
                   {/* Forfaitaire */}
                   <div className="p-3.5 rounded-2xl bg-slate-50 border border-slate-200 space-y-1">
                     <div className="flex items-center justify-between">
-                      <span className="text-[10px] font-bold uppercase tracking-wider text-slate-600">
+                      <span className="text-[0.625rem] font-bold uppercase tracking-wider text-slate-600">
                         Tarif Forfaitaire
                       </span>
                       <span className="text-xs bg-slate-200 text-slate-800 font-bold px-1.5 py-0.5 rounded">
@@ -680,10 +680,10 @@ ${driverProfile.fullName}`;
                     <div className="text-2xl font-black text-slate-900">
                       {selectedInfraction.fineForfaitaire} €
                     </div>
-                    <div className="text-[11px] text-slate-600 font-medium">
+                    <div className="text-[0.6875rem] text-slate-600 font-medium">
                       Jusqu'au {datesCalc.dateLimitForfaitaire.toLocaleDateString('fr-FR')}
                     </div>
-                    <div className="text-[10px] text-slate-500">
+                    <div className="text-[0.625rem] text-slate-500">
                       Après expiration du tarif minoré
                     </div>
                   </div>
@@ -691,7 +691,7 @@ ${driverProfile.fullName}`;
                   {/* Majorée */}
                   <div className="p-3.5 rounded-2xl bg-rose-50 border border-rose-200 space-y-1">
                     <div className="flex items-center justify-between">
-                      <span className="text-[10px] font-bold uppercase tracking-wider text-rose-800">
+                      <span className="text-[0.625rem] font-bold uppercase tracking-wider text-rose-800">
                         Tarif Majoré
                       </span>
                       <span className="text-xs bg-rose-200 text-rose-900 font-bold px-1.5 py-0.5 rounded">
@@ -701,10 +701,10 @@ ${driverProfile.fullName}`;
                     <div className="text-2xl font-black text-rose-900">
                       {selectedInfraction.fineMajoree} €
                     </div>
-                    <div className="text-[11px] text-rose-800 font-medium">
+                    <div className="text-[0.6875rem] text-rose-800 font-medium">
                       Au-delà de l'échéance 2
                     </div>
-                    <div className="text-[10px] text-rose-700">
+                    <div className="text-[0.625rem] text-rose-700">
                       Titres exécutoires Trésor Public
                     </div>
                   </div>
@@ -738,7 +738,7 @@ ${driverProfile.fullName}`;
                   <strong className="block font-bold text-amber-900">
                     Si l'infraction est reconnue (après paiement) :
                   </strong>
-                  <p className="text-[11px] leading-relaxed text-stone-700">
+                  <p className="text-[0.6875rem] leading-relaxed text-stone-700">
                     {selectedInfraction.pointsLoss === 1
                       ? 'Ce point unique sera récupéré automatiquement au bout de 6 mois sans aucune nouvelle infraction constatée (Art. L223-6 al. 1). Si vous commettez une nouvelle infraction durant ce délai, le délai est repoussé à 2 ou 3 ans.'
                       : selectedInfraction.fineClass <= 3
@@ -817,7 +817,7 @@ ${driverProfile.fullName}`;
                       <strong className="text-xs font-bold text-slate-900 block">
                         Cas 1 : Vol, destruction ou usurpation (doublette)
                       </strong>
-                      <span className="text-[11px] text-slate-500 block leading-tight mt-0.5">
+                      <span className="text-[0.6875rem] text-slate-500 block leading-tight mt-0.5">
                         Véhicule volé, cédé pour destruction ou plaques copiées. Aucune consignation requise.
                       </span>
                     </div>
@@ -845,7 +845,7 @@ ${driverProfile.fullName}`;
                       <strong className="text-xs font-bold text-slate-900 block">
                         Cas 2 : Prêt du véhicule / Désignation d'un tiers
                       </strong>
-                      <span className="text-[11px] text-slate-500 block leading-tight mt-0.5">
+                      <span className="text-[0.6875rem] text-slate-500 block leading-tight mt-0.5">
                         Vous n'étiez pas au volant (véhicule prêté à un conjoint, collègue, enfant). Aucune consignation requise.
                       </span>
                     </div>
@@ -873,7 +873,7 @@ ${driverProfile.fullName}`;
                       <strong className="text-xs font-bold text-slate-900 block">
                         Cas 3 : Cliché non probant / Flash arrière (Art. L121-3)
                       </strong>
-                      <span className="text-[11px] text-slate-500 block leading-tight mt-0.5">
+                      <span className="text-[0.6875rem] text-slate-500 block leading-tight mt-0.5">
                         Conducteur non identifiable sur la photo. Consignation préalable requise mais 0 point retiré.
                       </span>
                     </div>
@@ -901,7 +901,7 @@ ${driverProfile.fullName}`;
                       <strong className="text-xs font-bold text-slate-900 block">
                         Cas 3 : Signalisation défaillante ou masquée
                       </strong>
-                      <span className="text-[11px] text-slate-500 block leading-tight mt-0.5">
+                      <span className="text-[0.6875rem] text-slate-500 block leading-tight mt-0.5">
                         Panneau de limitation masqué, incohérence de signalisation de chantier ou marquage effacé.
                       </span>
                     </div>
@@ -929,7 +929,7 @@ ${driverProfile.fullName}`;
                       <strong className="text-xs font-bold text-slate-900 block">
                         Cas 3 : Urgence médicale / Force majeure (Art. 122-7)
                       </strong>
-                      <span className="text-[11px] text-slate-500 block leading-tight mt-0.5">
+                      <span className="text-[0.6875rem] text-slate-500 block leading-tight mt-0.5">
                         Danger grave et imminent justifié par un certificat médical ou d'admission d'urgence.
                       </span>
                     </div>
@@ -1007,7 +1007,7 @@ ${driverProfile.fullName}`;
                   <strong className="text-amber-900 font-bold block">
                     Attention : Consignation préalable obligatoire (Cas 3)
                   </strong>
-                  <p className="text-stone-700 text-[11px] leading-relaxed">
+                  <p className="text-stone-700 text-[0.6875rem] leading-relaxed">
                     Pour contester dans le Cas 3 (radar automatique), l'article 529-10 du CPP exige le versement d'une <strong>consignation financière</strong> ({selectedInfraction.fineForfaitaire} € ou {selectedInfraction.fineMinoree} €).
                     Cette somme n'est pas un paiement : elle vous est <strong>intégralement remboursée</strong> si l'Officier du Ministère Public classe le dossier ou si le juge vous relaxe.
                   </p>
@@ -1022,7 +1022,7 @@ ${driverProfile.fullName}`;
                   <h3 className="font-bold text-slate-900 text-sm">
                     Modèle officiel de requête en exonération
                   </h3>
-                  <span className="text-[11px] text-slate-500">
+                  <span className="text-[0.6875rem] text-slate-500">
                     Prêt pour expédition postale LRAR ou télétransmission ANTAI
                   </span>
                 </div>
@@ -1035,7 +1035,7 @@ ${driverProfile.fullName}`;
                 </button>
               </div>
 
-              <div className="bg-slate-50 p-4 rounded-xl border border-slate-200 font-mono text-[11px] text-slate-800 max-h-96 overflow-y-auto whitespace-pre-line leading-relaxed">
+              <div className="bg-slate-50 p-4 rounded-xl border border-slate-200 font-mono text-[0.6875rem] text-slate-800 max-h-96 overflow-y-auto whitespace-pre-line leading-relaxed">
                 {contestationLetterText}
               </div>
 
@@ -1043,7 +1043,7 @@ ${driverProfile.fullName}`;
                 <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
                 <div className="space-y-0.5">
                   <strong className="block font-bold">Conseil pour contester sans frais :</strong>
-                  <p className="text-[11px] leading-relaxed">
+                  <p className="text-[0.6875rem] leading-relaxed">
                     Privilégiez la contestation en ligne sur le site officiel <strong>antai.gouv.fr</strong>. Vous n'aurez aucun frais d'affranchissement postal recommandé et vous recevrez immédiatement un accusé d'enregistrement électronique certifié.
                   </p>
                 </div>
@@ -1071,7 +1071,7 @@ ${driverProfile.fullName}`;
                 </span>
                 <span className="text-lg text-slate-300 font-bold">/ {maxPointsPossible} pts</span>
               </div>
-              <p className="text-[11px] text-slate-400">
+              <p className="text-[0.6875rem] text-slate-400">
                 {currentPointsTotal <= 6
                   ? '⚠️ Attention : capital points fragilisé. Envisagez un stage volontaire.'
                   : 'Capital sécurisé. Consultez vos délais de récupération ci-dessous.'}
@@ -1091,7 +1091,7 @@ ${driverProfile.fullName}`;
               <p className="text-xs text-slate-600 leading-relaxed">
                 Effectuer un stage de sensibilisation à la sécurité routière (2 jours consécutifs) permet de récupérer <strong>immédiatement 4 points</strong> (dans la limite du plafond de 12 points).
               </p>
-              <div className="text-[11px] font-bold text-purple-700 bg-purple-50 p-2 rounded-xl border border-purple-100">
+              <div className="text-[0.6875rem] font-bold text-purple-700 bg-purple-50 p-2 rounded-xl border border-purple-100">
                 Règle légale : 1 seul stage crédité tous les 1 an et 1 jour.
               </div>
             </div>
@@ -1154,11 +1154,11 @@ ${driverProfile.fullName}`;
                         <span className="font-bold text-slate-900 text-sm">
                           {item.infractionTitle}
                         </span>
-                        <span className="px-2 py-0.5 bg-rose-100 text-rose-800 text-[10px] font-black rounded-full">
+                        <span className="px-2 py-0.5 bg-rose-100 text-rose-800 text-[0.625rem] font-black rounded-full">
                           -{item.pointsDeducted} pt(s)
                         </span>
                         {item.restituted && (
-                          <span className="px-2 py-0.5 bg-emerald-100 text-emerald-800 text-[10px] font-black rounded-full flex items-center gap-1">
+                          <span className="px-2 py-0.5 bg-emerald-100 text-emerald-800 text-[0.625rem] font-black rounded-full flex items-center gap-1">
                             <CheckCircle2 className="w-3 h-3" />
                             <span>Point restitué</span>
                           </span>
@@ -1167,14 +1167,14 @@ ${driverProfile.fullName}`;
                       <div className="text-xs text-slate-500">
                         Date de l'infraction : {new Date(item.date).toLocaleDateString('fr-FR')} • {item.notes}
                       </div>
-                      <div className="text-[11px] text-indigo-700 font-medium">
+                      <div className="text-[0.6875rem] text-indigo-700 font-medium">
                         Règle légale : {item.restitutionRule}
                       </div>
                     </div>
 
                     <div className="text-right sm:text-right flex items-center gap-3">
                       <div>
-                        <span className="text-[10px] uppercase font-bold text-slate-400 block">
+                        <span className="text-[0.625rem] uppercase font-bold text-slate-400 block">
                           Date de restitution estimée
                         </span>
                         <span className="text-xs font-black text-slate-800">

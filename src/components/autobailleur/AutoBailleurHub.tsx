@@ -419,31 +419,31 @@ ${landlordInfo.fullName}`;
           {/* Quick Metrics Bar */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-3">
             <div className="bg-slate-800/80 border border-emerald-800/50 rounded-2xl p-3">
-              <span className="block text-[11px] text-emerald-300/80 uppercase font-semibold">Économie agence</span>
+              <span className="block text-[0.6875rem] text-emerald-300/80 uppercase font-semibold">Économie agence</span>
               <span className="text-lg font-black text-emerald-300">
                 ~{annualAgencyFeeSaved} € / an
               </span>
-              <span className="block text-[10px] text-slate-400 mt-0.5">0% de frais de gestion</span>
+              <span className="block text-[0.625rem] text-slate-400 mt-0.5">0% de frais de gestion</span>
             </div>
 
             <div className="bg-slate-800/80 border border-emerald-800/50 rounded-2xl p-3">
-              <span className="block text-[11px] text-emerald-300/80 uppercase font-semibold">Dernier IRL INSEE</span>
+              <span className="block text-[0.6875rem] text-emerald-300/80 uppercase font-semibold">Dernier IRL INSEE</span>
               <span className="text-lg font-black text-amber-300">
                 {OFFICIAL_IRL_DATA[0].value}
               </span>
-              <span className="block text-[10px] text-slate-400 mt-0.5">{OFFICIAL_IRL_DATA[0].label} (Officiel)</span>
+              <span className="block text-[0.625rem] text-slate-400 mt-0.5">{OFFICIAL_IRL_DATA[0].label} (Officiel)</span>
             </div>
 
             <div className="bg-slate-800/80 border border-emerald-800/50 rounded-2xl p-3">
-              <span className="block text-[11px] text-emerald-300/80 uppercase font-semibold">Quittances</span>
+              <span className="block text-[0.6875rem] text-emerald-300/80 uppercase font-semibold">Quittances</span>
               <span className="text-lg font-black text-sky-300">Art. 21</span>
-              <span className="block text-[10px] text-slate-400 mt-0.5">100% conforme loi 1989</span>
+              <span className="block text-[0.625rem] text-slate-400 mt-0.5">100% conforme loi 1989</span>
             </div>
 
             <div className="bg-slate-800/80 border border-emerald-800/50 rounded-2xl p-3">
-              <span className="block text-[11px] text-emerald-300/80 uppercase font-semibold">Charges décret</span>
+              <span className="block text-[0.6875rem] text-emerald-300/80 uppercase font-semibold">Charges décret</span>
               <span className="text-lg font-black text-purple-300">87-713</span>
-              <span className="block text-[10px] text-slate-400 mt-0.5">Ventilation TEOM & copro</span>
+              <span className="block text-[0.625rem] text-slate-400 mt-0.5">Ventilation TEOM & copro</span>
             </div>
           </div>
         </div>
@@ -550,7 +550,7 @@ ${landlordInfo.fullName}`;
                   />
                   <span className="absolute right-3 top-2.5 text-xs text-slate-400 font-bold">€ / mois</span>
                 </div>
-                <span className="text-[11px] text-slate-500 block">
+                <span className="text-[0.6875rem] text-slate-500 block">
                   Ne jamais inclure les provisions pour charges dans la base de calcul !
                 </span>
               </div>
@@ -570,7 +570,7 @@ ${landlordInfo.fullName}`;
                     </option>
                   ))}
                 </select>
-                <span className="text-[11px] text-slate-500 block">
+                <span className="text-[0.6875rem] text-slate-500 block">
                   Indice mentionné au bail d'origine ou lors de la dernière révision.
                 </span>
               </div>
@@ -610,7 +610,7 @@ ${landlordInfo.fullName}`;
                   <AlertTriangle className="w-3.5 h-3.5 text-amber-600 shrink-0" />
                   <span>Règle d'or Loi ALUR (Non-rétroactivité) :</span>
                 </div>
-                <p className="text-stone-700 text-[11px] leading-relaxed">
+                <p className="text-stone-700 text-[0.6875rem] leading-relaxed">
                   La révision ne prend effet <strong>qu'à compter du jour de la notification formelle</strong>. Si vous oubliez d'envoyer la demande pendant 4 mois, les arriérés de ces 4 mois sont <strong>définitivement perdus</strong> pour le bailleur.
                 </p>
               </div>
@@ -648,7 +648,7 @@ ${landlordInfo.fullName}`;
 
                 {/* Formula display */}
                 <div className="bg-emerald-950/30 p-3 rounded-xl text-xs font-mono border border-emerald-300/30">
-                  <span className="block text-[10px] text-emerald-200 uppercase font-sans font-bold">
+                  <span className="block text-[0.625rem] text-emerald-200 uppercase font-sans font-bold">
                     Formule légale appliquée :
                   </span>
                   <span>
@@ -674,12 +674,12 @@ ${landlordInfo.fullName}`;
                   </button>
                 </div>
 
-                <div className="bg-slate-50 p-4 rounded-xl border border-slate-200 font-mono text-[11px] text-slate-800 max-h-56 overflow-y-auto whitespace-pre-line leading-relaxed">
+                <div className="bg-slate-50 p-4 rounded-xl border border-slate-200 font-mono text-[0.6875rem] text-slate-800 max-h-56 overflow-y-auto whitespace-pre-line leading-relaxed">
                   {revisionLetterText}
                 </div>
 
                 <div className="flex items-center justify-between pt-1">
-                  <span className="text-[11px] text-slate-500">
+                  <span className="text-[0.6875rem] text-slate-500">
                     Conseil : Envoyez ce courrier par lettre recommandée ou email avec accusé de lecture.
                   </span>
                   {onNavigateToPlumeWithPrompt && (
@@ -841,7 +841,7 @@ ${landlordInfo.fullName}`;
 
               <div className="p-3 bg-sky-50 border border-sky-100 rounded-xl text-xs text-sky-900 space-y-1">
                 <strong className="block font-bold">Rappel de la Loi du 6 juillet 1989 :</strong>
-                <p className="text-[11px] leading-relaxed">
+                <p className="text-[0.6875rem] leading-relaxed">
                   La quittance de loyer doit obligatoirement distinguer le loyer principal net des provisions pour charges. Aucun frais d'envoi postal ou de gestion ne peut être réclamé au locataire.
                 </p>
               </div>
@@ -860,7 +860,7 @@ ${landlordInfo.fullName}`;
                   </p>
                 </div>
                 <div className="text-right sm:text-right bg-slate-100 p-3 rounded-xl border border-slate-200">
-                  <span className="block text-[10px] uppercase font-bold text-slate-500">
+                  <span className="block text-[0.625rem] uppercase font-bold text-slate-500">
                     Période de location acquittée
                   </span>
                   <span className="text-sm font-black text-slate-900">
@@ -874,18 +874,18 @@ ${landlordInfo.fullName}`;
               {/* Parties block */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-2">
                 <div className="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-1">
-                  <strong className="block text-[10px] uppercase tracking-wider text-slate-400 font-bold">
+                  <strong className="block text-[0.625rem] uppercase tracking-wider text-slate-400 font-bold">
                     Bailleur (Propriétaire) :
                   </strong>
                   <div className="font-bold text-slate-900 text-sm">{landlordInfo.fullName}</div>
                   <div className="text-xs text-slate-600">{landlordInfo.address}</div>
-                  <div className="text-[11px] text-slate-500 pt-1 font-mono">
+                  <div className="text-[0.6875rem] text-slate-500 pt-1 font-mono">
                     Tél : {landlordInfo.phone} | Email : {landlordInfo.email}
                   </div>
                 </div>
 
                 <div className="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-1">
-                  <strong className="block text-[10px] uppercase tracking-wider text-slate-400 font-bold">
+                  <strong className="block text-[0.625rem] uppercase tracking-wider text-slate-400 font-bold">
                     Locataire (Preneur) :
                   </strong>
                   <div className="font-bold text-slate-900 text-sm">{property.tenantFullName}</div>
@@ -911,7 +911,7 @@ ${landlordInfo.fullName}`;
                   <div className="p-3 flex justify-between items-center bg-slate-50/50">
                     <div>
                       <span className="text-slate-800">Provision pour charges locatives</span>
-                      <span className="block text-[11px] text-slate-500">
+                      <span className="block text-[0.6875rem] text-slate-500">
                         Soumis à régularisation annuelle selon Décret 87-713
                       </span>
                     </div>
@@ -922,7 +922,7 @@ ${landlordInfo.fullName}`;
                     <div className="p-3 flex justify-between items-center text-emerald-800 bg-emerald-50/50">
                       <div>
                         <span>Déduction aide au logement CAF / APL (Tiers payant)</span>
-                        <span className="block text-[11px] text-emerald-600">Versée directement au bailleur</span>
+                        <span className="block text-[0.6875rem] text-emerald-600">Versée directement au bailleur</span>
                       </div>
                       <span className="font-bold">-{receiptApl.toFixed(2)} €</span>
                     </div>
@@ -951,14 +951,14 @@ ${landlordInfo.fullName}`;
                   <strong>{receiptMethod}</strong> le{' '}
                   <strong>{new Date(receiptPaymentDate).toLocaleDateString('fr-FR')}</strong>.
                 </p>
-                <p className="text-[11px] text-slate-500 italic">
+                <p className="text-[0.6875rem] text-slate-500 italic">
                   Cette quittance libère le locataire de toute obligation pour la période mentionnée, sous réserve de tous droits et de la régularisation annuelle des charges. Délivrée gratuitement conformément à l'article 21 de la loi n° 89-462 du 6 juillet 1989.
                 </p>
               </div>
 
               {/* Signature block */}
               <div className="flex justify-between items-end pt-4">
-                <div className="text-[11px] text-slate-400">
+                <div className="text-[0.6875rem] text-slate-400">
                   Document généré via papierpapier.fr • AutoBailleur
                 </div>
                 <div className="text-right space-y-3">
@@ -966,7 +966,7 @@ ${landlordInfo.fullName}`;
                     Fait à {property.city}, le {new Date(receiptPaymentDate).toLocaleDateString('fr-FR')}
                   </span>
                   <div className="h-12 border-b border-dashed border-slate-300 w-44 ml-auto" />
-                  <span className="text-[11px] text-slate-500 italic block">
+                  <span className="text-[0.6875rem] text-slate-500 italic block">
                     Signature du bailleur : {landlordInfo.fullName}
                   </span>
                 </div>
@@ -1039,10 +1039,10 @@ ${landlordInfo.fullName}`;
 
             <div className="bg-white/80 p-3 rounded-xl border border-slate-200 text-xs text-slate-700 space-y-1 shrink-0">
               <span className="block font-bold">Loi du 6 juillet 1989 art. 23 :</span>
-              <span className="block text-[11px] text-slate-500">
+              <span className="block text-[0.6875rem] text-slate-500">
                 Décompte à envoyer 1 mois avant la régularisation.
               </span>
-              <span className="block text-[11px] text-slate-500">
+              <span className="block text-[0.6875rem] text-slate-500">
                 Pièces justificatives conservées 6 mois.
               </span>
             </div>
@@ -1060,7 +1060,7 @@ ${landlordInfo.fullName}`;
 
             <div className="grid grid-cols-1 sm:grid-cols-12 gap-3 items-end">
               <div className="sm:col-span-4 space-y-1">
-                <label className="text-[11px] font-semibold text-slate-600">Nom de la charge :</label>
+                <label className="text-[0.6875rem] font-semibold text-slate-600">Nom de la charge :</label>
                 <input
                   type="text"
                   placeholder="Ex : Réparation interphone, TEOM..."
@@ -1071,7 +1071,7 @@ ${landlordInfo.fullName}`;
               </div>
 
               <div className="sm:col-span-2 space-y-1">
-                <label className="text-[11px] font-semibold text-slate-600">Montant facture (€) :</label>
+                <label className="text-[0.6875rem] font-semibold text-slate-600">Montant facture (€) :</label>
                 <input
                   type="number"
                   step="0.01"
@@ -1082,7 +1082,7 @@ ${landlordInfo.fullName}`;
               </div>
 
               <div className="sm:col-span-2 space-y-1">
-                <label className="text-[11px] font-semibold text-slate-600">Tantièmes / 1000 :</label>
+                <label className="text-[0.6875rem] font-semibold text-slate-600">Tantièmes / 1000 :</label>
                 <input
                   type="number"
                   value={newChargeTantiemes}
@@ -1092,7 +1092,7 @@ ${landlordInfo.fullName}`;
               </div>
 
               <div className="sm:col-span-2 space-y-1">
-                <label className="text-[11px] font-semibold text-slate-600">Nature :</label>
+                <label className="text-[0.6875rem] font-semibold text-slate-600">Nature :</label>
                 <select
                   value={newChargeIsRecup ? 'recup' : 'non_recup'}
                   onChange={(e) => setNewChargeIsRecup(e.target.value === 'recup')}
@@ -1128,7 +1128,7 @@ ${landlordInfo.fullName}`;
 
             <div className="overflow-x-auto">
               <table className="w-full text-left text-xs">
-                <thead className="bg-slate-100 text-slate-700 uppercase text-[10px] font-bold border-b border-slate-200">
+                <thead className="bg-slate-100 text-slate-700 uppercase text-[0.625rem] font-bold border-b border-slate-200">
                   <tr>
                     <th className="p-3">Poste de dépense</th>
                     <th className="p-3 text-right">Facture totale</th>
@@ -1155,7 +1155,7 @@ ${landlordInfo.fullName}`;
                       >
                         <td className="p-3">
                           <div className="font-bold text-slate-900">{charge.name}</div>
-                          <div className="text-[11px] text-slate-500">{charge.legalNote}</div>
+                          <div className="text-[0.6875rem] text-slate-500">{charge.legalNote}</div>
                         </td>
 
                         <td className="p-3 text-right font-semibold text-slate-800">
@@ -1170,11 +1170,11 @@ ${landlordInfo.fullName}`;
 
                         <td className="p-3 text-center">
                           {charge.isRecuperable ? (
-                            <span className="inline-block px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-bold text-[10px]">
+                            <span className="inline-block px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-bold text-[0.625rem]">
                               Récupérable ({charge.recuperablePercentage}%)
                             </span>
                           ) : (
-                            <span className="inline-block px-2 py-0.5 rounded-full bg-rose-100 text-rose-800 font-bold text-[10px]">
+                            <span className="inline-block px-2 py-0.5 rounded-full bg-rose-100 text-rose-800 font-bold text-[0.625rem]">
                               100% Bailleur (Interdit)
                             </span>
                           )}

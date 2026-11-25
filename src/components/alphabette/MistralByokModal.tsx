@@ -127,7 +127,7 @@ export const MistralByokModal: React.FC<MistralByokModalProps> = ({
               <span className="w-1 bg-white" />
               <span className="w-1.5 bg-[#CE1126]" />
             </span>
-            <span className="text-[11px] font-black uppercase tracking-wider text-blue-300">
+            <span className="text-[0.6875rem] font-black uppercase tracking-wider text-blue-300">
               Souveraineté & RGPD Natif
             </span>
           </div>
@@ -150,8 +150,8 @@ export const MistralByokModal: React.FC<MistralByokModalProps> = ({
             <div className="p-3.5 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-950 flex items-start gap-2.5">
               <ShieldCheck className="w-5 h-5 text-emerald-700 shrink-0 mt-0.5" />
               <div>
-                <p className="font-bold text-[12px]">Conformité RGPD native</p>
-                <p className="text-[11px] text-emerald-800 leading-relaxed mt-0.5">
+                <p className="font-bold text-[0.75rem]">Conformité RGPD native</p>
+                <p className="text-[0.6875rem] text-emerald-800 leading-relaxed mt-0.5">
                   Mistral AI est une entreprise française dont les infrastructures sont hébergées en Union Européenne. Vos données ne quittent pas le cadre juridique communautaire.
                 </p>
               </div>
@@ -160,8 +160,8 @@ export const MistralByokModal: React.FC<MistralByokModalProps> = ({
             <div className="p-3.5 rounded-2xl bg-blue-50 border border-blue-200 text-blue-950 flex items-start gap-2.5">
               <Lock className="w-5 h-5 text-blue-700 shrink-0 mt-0.5" />
               <div>
-                <p className="font-bold text-[12px]">Confidentialité absolue</p>
-                <p className="text-[11px] text-blue-800 leading-relaxed mt-0.5">
+                <p className="font-bold text-[0.75rem]">Confidentialité absolue</p>
+                <p className="text-[0.6875rem] text-blue-800 leading-relaxed mt-0.5">
                   Les modèles commerciaux de Mistral garantissent que vos requêtes et documents ne sont <strong>jamais réutilisés</strong> pour l'entraînement public des modèles.
                 </p>
               </div>
@@ -186,7 +186,7 @@ export const MistralByokModal: React.FC<MistralByokModalProps> = ({
                 <Cloud className="w-5 h-5 text-indigo-600 shrink-0 mt-0.5" />
                 <div>
                   <p className="font-bold text-slate-900">API Cloud Officielle Mistral</p>
-                  <p className="text-[11px] text-slate-500 mt-0.5">
+                  <p className="text-[0.6875rem] text-slate-500 mt-0.5">
                     https://api.mistral.ai/v1 (Production souveraine recommandée)
                   </p>
                 </div>
@@ -204,7 +204,7 @@ export const MistralByokModal: React.FC<MistralByokModalProps> = ({
                 <Laptop className="w-5 h-5 text-slate-800 shrink-0 mt-0.5" />
                 <div>
                   <p className="font-bold text-slate-900">Mac Local (Ollama / Metal)</p>
-                  <p className="text-[11px] text-slate-500 mt-0.5">
+                  <p className="text-[0.6875rem] text-slate-500 mt-0.5">
                     http://localhost:11434/v1 (100% hors-ligne sur votre machine)
                   </p>
                 </div>
@@ -222,7 +222,7 @@ export const MistralByokModal: React.FC<MistralByokModalProps> = ({
                 href="https://console.mistral.ai/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[11px] text-indigo-600 hover:text-indigo-800 font-semibold flex items-center gap-1"
+                className="text-[0.6875rem] text-indigo-600 hover:text-indigo-800 font-semibold flex items-center gap-1"
               >
                 <span>Obtenir une clé sur console.mistral.ai</span>
                 <ExternalLink className="w-3 h-3" />
@@ -245,7 +245,7 @@ export const MistralByokModal: React.FC<MistralByokModalProps> = ({
                 {showKey ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
               </button>
             </div>
-            <p className="text-[11px] text-slate-400">
+            <p className="text-[0.6875rem] text-slate-400">
               Votre clé est stockée localement dans votre navigateur (Zero-Knowledge). Elle n'est jamais transmise à des tiers.
             </p>
           </div>
@@ -302,7 +302,7 @@ export const MistralByokModal: React.FC<MistralByokModalProps> = ({
                 <p className="font-bold">
                   {testResult.success ? 'Connexion validée !' : 'Échec de connexion'}
                 </p>
-                <p className="text-[11px] mt-0.5 leading-relaxed">{testResult.message}</p>
+                <p className="text-[0.6875rem] mt-0.5 leading-relaxed">{testResult.message}</p>
               </div>
             </div>
           )}
@@ -314,7 +314,7 @@ export const MistralByokModal: React.FC<MistralByokModalProps> = ({
                 <p className="font-bold text-xs">
                   Vous ne souhaitez pas gérer de clé API ?
                 </p>
-                <p className="text-[11px] text-amber-800">
+                <p className="text-[0.6875rem] text-amber-800">
                   Tarifs prévus d'Alphabette : <strong>15 € par an</strong> pour une application, <strong>40 € par an</strong> pour toutes. L'IA utilise toujours votre propre clé.
                 </p>
               </div>
@@ -378,7 +378,7 @@ export const MistralByokModal: React.FC<MistralByokModalProps> = ({
 
         {/* Modal Footer with MANDATORY LINK TO http://alphabette.fr */}
         <div className="bg-slate-900 text-white px-6 py-3.5 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs">
-          <span className="text-slate-400 text-center sm:text-left text-[11px]">
+          <span className="text-slate-400 text-center sm:text-left text-[0.6875rem]">
             ALPHABETTE · La Grande-Motte · Mistral AI Exclusif
           </span>
           <a

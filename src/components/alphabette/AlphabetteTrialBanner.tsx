@@ -64,7 +64,7 @@ export const AlphabetteTrialBanner: React.FC<AlphabetteTrialBannerProps> = ({
           )}
           <button
             onClick={onOpenByok}
-            className="shrink-0 text-[11px] font-bold text-slate-950 bg-amber-400 hover:bg-amber-300 px-3 py-1 rounded-lg transition-colors"
+            className="shrink-0 text-[0.6875rem] font-bold text-slate-950 bg-amber-400 hover:bg-amber-300 px-3 py-1 rounded-lg transition-colors"
           >
             {access.hasAnyKey ? 'Changer ma clé IA' : 'Ajouter ma clé IA'}
           </button>
@@ -92,7 +92,7 @@ export const AlphabetteTrialBanner: React.FC<AlphabetteTrialBannerProps> = ({
           <div className="flex items-center gap-3">
             <button
               onClick={onOpenPricing}
-              className="text-[11px] font-semibold text-slate-700 hover:text-slate-950 underline decoration-slate-300"
+              className="text-[0.6875rem] font-semibold text-slate-700 hover:text-slate-950 underline decoration-slate-300"
             >
               Gérer mon pass
             </button>
@@ -100,7 +100,7 @@ export const AlphabetteTrialBanner: React.FC<AlphabetteTrialBannerProps> = ({
               href="http://alphabette.fr"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[11px] font-bold text-blue-700 hover:text-blue-900 flex items-center gap-1"
+              className="text-[0.6875rem] font-bold text-blue-700 hover:text-blue-900 flex items-center gap-1"
             >
               <span>alphabette.fr</span>
               <ExternalLink className="w-3 h-3" />
@@ -126,13 +126,13 @@ export const AlphabetteTrialBanner: React.FC<AlphabetteTrialBannerProps> = ({
           <div className="flex items-center gap-3">
             <button
               onClick={onOpenByok}
-              className="text-[11px] font-bold text-emerald-800 hover:text-emerald-950 underline"
+              className="text-[0.6875rem] font-bold text-emerald-800 hover:text-emerald-950 underline"
             >
               Configurer ma clé
             </button>
             <button
               onClick={onOpenPricing}
-              className="text-[11px] font-bold text-indigo-700 hover:text-indigo-900"
+              className="text-[0.6875rem] font-bold text-indigo-700 hover:text-indigo-900"
             >
               Voir les tarifs (15 € ou 40 € par an)
             </button>
@@ -156,7 +156,7 @@ export const AlphabetteTrialBanner: React.FC<AlphabetteTrialBannerProps> = ({
 
           <button
             onClick={onOpenPricing}
-            className="text-[11px] font-bold text-indigo-700 hover:text-indigo-900 underline"
+            className="text-[0.6875rem] font-bold text-indigo-700 hover:text-indigo-900 underline"
           >
             Voir les tarifs (15 € ou 40 € par an)
           </button>
@@ -202,11 +202,11 @@ export const AlphabetteTrialBanner: React.FC<AlphabetteTrialBannerProps> = ({
     <div className="bg-slate-900 text-slate-200 py-1.5 px-4 text-xs border-b border-slate-800">
       <div className="max-w-7xl mx-auto w-full flex flex-col sm:flex-row items-center justify-between gap-2">
         <div className="flex items-center gap-2">
-          <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-300 border border-blue-400/20 text-[10px] font-bold">
+          <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-300 border border-blue-400/20 text-[0.625rem] font-bold">
             <Clock className="w-3 h-3 text-amber-400" />
             <span>Période d'essai : {access.trialDaysLeft} jours restants</span>
           </span>
-          <span className="text-slate-300 text-[11px] hidden md:inline">
+          <span className="text-slate-300 text-[0.6875rem] hidden md:inline">
             Accès complet alimenté par la clé Mistral propriétaire Alphabette (100% Souverain & RGPD)
           </span>
         </div>
@@ -214,14 +214,14 @@ export const AlphabetteTrialBanner: React.FC<AlphabetteTrialBannerProps> = ({
         <div className="flex items-center gap-3">
           <button
             onClick={onOpenByok}
-            className="text-[11px] text-slate-300 hover:text-white underline decoration-slate-600 transition-colors"
+            className="text-[0.6875rem] text-slate-300 hover:text-white underline decoration-slate-600 transition-colors"
           >
             Mode BYOK (Clé perso)
           </button>
           <span className="text-slate-600">•</span>
           <button
             onClick={onOpenPricing}
-            className="text-[11px] font-bold text-amber-400 hover:text-amber-300 transition-colors"
+            className="text-[0.6875rem] font-bold text-amber-400 hover:text-amber-300 transition-colors"
           >
             Tarifs Alphabette (15 € ou 40 € par an)
           </button>
@@ -230,7 +230,7 @@ export const AlphabetteTrialBanner: React.FC<AlphabetteTrialBannerProps> = ({
             href="http://alphabette.fr"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[11px] text-blue-400 hover:text-blue-300 font-semibold hidden sm:inline"
+            className="text-[0.6875rem] text-blue-400 hover:text-blue-300 font-semibold hidden sm:inline"
           >
             alphabette.fr
           </a>

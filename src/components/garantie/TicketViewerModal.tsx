@@ -51,7 +51,7 @@ export const TicketViewerModal: React.FC<TicketViewerModalProps> = ({ warranty, 
                 <span className="text-xs uppercase font-extrabold text-amber-400 tracking-wider">
                   Coffre-fort anti-effacement thermique
                 </span>
-                <span className="text-[10px] bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded-full border border-emerald-500/30">
+                <span className="text-[0.625rem] bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded-full border border-emerald-500/30">
                   Preuve pérenne
                 </span>
               </div>
@@ -75,23 +75,23 @@ export const TicketViewerModal: React.FC<TicketViewerModalProps> = ({ warranty, 
           {/* Metadata pill bar */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs bg-slate-50 p-3 rounded-2xl border border-slate-200">
             <div>
-              <span className="text-slate-400 block text-[10px] uppercase font-bold">Enseigne</span>
+              <span className="text-slate-400 block text-[0.625rem] uppercase font-bold">Enseigne</span>
               <span className="font-bold text-slate-800">{warranty.store}</span>
             </div>
             <div>
-              <span className="text-slate-400 block text-[10px] uppercase font-bold">Date d'achat</span>
+              <span className="text-slate-400 block text-[0.625rem] uppercase font-bold">Date d'achat</span>
               <span className="font-bold text-slate-800">
                 {new Date(warranty.purchaseDate).toLocaleDateString('fr-FR')}
               </span>
             </div>
             <div>
-              <span className="text-slate-400 block text-[10px] uppercase font-bold">Montant</span>
+              <span className="text-slate-400 block text-[0.625rem] uppercase font-bold">Montant</span>
               <span className="font-bold text-slate-800">
                 {warranty.purchasePrice ? `${warranty.purchasePrice.toFixed(2)} € TTC` : 'Non renseigné'}
               </span>
             </div>
             <div>
-              <span className="text-slate-400 block text-[10px] uppercase font-bold">Fin garantie légale</span>
+              <span className="text-slate-400 block text-[0.625rem] uppercase font-bold">Fin garantie légale</span>
               <span className="font-bold text-emerald-700">
                 {new Date(warranty.warrantyEndDate).toLocaleDateString('fr-FR')}
               </span>

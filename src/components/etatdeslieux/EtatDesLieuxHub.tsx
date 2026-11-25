@@ -746,7 +746,7 @@ export const EtatDesLieuxHub: React.FC<EtatDesLieuxHubProps> = ({
                     />
                     <div className="absolute top-2 left-2">
                       <span
-                        className={`text-[10px] font-black uppercase px-2 py-0.5 rounded-md text-white shadow-xs ${
+                        className={`text-[0.625rem] font-black uppercase px-2 py-0.5 rounded-md text-white shadow-xs ${
                           photo.stage === 'entree' ? 'bg-emerald-600' : 'bg-rose-600'
                         }`}
                       >
@@ -773,7 +773,7 @@ export const EtatDesLieuxHub: React.FC<EtatDesLieuxHubProps> = ({
                     </div>
 
                     {photo.meterReading && (
-                      <div className="absolute bottom-2 left-2 right-2 bg-black/80 backdrop-blur-xs text-white text-[11px] px-2.5 py-1 rounded-lg flex items-center justify-between border border-amber-400/40">
+                      <div className="absolute bottom-2 left-2 right-2 bg-black/80 backdrop-blur-xs text-white text-[0.6875rem] px-2.5 py-1 rounded-lg flex items-center justify-between border border-amber-400/40">
                         <span className="font-bold text-amber-300">⚡ Relevé compteur :</span>
                         <span className="font-mono font-bold">
                           {photo.meterReading.indexValue} {photo.meterReading.unit}
@@ -786,7 +786,7 @@ export const EtatDesLieuxHub: React.FC<EtatDesLieuxHubProps> = ({
                     <div className="flex items-start justify-between gap-2">
                       <div>
                         <h4 className="font-bold text-slate-900 text-xs tracking-tight">{photo.title}</h4>
-                        <p className="text-[11px] text-slate-500 flex items-center gap-1 mt-0.5">
+                        <p className="text-[0.6875rem] text-slate-500 flex items-center gap-1 mt-0.5">
                           <Clock className="w-3 h-3 text-slate-400" />
                           <span>{photo.timestampLabel}</span>
                         </p>
@@ -799,7 +799,7 @@ export const EtatDesLieuxHub: React.FC<EtatDesLieuxHubProps> = ({
                       </p>
                     )}
 
-                    <div className="pt-2 border-t border-slate-100 flex items-center justify-between text-[10px] text-slate-400 font-mono">
+                    <div className="pt-2 border-t border-slate-100 flex items-center justify-between text-[0.625rem] text-slate-400 font-mono">
                       <span>SHA-256: {photo.sha256Fingerprint}</span>
                       <button
                         onClick={() => {
@@ -941,7 +941,7 @@ export const EtatDesLieuxHub: React.FC<EtatDesLieuxHubProps> = ({
               {isMeterMode && (
                 <div className="grid grid-cols-2 gap-2 pt-1 text-xs">
                   <div>
-                    <label className="block text-[11px] font-semibold text-slate-700">Type de compteur :</label>
+                    <label className="block text-[0.6875rem] font-semibold text-slate-700">Type de compteur :</label>
                     <select
                       value={meterType}
                       onChange={(e) => setMeterType(e.target.value as MeterType)}
@@ -954,7 +954,7 @@ export const EtatDesLieuxHub: React.FC<EtatDesLieuxHubProps> = ({
                     </select>
                   </div>
                   <div>
-                    <label className="block text-[11px] font-semibold text-slate-700">Index relevé :</label>
+                    <label className="block text-[0.6875rem] font-semibold text-slate-700">Index relevé :</label>
                     <input
                       type="text"
                       placeholder="ex: 12450"
@@ -976,7 +976,7 @@ export const EtatDesLieuxHub: React.FC<EtatDesLieuxHubProps> = ({
                   <button
                     type="button"
                     onClick={() => setPreviewPhotoUrl(null)}
-                    className="absolute top-2 right-2 px-2 py-1 bg-black/70 hover:bg-black text-white text-[10px] font-bold rounded-lg"
+                    className="absolute top-2 right-2 px-2 py-1 bg-black/70 hover:bg-black text-white text-[0.625rem] font-bold rounded-lg"
                   >
                     Changer de photo
                   </button>
@@ -1085,7 +1085,7 @@ export const EtatDesLieuxHub: React.FC<EtatDesLieuxHubProps> = ({
 
             {/* Quick Demo Presets */}
             <div className="pt-4 border-t border-slate-100 mt-4 space-y-2">
-              <span className="text-[11px] font-bold uppercase tracking-wider text-slate-500 block">
+              <span className="text-[0.6875rem] font-bold uppercase tracking-wider text-slate-500 block">
                 Exemples de litiges fréquents à tester en 1 clic :
               </span>
               <div className="flex flex-wrap gap-2">
@@ -1146,7 +1146,7 @@ export const EtatDesLieuxHub: React.FC<EtatDesLieuxHubProps> = ({
                   onChange={(e) => setAnalyzerOccupancyYears(Number(e.target.value))}
                   className="w-full accent-indigo-600"
                 />
-                <div className="flex justify-between text-[10px] text-slate-400">
+                <div className="flex justify-between text-[0.625rem] text-slate-400">
                   <span>1 an</span>
                   <span>5 ans</span>
                   <span>10 ans</span>
@@ -1176,7 +1176,7 @@ export const EtatDesLieuxHub: React.FC<EtatDesLieuxHubProps> = ({
                     <img src={analyzerImage} alt="Analyse" className="w-full h-full object-cover" />
                     <button
                       onClick={() => setAnalyzerImage(null)}
-                      className="absolute top-1.5 right-1.5 bg-black/70 text-white text-[10px] px-2 py-0.5 rounded"
+                      className="absolute top-1.5 right-1.5 bg-black/70 text-white text-[0.625rem] px-2 py-0.5 rounded"
                     >
                       Retirer
                     </button>
@@ -1276,7 +1276,7 @@ export const EtatDesLieuxHub: React.FC<EtatDesLieuxHubProps> = ({
                     </div>
 
                     <div className="bg-slate-50 p-3 rounded-xl border border-slate-200 text-right">
-                      <span className="text-[10px] uppercase font-bold text-slate-400 block">Verdict de prise en charge</span>
+                      <span className="text-[0.625rem] uppercase font-bold text-slate-400 block">Verdict de prise en charge</span>
                       <strong className="text-xs text-slate-900 block mt-0.5">
                         {wearAnalysisResult.whoPaysLabel}
                       </strong>
@@ -1298,31 +1298,31 @@ export const EtatDesLieuxHub: React.FC<EtatDesLieuxHubProps> = ({
                       </strong>
                       <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
                         <div className="bg-white p-2.5 rounded-lg border border-sky-100">
-                          <span className="text-[10px] text-slate-400 uppercase block">Durée de vie</span>
+                          <span className="text-[0.625rem] text-slate-400 uppercase block">Durée de vie</span>
                           <span className="font-bold text-slate-800 text-sm">
                             {wearAnalysisResult.depreciationDetails.theoreticalLifespanYears} ans
                           </span>
                         </div>
                         <div className="bg-white p-2.5 rounded-lg border border-sky-100">
-                          <span className="text-[10px] text-slate-400 uppercase block">Abattement / an</span>
+                          <span className="text-[0.625rem] text-slate-400 uppercase block">Abattement / an</span>
                           <span className="font-bold text-slate-800 text-sm">
                             {wearAnalysisResult.depreciationDetails.annualDepreciationRate}%
                           </span>
                         </div>
                         <div className="bg-white p-2.5 rounded-lg border border-sky-100">
-                          <span className="text-[10px] text-slate-400 uppercase block">Usure reconnue</span>
+                          <span className="text-[0.625rem] text-slate-400 uppercase block">Usure reconnue</span>
                           <span className="font-bold text-emerald-600 text-sm">
                             {wearAnalysisResult.depreciationDetails.calculatedDepreciationRate}%
                           </span>
                         </div>
                         <div className="bg-white p-2.5 rounded-lg border border-sky-100">
-                          <span className="text-[10px] text-slate-400 uppercase block">Part max locataire</span>
+                          <span className="text-[0.625rem] text-slate-400 uppercase block">Part max locataire</span>
                           <span className="font-bold text-rose-600 text-sm">
                             {wearAnalysisResult.depreciationDetails.sharePayableByTenantPercent}%
                           </span>
                         </div>
                       </div>
-                      <p className="text-[11px] text-slate-600">
+                      <p className="text-[0.6875rem] text-slate-600">
                         {wearAnalysisResult.depreciationDetails.explanation}
                       </p>
                     </div>
@@ -1451,7 +1451,7 @@ export const EtatDesLieuxHub: React.FC<EtatDesLieuxHubProps> = ({
                   onChange={(e) => setSimOccupancyYears(Number(e.target.value))}
                   className="w-full accent-emerald-600"
                 />
-                <div className="flex justify-between text-[10px] text-slate-400">
+                <div className="flex justify-between text-[0.625rem] text-slate-400">
                   <span>1 an</span>
                   <span>5 ans</span>
                   <span>10 ans</span>
@@ -1476,8 +1476,8 @@ export const EtatDesLieuxHub: React.FC<EtatDesLieuxHubProps> = ({
 
               <div className="bg-slate-50 p-3 rounded-xl border border-slate-200 text-xs space-y-1.5 text-slate-600">
                 <span className="font-bold text-slate-800 block">Source légale du barème :</span>
-                <p className="text-[11px]">{selectedGridItem.source}</p>
-                <p className="text-[11px] italic">{selectedGridItem.description}</p>
+                <p className="text-[0.6875rem]">{selectedGridItem.source}</p>
+                <p className="text-[0.6875rem] italic">{selectedGridItem.description}</p>
               </div>
             </div>
 
@@ -1485,7 +1485,7 @@ export const EtatDesLieuxHub: React.FC<EtatDesLieuxHubProps> = ({
             <div className="md:col-span-2 space-y-4">
               <div className="bg-white rounded-2xl border border-slate-200 p-6 shadow-xs space-y-6">
                 <div>
-                  <span className="text-[10px] font-black uppercase text-emerald-800 bg-emerald-100 px-2.5 py-1 rounded-full">
+                  <span className="text-[0.625rem] font-black uppercase text-emerald-800 bg-emerald-100 px-2.5 py-1 rounded-full">
                     Calcul d’abattement légal
                   </span>
                   <h3 className="text-xl font-bold text-slate-900 mt-2 font-serif-title">
@@ -1506,7 +1506,7 @@ export const EtatDesLieuxHub: React.FC<EtatDesLieuxHubProps> = ({
                     <strong className="text-2xl font-black text-rose-900 font-mono">
                       {simInitialCost.toLocaleString('fr-FR')} €
                     </strong>
-                    <p className="text-[10px] text-rose-700">100% de la facture (illégal si équipement vétuste)</p>
+                    <p className="text-[0.625rem] text-rose-700">100% de la facture (illégal si équipement vétuste)</p>
                   </div>
 
                   <div className="bg-emerald-50 border border-emerald-300 p-4 rounded-2xl space-y-1">
@@ -1516,7 +1516,7 @@ export const EtatDesLieuxHub: React.FC<EtatDesLieuxHubProps> = ({
                     <strong className="text-2xl font-black text-emerald-950 font-mono">
                       {simDepreciation.maxAmountPayableByTenant.toLocaleString('fr-FR')} €
                     </strong>
-                    <p className="text-[10px] text-emerald-800">
+                    <p className="text-[0.625rem] text-emerald-800">
                       Après déduction de {simDepreciation.depreciationRatePercent}% d’abattement ({simDepreciation.amountDeductedForOwner.toLocaleString('fr-FR')} € à la charge du bailleur)
                     </p>
                   </div>
@@ -1562,7 +1562,7 @@ export const EtatDesLieuxHub: React.FC<EtatDesLieuxHubProps> = ({
                     {FRENCH_HOUSING_LEGAL_REFERENCES.slice(0, 3).map((ref, idx) => (
                       <div key={idx} className="bg-slate-50 p-2.5 rounded-xl border border-slate-200">
                         <strong className="text-slate-900 block font-semibold">{ref.title}</strong>
-                        <span className="text-slate-600 text-[11px]">{ref.summary}</span>
+                        <span className="text-slate-600 text-[0.6875rem]">{ref.summary}</span>
                       </div>
                     ))}
                   </div>
@@ -1595,7 +1595,7 @@ export const EtatDesLieuxHub: React.FC<EtatDesLieuxHubProps> = ({
               <div className="flex items-center justify-between border-b border-slate-100 pb-2">
                 <h3 className="font-bold text-slate-900">Données du litige</h3>
                 {profileName && (
-                  <span className="text-[10px] bg-emerald-100 text-emerald-800 font-bold px-2 py-0.5 rounded-full flex items-center gap-1">
+                  <span className="text-[0.625rem] bg-emerald-100 text-emerald-800 font-bold px-2 py-0.5 rounded-full flex items-center gap-1">
                     <UserCheck className="w-3 h-3" />
                     Trousseau actif
                   </span>
@@ -1755,7 +1755,7 @@ export const EtatDesLieuxHub: React.FC<EtatDesLieuxHubProps> = ({
               <div className="bg-slate-900 text-white rounded-2xl p-5 shadow-sm space-y-3">
                 <div className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-800 pb-3">
                   <div>
-                    <span className="text-[10px] uppercase font-bold text-sky-400 block tracking-wider">
+                    <span className="text-[0.625rem] uppercase font-bold text-sky-400 block tracking-wider">
                       Décompte légal exécutoire
                     </span>
                     <h4 className="text-base font-bold text-white">
@@ -1769,19 +1769,19 @@ export const EtatDesLieuxHub: React.FC<EtatDesLieuxHubProps> = ({
 
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 text-xs">
                   <div className="bg-slate-800/80 p-2.5 rounded-xl border border-slate-700">
-                    <span className="text-[10px] text-slate-400 block">Caution retenue</span>
+                    <span className="text-[0.625rem] text-slate-400 block">Caution retenue</span>
                     <strong className="text-white text-sm">
                       {generatedDisputeLetter.breakdown.undueRetainedAmount.toLocaleString('fr-FR')} €
                     </strong>
                   </div>
                   <div className="bg-slate-800/80 p-2.5 rounded-xl border border-slate-700">
-                    <span className="text-[10px] text-slate-400 block">Mois de retard entamés</span>
+                    <span className="text-[0.625rem] text-slate-400 block">Mois de retard entamés</span>
                     <strong className="text-amber-400 text-sm">
                       {generatedDisputeLetter.breakdown.delayMonths} mois (Art. 22)
                     </strong>
                   </div>
                   <div className="bg-slate-800/80 p-2.5 rounded-xl border border-slate-700 col-span-2 sm:col-span-1">
-                    <span className="text-[10px] text-slate-400 block">Pénalité légale (+10%/mois)</span>
+                    <span className="text-[0.625rem] text-slate-400 block">Pénalité légale (+10%/mois)</span>
                     <strong className="text-emerald-400 text-sm">
                       +{generatedDisputeLetter.breakdown.totalPenalty.toLocaleString('fr-FR')} €
                     </strong>
@@ -1866,7 +1866,7 @@ export const EtatDesLieuxHub: React.FC<EtatDesLieuxHubProps> = ({
 
                 {/* Signature zone */}
                 <div className="pt-8 border-t border-slate-200 flex justify-between items-end font-sans text-xs">
-                  <div className="text-[11px] text-slate-400">
+                  <div className="text-[0.6875rem] text-slate-400">
                     Document certifié conforme à la Loi n° 89-462 (art. 22) et au Décret n° 2016-382.
                   </div>
                   <div className="border-t-2 border-slate-900 pt-2 w-48 text-center font-bold">

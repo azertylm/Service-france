@@ -27,7 +27,7 @@ export const TourismExportModal: React.FC<TourismExportModalProps> = ({ circuit,
           <div className="flex items-center gap-2">
             <span className="text-xl">🖨️</span>
             <div>
-              <span className="text-[11px] font-semibold uppercase tracking-wider text-amber-400">
+              <span className="text-[0.6875rem] font-semibold uppercase tracking-wider text-amber-400">
                 Kit Office de Tourisme & Partenaires Territoriaux
               </span>
               <h2 className="text-sm sm:text-base font-bold text-white">
@@ -72,29 +72,29 @@ export const TourismExportModal: React.FC<TourismExportModalProps> = ({ circuit,
             </div>
 
             <div className="text-right shrink-0">
-              <span className="inline-block text-[11px] font-semibold text-emerald-800 bg-emerald-50 border border-emerald-300 px-2.5 py-1 rounded">
+              <span className="inline-block text-[0.6875rem] font-semibold text-emerald-800 bg-emerald-50 border border-emerald-300 px-2.5 py-1 rounded">
                 0% publicité • 100% culture
               </span>
-              <p className="text-[10px] text-slate-400 mt-1">Édition citoyenne libre</p>
+              <p className="text-[0.625rem] text-slate-400 mt-1">Édition citoyenne libre</p>
             </div>
           </div>
 
           {/* Practical Info Bar */}
           <div className="grid grid-cols-4 gap-2 bg-slate-100 p-3 rounded-xl text-center text-xs">
             <div>
-              <span className="text-slate-500 block text-[10px] uppercase">Commune</span>
+              <span className="text-slate-500 block text-[0.625rem] uppercase">Commune</span>
               <strong className="text-slate-900">{circuit.commune}</strong>
             </div>
             <div>
-              <span className="text-slate-500 block text-[10px] uppercase">Durée</span>
+              <span className="text-slate-500 block text-[0.625rem] uppercase">Durée</span>
               <strong className="text-slate-900">{circuit.duration}</strong>
             </div>
             <div>
-              <span className="text-slate-500 block text-[10px] uppercase">Distance</span>
+              <span className="text-slate-500 block text-[0.625rem] uppercase">Distance</span>
               <strong className="text-slate-900">{circuit.distanceKm} km ({circuit.transportMode})</strong>
             </div>
             <div>
-              <span className="text-slate-500 block text-[10px] uppercase">Meilleur horaire</span>
+              <span className="text-slate-500 block text-[0.625rem] uppercase">Meilleur horaire</span>
               <strong className="text-slate-900">{circuit.recommendedTime}</strong>
             </div>
           </div>
@@ -118,12 +118,12 @@ export const TourismExportModal: React.FC<TourismExportModalProps> = ({ circuit,
                 >
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
-                      <span className="w-5 h-5 rounded-full bg-slate-900 text-white font-bold flex items-center justify-center text-[11px]">
+                      <span className="w-5 h-5 rounded-full bg-slate-900 text-white font-bold flex items-center justify-center text-[0.6875rem]">
                         {idx + 1}
                       </span>
                       <strong className="text-sm text-slate-900">{site.name}</strong>
                     </div>
-                    <span className="text-[11px] text-slate-500 italic">
+                    <span className="text-[0.6875rem] text-slate-500 italic">
                       {site.architect} ({site.yearBuilt})
                     </span>
                   </div>
@@ -131,13 +131,13 @@ export const TourismExportModal: React.FC<TourismExportModalProps> = ({ circuit,
                   <p className="text-slate-700 italic pl-7">« {site.shortTagline} »</p>
 
                   <div className="pl-7 space-y-1 pt-1">
-                    <div className="text-[11px] text-slate-600">
+                    <div className="text-[0.6875rem] text-slate-600">
                       <strong>À observer à l'œil nu :</strong> {site.whatToLookFor.join(' • ')}
                     </div>
-                    <div className="text-[11px] text-purple-900 bg-purple-50 p-2 rounded">
+                    <div className="text-[0.6875rem] text-purple-900 bg-purple-50 p-2 rounded">
                       <strong>Secret / Anecdote :</strong> {site.anecdote}
                     </div>
-                    <div className="text-[10px] text-slate-500">
+                    <div className="text-[0.625rem] text-slate-500">
                       📍 {site.address} — GPS : {site.coordinates.lat.toFixed(4)}, {site.coordinates.lng.toFixed(4)}
                     </div>
                   </div>
@@ -147,14 +147,14 @@ export const TourismExportModal: React.FC<TourismExportModalProps> = ({ circuit,
           </div>
 
           {/* Charter & Independence notice */}
-          <div className="border-t border-slate-200 pt-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] text-slate-500">
+          <div className="border-t border-slate-200 pt-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-[0.6875rem] text-slate-500">
             <div className="flex items-center gap-2">
               <ShieldCheck className="w-4 h-4 text-emerald-600" />
               <span>
                 Charte d'utilité publique papierpapier.fr : aucun partenariat rémunéré ni promotion de commerce.
               </span>
             </div>
-            <span className="font-mono text-[10px]">Version prête pour affichage et distribution accueil</span>
+            <span className="font-mono text-[0.625rem]">Version prête pour affichage et distribution accueil</span>
           </div>
         </div>
       </div>

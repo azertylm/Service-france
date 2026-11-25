@@ -253,7 +253,7 @@ export const MemoSanteHub: React.FC = () => {
                 <h1 className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight">
                   MémoSanté
                 </h1>
-                <span className="text-[10px] font-bold uppercase tracking-wider text-teal-800 bg-teal-50 border border-teal-200 px-2 py-0.5 rounded-full">
+                <span className="text-[0.625rem] font-bold uppercase tracking-wider text-teal-800 bg-teal-50 border border-teal-200 px-2 py-0.5 rounded-full">
                   100 % Privé & Local
                 </span>
               </div>
@@ -316,7 +316,7 @@ export const MemoSanteHub: React.FC = () => {
           >
             <Syringe className="w-4 h-4 text-teal-600" />
             <span>Vaccins & Rappels</span>
-            <span className="text-[10px] bg-slate-200 text-slate-700 px-1.5 py-0.2 rounded-full font-semibold">
+            <span className="text-[0.625rem] bg-slate-200 text-slate-700 px-1.5 py-0.2 rounded-full font-semibold">
               {vaccines.length}
             </span>
           </button>
@@ -331,7 +331,7 @@ export const MemoSanteHub: React.FC = () => {
           >
             <Pill className="w-4 h-4 text-teal-600" />
             <span>Ordonnances & Traitements</span>
-            <span className="text-[10px] bg-slate-200 text-slate-700 px-1.5 py-0.2 rounded-full font-semibold">
+            <span className="text-[0.625rem] bg-slate-200 text-slate-700 px-1.5 py-0.2 rounded-full font-semibold">
               {prescriptions.length}
             </span>
           </button>
@@ -346,7 +346,7 @@ export const MemoSanteHub: React.FC = () => {
           >
             <AlertOctagon className="w-4 h-4 text-rose-600" />
             <span>Allergies & Fiche d'Urgence</span>
-            <span className="text-[10px] bg-slate-200 text-slate-700 px-1.5 py-0.2 rounded-full font-semibold">
+            <span className="text-[0.625rem] bg-slate-200 text-slate-700 px-1.5 py-0.2 rounded-full font-semibold">
               {allergies.length}
             </span>
           </button>
@@ -361,7 +361,7 @@ export const MemoSanteHub: React.FC = () => {
           >
             <Users className="w-4 h-4 text-slate-600" />
             <span>Membres du Foyer</span>
-            <span className="text-[10px] bg-slate-200 text-slate-700 px-1.5 py-0.2 rounded-full font-semibold">
+            <span className="text-[0.625rem] bg-slate-200 text-slate-700 px-1.5 py-0.2 rounded-full font-semibold">
               {familyMembers.length}
             </span>
           </button>

@@ -141,7 +141,7 @@ export const DroitsSociauxHub: React.FC<DroitsSociauxHubProps> = ({
           </span>
           <button
             onClick={handlePrefillFromKeychain}
-            className="text-[11px] font-bold text-amber-700 bg-amber-50 hover:bg-amber-100 border border-amber-200 px-2 py-0.5 rounded-md flex items-center gap-1 transition-colors"
+            className="text-[0.6875rem] font-bold text-amber-700 bg-amber-50 hover:bg-amber-100 border border-amber-200 px-2 py-0.5 rounded-md flex items-center gap-1 transition-colors"
           >
             <FileKey className="w-3 h-3 text-amber-600" />
             <span>Pré-remplir commune depuis le trousseau</span>
@@ -167,13 +167,13 @@ export const DroitsSociauxHub: React.FC<DroitsSociauxHubProps> = ({
             }
             className="text-left p-3.5 rounded-xl border border-slate-200 hover:border-amber-500 hover:bg-amber-50/30 transition-all group"
           >
-            <div className="text-[10px] font-bold text-amber-700 bg-amber-100/70 px-2 py-0.5 rounded w-fit mb-1">
+            <div className="text-[0.625rem] font-bold text-amber-700 bg-amber-100/70 px-2 py-0.5 rounded w-fit mb-1">
               Célibataire au SMIC
             </div>
             <h4 className="text-xs font-bold text-slate-900 group-hover:text-amber-950">
               Salarié net 1 420 € · Locataire
             </h4>
-            <p className="text-[11px] text-slate-500 mt-1 leading-relaxed">
+            <p className="text-[0.6875rem] text-slate-500 mt-1 leading-relaxed">
               Prime d'activité (~180 €/m) + Chèque énergie + aide locale.
             </p>
           </button>
@@ -196,13 +196,13 @@ export const DroitsSociauxHub: React.FC<DroitsSociauxHubProps> = ({
             }
             className="text-left p-3.5 rounded-xl border border-slate-200 hover:border-amber-500 hover:bg-amber-50/30 transition-all group"
           >
-            <div className="text-[10px] font-bold text-emerald-700 bg-emerald-100/70 px-2 py-0.5 rounded w-fit mb-1">
+            <div className="text-[0.625rem] font-bold text-emerald-700 bg-emerald-100/70 px-2 py-0.5 rounded w-fit mb-1">
               Couple avec 2 enfants
             </div>
             <h4 className="text-xs font-bold text-slate-900 group-hover:text-emerald-950">
               1 salaire 2 100 € · 2 enfants (7 & 11 ans)
             </h4>
-            <p className="text-[11px] text-slate-500 mt-1 leading-relaxed">
+            <p className="text-[0.6875rem] text-slate-500 mt-1 leading-relaxed">
               ARS (840 €/an) + Pass'Sport + Chèque énergie + CCAS.
             </p>
           </button>
@@ -225,13 +225,13 @@ export const DroitsSociauxHub: React.FC<DroitsSociauxHubProps> = ({
             }
             className="text-left p-3.5 rounded-xl border border-slate-200 hover:border-amber-500 hover:bg-amber-50/30 transition-all group"
           >
-            <div className="text-[10px] font-bold text-indigo-700 bg-indigo-100/70 px-2 py-0.5 rounded w-fit mb-1">
+            <div className="text-[0.625rem] font-bold text-indigo-700 bg-indigo-100/70 px-2 py-0.5 rounded w-fit mb-1">
               Parent solo temps partiel
             </div>
             <h4 className="text-xs font-bold text-slate-900 group-hover:text-indigo-950">
               Salaire 1 100 € · 1 enfant · Loyer 590 €
             </h4>
-            <p className="text-[11px] text-slate-500 mt-1 leading-relaxed">
+            <p className="text-[0.6875rem] text-slate-500 mt-1 leading-relaxed">
               Forte prime d'activité + APL + Mutuelle CSS gratuite.
             </p>
           </button>
@@ -249,7 +249,7 @@ export const DroitsSociauxHub: React.FC<DroitsSociauxHubProps> = ({
               <Users className="w-4 h-4 text-slate-700" />
               <span>Votre situation de foyer</span>
             </h3>
-            <span className="text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200">
+            <span className="text-[0.6875rem] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200">
               100% confidentiel
             </span>
           </div>
@@ -386,7 +386,7 @@ export const DroitsSociauxHub: React.FC<DroitsSociauxHubProps> = ({
                 }
                 className="w-full accent-amber-500 h-2 bg-slate-200 rounded-lg cursor-pointer"
               />
-              <div className="flex justify-between text-[10px] text-slate-400 mt-1">
+              <div className="flex justify-between text-[0.625rem] text-slate-400 mt-1">
                 <span>0 € (Sans emploi)</span>
                 <span>1 420 € (SMIC)</span>
                 <span>2 500 €</span>
@@ -421,7 +421,7 @@ export const DroitsSociauxHub: React.FC<DroitsSociauxHubProps> = ({
                 <span className="text-xs font-semibold text-slate-700">
                   Revenu Fiscal de Référence (RFR annuel) :
                 </span>
-                <span className="text-[11px] text-slate-500 font-medium">
+                <span className="text-[0.6875rem] text-slate-500 font-medium">
                   {inputs.annualTaxableIncome > 0
                     ? `${inputs.annualTaxableIncome} €/an`
                     : 'Estimé automatiquement'}
@@ -438,7 +438,7 @@ export const DroitsSociauxHub: React.FC<DroitsSociauxHubProps> = ({
                 }
                 className="w-full border border-slate-300 rounded-xl p-2.5 text-xs text-slate-900 focus:ring-2 focus:ring-amber-500 focus:outline-hidden"
               />
-              <p className="text-[10px] text-slate-400 mt-1">
+              <p className="text-[0.625rem] text-slate-400 mt-1">
                 Indiqué sur la 1ère page de votre dernier avis d'imposition sur le revenu.
               </p>
             </div>
@@ -455,7 +455,7 @@ export const DroitsSociauxHub: React.FC<DroitsSociauxHubProps> = ({
               <button
                 type="button"
                 onClick={() => setInputs((p) => ({ ...p, housingStatus: 'tenant' }))}
-                className={`p-2 rounded-xl border text-[11px] font-semibold flex items-center justify-center transition-all ${
+                className={`p-2 rounded-xl border text-[0.6875rem] font-semibold flex items-center justify-center transition-all ${
                   inputs.housingStatus === 'tenant'
                     ? 'bg-slate-900 text-white border-slate-900 shadow-xs'
                     : 'bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100'
@@ -466,7 +466,7 @@ export const DroitsSociauxHub: React.FC<DroitsSociauxHubProps> = ({
               <button
                 type="button"
                 onClick={() => setInputs((p) => ({ ...p, housingStatus: 'owner' }))}
-                className={`p-2 rounded-xl border text-[11px] font-semibold flex items-center justify-center transition-all ${
+                className={`p-2 rounded-xl border text-[0.6875rem] font-semibold flex items-center justify-center transition-all ${
                   inputs.housingStatus === 'owner'
                     ? 'bg-slate-900 text-white border-slate-900 shadow-xs'
                     : 'bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100'
@@ -477,7 +477,7 @@ export const DroitsSociauxHub: React.FC<DroitsSociauxHubProps> = ({
               <button
                 type="button"
                 onClick={() => setInputs((p) => ({ ...p, housingStatus: 'free_lodging' }))}
-                className={`p-2 rounded-xl border text-[11px] font-semibold flex items-center justify-center transition-all ${
+                className={`p-2 rounded-xl border text-[0.6875rem] font-semibold flex items-center justify-center transition-all ${
                   inputs.housingStatus === 'free_lodging'
                     ? 'bg-slate-900 text-white border-slate-900 shadow-xs'
                     : 'bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100'
@@ -551,7 +551,7 @@ export const DroitsSociauxHub: React.FC<DroitsSociauxHubProps> = ({
           {/* Summary Box with Total Gains */}
           <div className="bg-gradient-to-br from-emerald-950 via-slate-900 to-slate-950 text-white rounded-3xl p-6 sm:p-7 shadow-lg border border-emerald-500/30 flex flex-col sm:flex-row items-center justify-between gap-6">
             <div className="space-y-1 text-center sm:text-left">
-              <span className="text-[11px] font-black uppercase tracking-wider text-emerald-400 bg-emerald-950/80 px-2.5 py-1 rounded-full border border-emerald-800">
+              <span className="text-[0.6875rem] font-black uppercase tracking-wider text-emerald-400 bg-emerald-950/80 px-2.5 py-1 rounded-full border border-emerald-800">
                 Droits théoriques détectés
               </span>
               <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tight pt-1">
@@ -636,7 +636,7 @@ export const DroitsSociauxHub: React.FC<DroitsSociauxHubProps> = ({
                           <h4 className="text-sm sm:text-base font-bold text-slate-900">
                             {aid.name}
                           </h4>
-                          <span className="text-[10px] font-bold text-slate-600 bg-slate-100 px-2 py-0.5 rounded">
+                          <span className="text-[0.625rem] font-bold text-slate-600 bg-slate-100 px-2 py-0.5 rounded">
                             {aid.organism}
                           </span>
                         </div>
@@ -652,7 +652,7 @@ export const DroitsSociauxHub: React.FC<DroitsSociauxHubProps> = ({
                           ? `~${aid.estimatedMonthlyAmount} € / mois`
                           : `${aid.estimatedAnnualAmount} € / an`}
                       </div>
-                      <div className="text-[10px] text-slate-400 font-semibold">
+                      <div className="text-[0.625rem] text-slate-400 font-semibold">
                         ({aid.estimatedAnnualAmount} € / an)
                       </div>
                       <div className="mt-1 flex justify-end text-slate-400">
@@ -690,7 +690,7 @@ export const DroitsSociauxHub: React.FC<DroitsSociauxHubProps> = ({
                           <span className="font-bold text-slate-700 block mb-1">
                             📋 Pièces justificatives à réunir :
                           </span>
-                          <ul className="list-disc list-inside text-slate-600 space-y-0.5 text-[11px]">
+                          <ul className="list-disc list-inside text-slate-600 space-y-0.5 text-[0.6875rem]">
                             {aid.requiredDocuments.map((doc, idx) => (
                               <li key={idx}>{doc}</li>
                             ))}

@@ -420,7 +420,7 @@ export default function App() {
                 Le portail citoyen d'utilité publique
               </span>
             </div>
-            <p className="text-[11px] text-slate-400">
+            <p className="text-[0.6875rem] text-slate-400">
               Composé de <strong>ClairContrat</strong> (décodeur juridique),{' '}
               <strong>Patrimoine en Poche</strong> (guide architectural sans publicité),{' '}
               <strong>PlumeCitoyenne</strong> (écrivain public administratif) et{' '}
@@ -531,7 +531,7 @@ export default function App() {
             </button>
           </div>
 
-          <div className="text-center md:text-right max-w-sm text-[10px] text-slate-400 leading-relaxed">
+          <div className="text-center md:text-right max-w-sm text-[0.625rem] text-slate-400 leading-relaxed">
             <strong>papierpapier.fr</strong> · Conçue et éditée par ALPHABETTE (fondée par Valentin RICHAUD à La Grande-Motte). Respect strict de la souveraineté citoyenne et architecture zéro connaissance.
           </div>
         </div>

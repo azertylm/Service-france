@@ -376,7 +376,7 @@ export const ResilExpressHub: React.FC<ResilExpressHubProps> = ({
 
         <div className="flex items-center gap-4 bg-emerald-50 px-5 py-3 rounded-2xl border border-emerald-200 shrink-0">
           <div>
-            <span className="text-[10px] uppercase font-bold text-emerald-800 block">
+            <span className="text-[0.625rem] uppercase font-bold text-emerald-800 block">
               Gain Mensuel
             </span>
             <span className="text-xl sm:text-2xl font-black text-emerald-700">
@@ -385,7 +385,7 @@ export const ResilExpressHub: React.FC<ResilExpressHubProps> = ({
           </div>
           <div className="h-8 w-px bg-emerald-300" />
           <div>
-            <span className="text-[10px] uppercase font-bold text-emerald-800 block">
+            <span className="text-[0.625rem] uppercase font-bold text-emerald-800 block">
               Gain Annuel
             </span>
             <span className="text-xl sm:text-2xl font-black text-emerald-900">
@@ -510,7 +510,7 @@ export const ResilExpressHub: React.FC<ResilExpressHubProps> = ({
                 <div className="mt-0.5 shrink-0">{getCategoryIcon(provider.category)}</div>
                 <div className="min-w-0 flex-1">
                   <h4 className="text-xs font-bold text-slate-900 truncate">{provider.name}</h4>
-                  <p className="text-[11px] text-slate-500 truncate">
+                  <p className="text-[0.6875rem] text-slate-500 truncate">
                     ~{provider.typicalMonthlyCost.toFixed(2)} €/mois · Préavis {provider.noticePeriodDays}j
                   </p>
                 </div>
@@ -535,7 +535,7 @@ export const ResilExpressHub: React.FC<ResilExpressHubProps> = ({
             </div>
             <div className="min-w-0 flex-1">
               <h4 className="text-xs font-bold text-slate-900 truncate">Autre organisme non listé</h4>
-              <p className="text-[11px] text-slate-500 truncate">Saisie manuelle personnalisée</p>
+              <p className="text-[0.6875rem] text-slate-500 truncate">Saisie manuelle personnalisée</p>
             </div>
           </button>
         </div>
@@ -545,7 +545,7 @@ export const ResilExpressHub: React.FC<ResilExpressHubProps> = ({
           <div className="p-3.5 rounded-2xl bg-amber-50 border border-amber-200 text-xs text-amber-950 flex items-start gap-2.5">
             <Info className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
             <div className="space-y-0.5">
-              <strong className="font-bold text-amber-900 uppercase tracking-wider text-[11px]">
+              <strong className="font-bold text-amber-900 uppercase tracking-wider text-[0.6875rem]">
                 Astuce légale pour {selectedProvider.name} :
               </strong>
               <p className="leading-relaxed">{selectedProvider.tip}</p>
@@ -639,7 +639,7 @@ export const ResilExpressHub: React.FC<ResilExpressHubProps> = ({
                       {ground.title}
                     </strong>
                   </div>
-                  <p className="text-[11px] text-slate-500 pl-5 pt-0.5">{ground.desc}</p>
+                  <p className="text-[0.6875rem] text-slate-500 pl-5 pt-0.5">{ground.desc}</p>
                 </label>
               ))}
             </div>
@@ -694,7 +694,7 @@ export const ResilExpressHub: React.FC<ResilExpressHubProps> = ({
                 placeholder="29.99"
                 className="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs"
               />
-              <span className="text-[10px] text-slate-400">
+              <span className="text-[0.625rem] text-slate-400">
                 Sert à mesurer vos économies réelles dans le tableau de bord.
               </span>
             </div>
@@ -704,7 +704,7 @@ export const ResilExpressHub: React.FC<ResilExpressHubProps> = ({
           <div className="space-y-3 pt-3 border-t border-slate-100 text-xs">
             <div className="flex items-center justify-between">
               <label className="font-bold text-slate-700 block">Vos coordonnées (Expéditeur) :</label>
-              <span className="text-[10px] text-emerald-700 font-semibold flex items-center gap-1">
+              <span className="text-[0.625rem] text-emerald-700 font-semibold flex items-center gap-1">
                 <UserCheck className="w-3 h-3" />
                 Trousseau local
               </span>
@@ -757,7 +757,7 @@ export const ResilExpressHub: React.FC<ResilExpressHubProps> = ({
           <div className="space-y-4">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-slate-100">
               <div>
-                <span className="text-[10px] font-bold uppercase tracking-wider text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded-full">
+                <span className="text-[0.625rem] font-bold uppercase tracking-wider text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded-full">
                   Lettre Recommandée avec Accusé de Réception (LRAR)
                 </span>
                 <h3 className="text-base font-black text-slate-900 font-serif-title mt-1">
@@ -858,13 +858,13 @@ export const ResilExpressHub: React.FC<ResilExpressHubProps> = ({
                       +{item.monthlyAmount.toFixed(2)} €/m
                     </span>
                   </div>
-                  <p className="text-[11px] text-slate-500">
+                  <p className="text-[0.6875rem] text-slate-500">
                     Fondement : {item.legalGround.replace('_', ' ')} · Ajouté le {item.cancellationDate}
                   </p>
                 </div>
 
                 <div className="flex items-center justify-between pt-2 border-t border-slate-200 text-xs">
-                  <span className="inline-flex items-center gap-1 text-[10px] font-bold text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded">
+                  <span className="inline-flex items-center gap-1 text-[0.625rem] font-bold text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded">
                     <CheckCircle2 className="w-3 h-3 text-indigo-600" />
                     Lettre prête
                   </span>

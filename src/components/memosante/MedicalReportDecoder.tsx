@@ -152,14 +152,14 @@ export const MedicalReportDecoder: React.FC<MedicalReportDecoderProps> = ({ onSa
               Garantie Solennelle de Confidentialité & Non-Accès
             </span>
           </div>
-          <span className="text-[10px] font-bold uppercase tracking-wider text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded-full">
+          <span className="text-[0.625rem] font-bold uppercase tracking-wider text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded-full">
             Zero-Knowledge
           </span>
         </div>
         <blockquote className="italic font-medium text-xs sm:text-sm text-slate-900 border-l-3 border-emerald-600 pl-3 leading-relaxed">
           « Vos données ne quittent pas votre appareil de manière lisible. ALPHABETTE n'a aucun moyen technique d'accéder à vos documents, analyses ou courriers. »
         </blockquote>
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 text-[11px] text-emerald-900/80 font-semibold pt-1 border-t border-emerald-200/60">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 text-[0.6875rem] text-emerald-900/80 font-semibold pt-1 border-t border-emerald-200/60">
           <span>ALPHABETTE (La Grande-Motte, fondateur Valentin RICHAUD)</span>
           <span className="text-amber-900 font-bold">Règle éthique : Aucun diagnostic posé · Renvoi exclusif vers votre médecin ou le 15</span>
         </div>
@@ -172,7 +172,7 @@ export const MedicalReportDecoder: React.FC<MedicalReportDecoderProps> = ({ onSa
             <Sparkles className="w-3.5 h-3.5 text-emerald-600" />
             Exemples concrets à tester en 1 clic
           </span>
-          <span className="text-[11px] text-slate-400">Comptes-rendus anonymisés</span>
+          <span className="text-[0.6875rem] text-slate-400">Comptes-rendus anonymisés</span>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
@@ -183,7 +183,7 @@ export const MedicalReportDecoder: React.FC<MedicalReportDecoderProps> = ({ onSa
               className="text-left p-3.5 rounded-xl border border-slate-200 hover:border-emerald-500 hover:bg-emerald-50/40 transition-all group"
             >
               <div className="flex items-center justify-between gap-1 mb-1">
-                <span className="text-[10px] font-bold text-emerald-700 bg-emerald-100/70 px-2 py-0.5 rounded-md">
+                <span className="text-[0.625rem] font-bold text-emerald-700 bg-emerald-100/70 px-2 py-0.5 rounded-md">
                   {preset.badge}
                 </span>
                 <ChevronRight className="w-3.5 h-3.5 text-slate-400 group-hover:text-emerald-600 group-hover:translate-x-0.5 transition-all" />
@@ -191,7 +191,7 @@ export const MedicalReportDecoder: React.FC<MedicalReportDecoderProps> = ({ onSa
               <h4 className="text-xs font-bold text-slate-900 group-hover:text-emerald-950 line-clamp-1">
                 {preset.title}
               </h4>
-              <p className="text-[11px] text-slate-500 mt-1 line-clamp-2 leading-relaxed">
+              <p className="text-[0.6875rem] text-slate-500 mt-1 line-clamp-2 leading-relaxed">
                 {preset.rawText.substring(0, 95)}...
               </p>
             </button>
@@ -252,7 +252,7 @@ export const MedicalReportDecoder: React.FC<MedicalReportDecoderProps> = ({ onSa
               <p className="text-xs font-bold text-slate-800">
                 Ou photographiez / téléversez votre feuille d'analyse
               </p>
-              <p className="text-[11px] text-slate-500">
+              <p className="text-[0.6875rem] text-slate-500">
                 {selectedFile ? (
                   <span className="text-emerald-700 font-semibold">
                     Fichier prêt : {selectedFile.name}
@@ -321,7 +321,7 @@ export const MedicalReportDecoder: React.FC<MedicalReportDecoderProps> = ({ onSa
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-200 pb-5">
             <div>
               <div className="flex items-center gap-2">
-                <span className="text-[10px] font-bold uppercase tracking-wider text-emerald-800 bg-emerald-100 px-2.5 py-0.5 rounded-full">
+                <span className="text-[0.625rem] font-bold uppercase tracking-wider text-emerald-800 bg-emerald-100 px-2.5 py-0.5 rounded-full">
                   {explanation.reportType}
                 </span>
                 <span className="text-xs text-slate-400">Décryptage citoyen</span>
@@ -398,7 +398,7 @@ export const MedicalReportDecoder: React.FC<MedicalReportDecoderProps> = ({ onSa
                     <span className="font-bold text-sm text-slate-900">
                       {term.technicalTerm}
                     </span>
-                    <span className="text-[10px] uppercase font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-md">
+                    <span className="text-[0.625rem] uppercase font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-md">
                       Vulgarisé
                     </span>
                   </div>

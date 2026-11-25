@@ -100,12 +100,12 @@ export const Header: React.FC<HeaderProps> = ({
             </div>
             <button
               onClick={() => handleSelectService('accueil')}
-              className="font-black tracking-wider uppercase text-slate-100 text-[11px] sm:text-xs hover:text-white transition-colors truncate"
+              className="font-black tracking-wider uppercase text-slate-100 text-[0.6875rem] sm:text-xs hover:text-white transition-colors truncate"
             >
               papierpapier.fr
             </button>
             <span className="text-slate-600 hidden sm:inline">|</span>
-            <span className="text-slate-400 hidden sm:inline text-[11px] truncate">
+            <span className="text-slate-400 hidden sm:inline text-[0.6875rem] truncate">
               ALPHABETTE · La Grande-Motte
             </span>
           </div>
@@ -115,7 +115,7 @@ export const Header: React.FC<HeaderProps> = ({
             {/* Urgence 114 Direct Alert (Visible on all screens) */}
             <button
               onClick={() => handleSelectService('urgence')}
-              className={`text-[11px] font-bold px-2 py-1 rounded-md transition-all flex items-center gap-1 shadow-xs active:scale-95 ${
+              className={`text-[0.6875rem] font-bold px-2 py-1 rounded-md transition-all flex items-center gap-1 shadow-xs active:scale-95 ${
                 currentService === 'urgence'
                   ? 'bg-rose-500 text-white ring-2 ring-rose-300'
                   : 'bg-rose-600 hover:bg-rose-500 text-white'
@@ -131,7 +131,7 @@ export const Header: React.FC<HeaderProps> = ({
               {/* Zero-Knowledge modal button */}
               <button
                 onClick={onOpenZeroKnowledge}
-                className="text-[11px] text-emerald-400 bg-emerald-950/80 hover:bg-emerald-900/80 px-2 py-1 rounded border border-emerald-800/80 flex items-center gap-1 transition-all"
+                className="text-[0.6875rem] text-emerald-400 bg-emerald-950/80 hover:bg-emerald-900/80 px-2 py-1 rounded border border-emerald-800/80 flex items-center gap-1 transition-all"
                 title="Confidentialité : vos données restent dans ce navigateur"
               >
                 <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
@@ -141,7 +141,7 @@ export const Header: React.FC<HeaderProps> = ({
               {/* Trousseau Administratif */}
               <button
                 onClick={onOpenKeychain}
-                className="text-[11px] text-amber-300 bg-amber-950/80 hover:bg-amber-900/80 px-2 py-1 rounded border border-amber-800/80 flex items-center gap-1 transition-all"
+                className="text-[0.6875rem] text-amber-300 bg-amber-950/80 hover:bg-amber-900/80 px-2 py-1 rounded border border-amber-800/80 flex items-center gap-1 transition-all"
                 title="Trousseau d'identité administrative locale"
               >
                 <FileKey className="w-3.5 h-3.5 text-amber-400" />
@@ -152,7 +152,7 @@ export const Header: React.FC<HeaderProps> = ({
               {onOpenByok && (
                 <button
                   onClick={onOpenByok}
-                  className="text-[11px] text-blue-300 bg-blue-950/80 hover:bg-blue-900/80 px-2 py-1 rounded border border-blue-800/80 flex items-center gap-1 transition-all font-medium"
+                  className="text-[0.6875rem] text-blue-300 bg-blue-950/80 hover:bg-blue-900/80 px-2 py-1 rounded border border-blue-800/80 flex items-center gap-1 transition-all font-medium"
                   title="Ajouter ou changer votre clé IA (Mistral, Gemini…)"
                 >
                   <Key className="w-3.5 h-3.5 text-blue-400" />
@@ -164,7 +164,7 @@ export const Header: React.FC<HeaderProps> = ({
               {onOpenPricing && (
                 <button
                   onClick={onOpenPricing}
-                  className="text-[11px] text-amber-300 bg-amber-900/70 hover:bg-amber-800/80 px-2.5 py-1 rounded-md border border-amber-500/50 flex items-center gap-1.5 transition-all font-bold shadow-xs active:scale-95"
+                  className="text-[0.6875rem] text-amber-300 bg-amber-900/70 hover:bg-amber-800/80 px-2.5 py-1 rounded-md border border-amber-500/50 flex items-center gap-1.5 transition-all font-bold shadow-xs active:scale-95"
                   title="Tarifs Alphabette : 15 € par an, ou 40 € par an pour toutes les applications"
                 >
                   <Crown className="w-3.5 h-3.5 text-amber-400" />
@@ -176,7 +176,7 @@ export const Header: React.FC<HeaderProps> = ({
               {onOpenSynergy && (
                 <button
                   onClick={onOpenSynergy}
-                  className="text-[11px] text-indigo-300 bg-indigo-950/80 hover:bg-indigo-900/80 px-2 py-1 rounded border border-indigo-800/80 flex items-center gap-1 transition-all"
+                  className="text-[0.6875rem] text-indigo-300 bg-indigo-950/80 hover:bg-indigo-900/80 px-2 py-1 rounded border border-indigo-800/80 flex items-center gap-1 transition-all"
                   title="Passerelle d'échange de données inter-applications Alphabette"
                 >
                   <Layers className="w-3.5 h-3.5 text-indigo-400" />
@@ -189,7 +189,7 @@ export const Header: React.FC<HeaderProps> = ({
                 href="http://alphabette.fr"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[11px] text-slate-300 hover:text-white bg-slate-800/80 hover:bg-slate-700/80 px-2 py-1 rounded border border-slate-700 flex items-center gap-1 transition-all ml-0.5"
+                className="text-[0.6875rem] text-slate-300 hover:text-white bg-slate-800/80 hover:bg-slate-700/80 px-2 py-1 rounded border border-slate-700 flex items-center gap-1 transition-all ml-0.5"
                 title="Découvrir toutes les applications de la suite sur http://alphabette.fr"
               >
                 <span>alphabette.fr</span>
@@ -200,7 +200,7 @@ export const Header: React.FC<HeaderProps> = ({
               <div className="flex items-center bg-slate-800/90 rounded-lg p-0.5 border border-slate-700 ml-1">
                 <button
                   onClick={() => handleSelectService('accueil')}
-                  className={`px-2 py-1 rounded text-[11px] font-medium transition-all ${
+                  className={`px-2 py-1 rounded text-[0.6875rem] font-medium transition-all ${
                     currentService === 'accueil'
                       ? 'bg-slate-700 text-white font-semibold'
                       : 'text-slate-400 hover:text-white'
@@ -210,7 +210,7 @@ export const Header: React.FC<HeaderProps> = ({
                 </button>
                 <button
                   onClick={() => handleSelectService('claircontrat')}
-                  className={`px-2 py-1 rounded text-[11px] font-medium transition-all flex items-center gap-1 ${
+                  className={`px-2 py-1 rounded text-[0.6875rem] font-medium transition-all flex items-center gap-1 ${
                     currentService === 'claircontrat'
                       ? 'bg-amber-500 text-slate-950 font-bold'
                       : 'text-slate-300 hover:text-white'
@@ -220,7 +220,7 @@ export const Header: React.FC<HeaderProps> = ({
                 </button>
                 <button
                   onClick={() => handleSelectService('resiliation')}
-                  className={`px-2 py-1 rounded text-[11px] font-medium transition-all flex items-center gap-1 ${
+                  className={`px-2 py-1 rounded text-[0.6875rem] font-medium transition-all flex items-center gap-1 ${
                     currentService === 'resiliation'
                       ? 'bg-rose-500 text-white font-bold'
                       : 'text-slate-300 hover:text-white'
@@ -230,7 +230,7 @@ export const Header: React.FC<HeaderProps> = ({
                 </button>
                 <button
                   onClick={() => handleSelectService('etatdeslieux')}
-                  className={`px-2 py-1 rounded text-[11px] font-medium transition-all flex items-center gap-1 ${
+                  className={`px-2 py-1 rounded text-[0.6875rem] font-medium transition-all flex items-center gap-1 ${
                     currentService === 'etatdeslieux'
                       ? 'bg-sky-500 text-white font-bold'
                       : 'text-slate-300 hover:text-white'
@@ -240,7 +240,7 @@ export const Header: React.FC<HeaderProps> = ({
                 </button>
                 <button
                   onClick={() => handleSelectService('autobailleur')}
-                  className={`px-2 py-1 rounded text-[11px] font-medium transition-all flex items-center gap-1 ${
+                  className={`px-2 py-1 rounded text-[0.6875rem] font-medium transition-all flex items-center gap-1 ${
                     currentService === 'autobailleur'
                       ? 'bg-emerald-500 text-slate-950 font-bold'
                       : 'text-slate-300 hover:text-white'
@@ -250,7 +250,7 @@ export const Header: React.FC<HeaderProps> = ({
                 </button>
                 <button
                   onClick={() => handleSelectService('succession')}
-                  className={`px-2 py-1 rounded text-[11px] font-medium transition-all flex items-center gap-1 ${
+                  className={`px-2 py-1 rounded text-[0.6875rem] font-medium transition-all flex items-center gap-1 ${
                     currentService === 'succession'
                       ? 'bg-stone-500 text-white font-bold'
                       : 'text-slate-300 hover:text-white'
@@ -260,7 +260,7 @@ export const Header: React.FC<HeaderProps> = ({
                 </button>
                 <button
                   onClick={() => handleSelectService('tuteur')}
-                  className={`px-2 py-1 rounded text-[11px] font-medium transition-all flex items-center gap-1 ${
+                  className={`px-2 py-1 rounded text-[0.6875rem] font-medium transition-all flex items-center gap-1 ${
                     currentService === 'tuteur'
                       ? 'bg-indigo-500 text-white font-bold'
                       : 'text-slate-300 hover:text-white'
@@ -270,7 +270,7 @@ export const Header: React.FC<HeaderProps> = ({
                 </button>
                 <button
                   onClick={() => handleSelectService('garantie')}
-                  className={`px-2 py-1 rounded text-[11px] font-medium transition-all flex items-center gap-1 ${
+                  className={`px-2 py-1 rounded text-[0.6875rem] font-medium transition-all flex items-center gap-1 ${
                     currentService === 'garantie'
                       ? 'bg-amber-500 text-slate-950 font-bold'
                       : 'text-slate-300 hover:text-white'
@@ -280,7 +280,7 @@ export const Header: React.FC<HeaderProps> = ({
                 </button>
                 <button
                   onClick={() => handleSelectService('droits')}
-                  className={`px-2 py-1 rounded text-[11px] font-medium transition-all flex items-center gap-1 ${
+                  className={`px-2 py-1 rounded text-[0.6875rem] font-medium transition-all flex items-center gap-1 ${
                     currentService === 'droits'
                       ? 'bg-amber-500 text-slate-950 font-bold'
                       : 'text-slate-300 hover:text-white'
@@ -290,7 +290,7 @@ export const Header: React.FC<HeaderProps> = ({
                 </button>
                 <button
                   onClick={() => handleSelectService('memosante')}
-                  className={`px-2 py-1 rounded text-[11px] font-medium transition-all flex items-center gap-1 ${
+                  className={`px-2 py-1 rounded text-[0.6875rem] font-medium transition-all flex items-center gap-1 ${
                     currentService === 'memosante'
                       ? 'bg-amber-500 text-slate-950 font-bold'
                       : 'text-slate-300 hover:text-white'
@@ -300,7 +300,7 @@ export const Header: React.FC<HeaderProps> = ({
                 </button>
                 <button
                   onClick={() => handleSelectService('plume')}
-                  className={`px-2 py-1 rounded text-[11px] font-medium transition-all flex items-center gap-1 ${
+                  className={`px-2 py-1 rounded text-[0.6875rem] font-medium transition-all flex items-center gap-1 ${
                     currentService === 'plume'
                       ? 'bg-amber-500 text-slate-950 font-bold'
                       : 'text-slate-300 hover:text-white'
@@ -310,7 +310,7 @@ export const Header: React.FC<HeaderProps> = ({
                 </button>
                 <button
                   onClick={() => handleSelectService('courrier')}
-                  className={`px-2 py-1 rounded text-[11px] font-medium transition-all flex items-center gap-1 ${
+                  className={`px-2 py-1 rounded text-[0.6875rem] font-medium transition-all flex items-center gap-1 ${
                     currentService === 'courrier'
                       ? 'bg-amber-500 text-slate-950 font-bold'
                       : 'text-slate-300 hover:text-white'
@@ -320,7 +320,7 @@ export const Header: React.FC<HeaderProps> = ({
                 </button>
                 <button
                   onClick={() => handleSelectService('patrimoine')}
-                  className={`px-2 py-1 rounded text-[11px] font-medium transition-all flex items-center gap-1 ${
+                  className={`px-2 py-1 rounded text-[0.6875rem] font-medium transition-all flex items-center gap-1 ${
                     currentService === 'patrimoine'
                       ? 'bg-amber-500 text-slate-950 font-bold'
                       : 'text-slate-300 hover:text-white'
@@ -355,7 +355,7 @@ export const Header: React.FC<HeaderProps> = ({
       </div>
 
       {/* 2. Mobile Horizontal Swipeable Tabs Bar (prevents any screen blowout on phones) */}
-      <div className="lg:hidden bg-slate-950 border-b border-slate-800 px-2 py-1.5 flex items-center gap-1 overflow-x-auto text-[11px] scrollbar-none whitespace-nowrap">
+      <div className="lg:hidden bg-slate-950 border-b border-slate-800 px-2 py-1.5 flex items-center gap-1 overflow-x-auto text-[0.6875rem] scrollbar-none whitespace-nowrap">
         <button
           onClick={() => handleSelectService('accueil')}
           className={`px-2.5 py-1 rounded-md font-semibold transition-all shrink-0 ${
@@ -512,7 +512,7 @@ export const Header: React.FC<HeaderProps> = ({
       {mobileMenuOpen && (
         <div className="lg:hidden bg-slate-900 text-white border-b border-slate-800 p-4 space-y-4 animate-in slide-in-from-top-2 duration-200">
           <div className="space-y-1">
-            <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400">
+            <span className="text-[0.625rem] font-bold uppercase tracking-wider text-slate-400">
               Services de papierpapier.fr
             </span>
             <div className="grid grid-cols-1 gap-1.5 pt-1">
@@ -540,7 +540,7 @@ export const Header: React.FC<HeaderProps> = ({
                   <HeartPulse className="w-4 h-4 text-rose-400" />
                   <span>🚨 Urgence 114 & Premiers Secours</span>
                 </div>
-                <span className="text-[10px] bg-rose-500/30 text-rose-300 px-1.5 py-0.5 rounded">
+                <span className="text-[0.625rem] bg-rose-500/30 text-rose-300 px-1.5 py-0.5 rounded">
                   24/7 Hors-ligne
                 </span>
               </button>
@@ -557,7 +557,7 @@ export const Header: React.FC<HeaderProps> = ({
                   <FileX className="w-4 h-4 text-rose-400" />
                   <span>✂️ Résil-Express — Gestionnaire de Désengagement</span>
                 </div>
-                <span className="text-[10px] bg-rose-500/20 text-rose-300 px-1.5 py-0.5 rounded">
+                <span className="text-[0.625rem] bg-rose-500/20 text-rose-300 px-1.5 py-0.5 rounded">
                   Lois Hamon & Chatel
                 </span>
               </button>
@@ -574,7 +574,7 @@ export const Header: React.FC<HeaderProps> = ({
                   <ShieldAlert className="w-4 h-4 text-sky-400" />
                   <span>🏠 ÉtatDesLieux Protect — Bouclier Caution</span>
                 </div>
-                <span className="text-[10px] bg-sky-500/20 text-sky-300 px-1.5 py-0.5 rounded">
+                <span className="text-[0.625rem] bg-sky-500/20 text-sky-300 px-1.5 py-0.5 rounded">
                   Vétusté & Décret 2016
                 </span>
               </button>
@@ -591,7 +591,7 @@ export const Header: React.FC<HeaderProps> = ({
                   <Building2 className="w-4 h-4 text-emerald-400" />
                   <span>🔑 AutoBailleur — Gestionnaire Locatif 0%</span>
                 </div>
-                <span className="text-[10px] bg-emerald-500/20 text-emerald-300 px-1.5 py-0.5 rounded">
+                <span className="text-[0.625rem] bg-emerald-500/20 text-emerald-300 px-1.5 py-0.5 rounded">
                   IRL & Quittances
                 </span>
               </button>
@@ -608,7 +608,7 @@ export const Header: React.FC<HeaderProps> = ({
                   <Car className="w-4 h-4 text-indigo-400" />
                   <span>🚗 PermisProtect — Suivi Points & Contestation PV</span>
                 </div>
-                <span className="text-[10px] bg-indigo-500/20 text-indigo-300 px-1.5 py-0.5 rounded">
+                <span className="text-[0.625rem] bg-indigo-500/20 text-indigo-300 px-1.5 py-0.5 rounded">
                   ANTAI & Délais
                 </span>
               </button>
@@ -625,7 +625,7 @@ export const Header: React.FC<HeaderProps> = ({
                   <Heart className="w-4 h-4 text-amber-400" />
                   <span>🕊️ Vigilance Succession — Démarches après obsèques</span>
                 </div>
-                <span className="text-[10px] bg-amber-500/20 text-amber-300 px-1.5 py-0.5 rounded">
+                <span className="text-[0.625rem] bg-amber-500/20 text-amber-300 px-1.5 py-0.5 rounded">
                   48h à 6 mois
                 </span>
               </button>
@@ -642,7 +642,7 @@ export const Header: React.FC<HeaderProps> = ({
                   <Compass className="w-4 h-4 text-indigo-400" />
                   <span>🧭 Tuteur Numérique — Démarches Pas-à-Pas</span>
                 </div>
-                <span className="text-[10px] bg-indigo-500/20 text-indigo-300 px-1.5 py-0.5 rounded">
+                <span className="text-[0.625rem] bg-indigo-500/20 text-indigo-300 px-1.5 py-0.5 rounded">
                   Anti-rejet
                 </span>
               </button>
@@ -659,7 +659,7 @@ export const Header: React.FC<HeaderProps> = ({
                   <ShieldCheck className="w-4 h-4 text-amber-400" />
                   <span>🛡️ ScanGarantie — Tickets & Garanties 2 Ans</span>
                 </div>
-                <span className="text-[10px] bg-amber-500/20 text-amber-300 px-1.5 py-0.5 rounded">
+                <span className="text-[0.625rem] bg-amber-500/20 text-amber-300 px-1.5 py-0.5 rounded">
                   Anti-effacement
                 </span>
               </button>
@@ -676,7 +676,7 @@ export const Header: React.FC<HeaderProps> = ({
                   <Coins className="w-4 h-4 text-amber-400" />
                   <span>💰 Décodeur de Droits Sociaux</span>
                 </div>
-                <span className="text-[10px] bg-amber-500/20 text-amber-300 px-1.5 py-0.5 rounded">
+                <span className="text-[0.625rem] bg-amber-500/20 text-amber-300 px-1.5 py-0.5 rounded">
                   Anti non-recours
                 </span>
               </button>
@@ -780,10 +780,10 @@ export const Header: React.FC<HeaderProps> = ({
             {/* Alphabette Ecosystem Actions */}
             <div className="bg-slate-950/80 rounded-2xl p-3 border border-slate-800 space-y-2">
               <div className="flex items-center justify-between">
-                <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400">
+                <span className="text-[0.625rem] font-bold uppercase tracking-wider text-slate-400">
                   Écosystème Alphabette (Mistral AI)
                 </span>
-                <span className="text-[10px] text-emerald-400 font-semibold">RGPD Natif</span>
+                <span className="text-[0.625rem] text-emerald-400 font-semibold">RGPD Natif</span>
               </div>
 
               <div className="grid grid-cols-2 gap-2">
@@ -846,7 +846,7 @@ export const Header: React.FC<HeaderProps> = ({
                     <span className="text-base sm:text-xl font-bold tracking-tight text-slate-900 font-serif-title truncate">
                       ClairContrat
                     </span>
-                    <span className="text-[9px] sm:text-[10px] uppercase font-bold text-amber-800 bg-amber-100 px-1.5 py-0.5 rounded shrink-0">
+                    <span className="text-[0.5625rem] sm:text-[0.625rem] uppercase font-bold text-amber-800 bg-amber-100 px-1.5 py-0.5 rounded shrink-0">
                       Droit
                     </span>
                   </div>
@@ -868,7 +868,7 @@ export const Header: React.FC<HeaderProps> = ({
                     <span className="text-base sm:text-xl font-bold tracking-tight text-slate-900 font-serif-title truncate">
                       Patrimoine en Poche
                     </span>
-                    <span className="text-[9px] sm:text-[10px] uppercase font-bold text-indigo-800 bg-indigo-100 px-1.5 py-0.5 rounded shrink-0">
+                    <span className="text-[0.5625rem] sm:text-[0.625rem] uppercase font-bold text-indigo-800 bg-indigo-100 px-1.5 py-0.5 rounded shrink-0">
                       Culture
                     </span>
                   </div>
@@ -890,7 +890,7 @@ export const Header: React.FC<HeaderProps> = ({
                     <span className="text-base sm:text-xl font-bold tracking-tight text-slate-900 font-serif-title truncate">
                       PlumeCitoyenne
                     </span>
-                    <span className="text-[9px] sm:text-[10px] uppercase font-bold text-emerald-800 bg-emerald-100 px-1.5 py-0.5 rounded shrink-0">
+                    <span className="text-[0.5625rem] sm:text-[0.625rem] uppercase font-bold text-emerald-800 bg-emerald-100 px-1.5 py-0.5 rounded shrink-0">
                       Social
                     </span>
                   </div>
@@ -912,7 +912,7 @@ export const Header: React.FC<HeaderProps> = ({
                     <span className="text-base sm:text-xl font-bold tracking-tight text-slate-900 font-serif-title truncate">
                       MémoSanté
                     </span>
-                    <span className="text-[9px] sm:text-[10px] uppercase font-bold text-teal-800 bg-teal-100 px-1.5 py-0.5 rounded shrink-0">
+                    <span className="text-[0.5625rem] sm:text-[0.625rem] uppercase font-bold text-teal-800 bg-teal-100 px-1.5 py-0.5 rounded shrink-0">
                       Santé 100% Privée
                     </span>
                   </div>
@@ -934,7 +934,7 @@ export const Header: React.FC<HeaderProps> = ({
                     <span className="text-base sm:text-xl font-bold tracking-tight text-slate-900 font-serif-title truncate">
                       Résil-Express
                     </span>
-                    <span className="text-[9px] sm:text-[10px] uppercase font-bold text-rose-800 bg-rose-100 px-1.5 py-0.5 rounded shrink-0">
+                    <span className="text-[0.5625rem] sm:text-[0.625rem] uppercase font-bold text-rose-800 bg-rose-100 px-1.5 py-0.5 rounded shrink-0">
                       Désengagement
                     </span>
                   </div>
@@ -956,7 +956,7 @@ export const Header: React.FC<HeaderProps> = ({
                     <span className="text-base sm:text-xl font-bold tracking-tight text-slate-900 font-serif-title truncate">
                       ÉtatDesLieux Protect
                     </span>
-                    <span className="text-[9px] sm:text-[10px] uppercase font-bold text-sky-800 bg-sky-100 px-1.5 py-0.5 rounded shrink-0">
+                    <span className="text-[0.5625rem] sm:text-[0.625rem] uppercase font-bold text-sky-800 bg-sky-100 px-1.5 py-0.5 rounded shrink-0">
                       Bouclier Caution
                     </span>
                   </div>
@@ -978,7 +978,7 @@ export const Header: React.FC<HeaderProps> = ({
                     <span className="text-base sm:text-xl font-bold tracking-tight text-slate-900 font-serif-title truncate">
                       Vigilance Succession
                     </span>
-                    <span className="text-[9px] sm:text-[10px] uppercase font-bold text-stone-800 bg-stone-200 px-1.5 py-0.5 rounded shrink-0">
+                    <span className="text-[0.5625rem] sm:text-[0.625rem] uppercase font-bold text-stone-800 bg-stone-200 px-1.5 py-0.5 rounded shrink-0">
                       Après Obsèques
                     </span>
                   </div>
@@ -1000,7 +1000,7 @@ export const Header: React.FC<HeaderProps> = ({
                     <span className="text-base sm:text-xl font-bold tracking-tight text-slate-900 font-serif-title truncate">
                       Tuteur Numérique
                     </span>
-                    <span className="text-[9px] sm:text-[10px] uppercase font-bold text-indigo-800 bg-indigo-100 px-1.5 py-0.5 rounded shrink-0">
+                    <span className="text-[0.5625rem] sm:text-[0.625rem] uppercase font-bold text-indigo-800 bg-indigo-100 px-1.5 py-0.5 rounded shrink-0">
                       Feuilles de route
                     </span>
                   </div>
@@ -1022,7 +1022,7 @@ export const Header: React.FC<HeaderProps> = ({
                     <span className="text-base sm:text-xl font-bold tracking-tight text-slate-900 font-serif-title truncate">
                       ScanGarantie
                     </span>
-                    <span className="text-[9px] sm:text-[10px] uppercase font-bold text-blue-800 bg-blue-100 px-1.5 py-0.5 rounded shrink-0">
+                    <span className="text-[0.5625rem] sm:text-[0.625rem] uppercase font-bold text-blue-800 bg-blue-100 px-1.5 py-0.5 rounded shrink-0">
                       Garantie 2 ans
                     </span>
                   </div>
@@ -1044,7 +1044,7 @@ export const Header: React.FC<HeaderProps> = ({
                     <span className="text-base sm:text-xl font-bold tracking-tight text-slate-900 font-serif-title truncate">
                       Décodeur de Droits
                     </span>
-                    <span className="text-[9px] sm:text-[10px] uppercase font-bold text-amber-800 bg-amber-100 px-1.5 py-0.5 rounded shrink-0">
+                    <span className="text-[0.5625rem] sm:text-[0.625rem] uppercase font-bold text-amber-800 bg-amber-100 px-1.5 py-0.5 rounded shrink-0">
                       Aides
                     </span>
                   </div>
@@ -1066,7 +1066,7 @@ export const Header: React.FC<HeaderProps> = ({
                     <span className="text-base sm:text-xl font-bold tracking-tight text-slate-900 font-serif-title truncate">
                       Urgences & Balise 114
                     </span>
-                    <span className="text-[9px] sm:text-[10px] uppercase font-bold text-rose-800 bg-rose-100 px-1.5 py-0.5 rounded shrink-0">
+                    <span className="text-[0.5625rem] sm:text-[0.625rem] uppercase font-bold text-rose-800 bg-rose-100 px-1.5 py-0.5 rounded shrink-0">
                       Hors-Ligne 24/7
                     </span>
                   </div>
@@ -1088,7 +1088,7 @@ export const Header: React.FC<HeaderProps> = ({
                     <span className="text-base sm:text-xl font-black tracking-tight text-slate-900 font-serif-title truncate">
                       papierpapier.fr
                     </span>
-                    <span className="text-[9px] sm:text-[10px] font-bold uppercase tracking-wider text-slate-700 bg-slate-100 px-1.5 py-0.5 rounded shrink-0">
+                    <span className="text-[0.5625rem] sm:text-[0.625rem] font-bold uppercase tracking-wider text-slate-700 bg-slate-100 px-1.5 py-0.5 rounded shrink-0">
                       ALPHABETTE
                     </span>
                   </div>

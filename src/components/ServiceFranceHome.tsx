@@ -413,7 +413,7 @@ export const ServiceFranceHome: React.FC<ServiceFranceHomeProps> = ({
 
             {/* Results counter & quick label */}
             <div className="flex items-center gap-2 text-xs text-slate-500 shrink-0">
-              <span className="inline-flex items-center justify-center px-2.5 py-0.5 rounded-full font-bold bg-slate-900 text-white text-[11px]">
+              <span className="inline-flex items-center justify-center px-2.5 py-0.5 rounded-full font-bold bg-slate-900 text-white text-[0.6875rem]">
                 {filteredTools.length}
               </span>
               <span>outil{filteredTools.length > 1 ? 's' : ''} disponible{filteredTools.length > 1 ? 's' : ''} en accès direct</span>
@@ -422,7 +422,7 @@ export const ServiceFranceHome: React.FC<ServiceFranceHomeProps> = ({
 
           {/* Filter Pills */}
           <div className="flex items-center gap-1.5 overflow-x-auto pb-1 text-xs no-scrollbar">
-            <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider pr-1 flex items-center gap-1 shrink-0">
+            <span className="text-[0.6875rem] font-bold text-slate-400 uppercase tracking-wider pr-1 flex items-center gap-1 shrink-0">
               <SlidersHorizontal className="w-3 h-3" />
               Filtres :
             </span>
@@ -446,7 +446,7 @@ export const ServiceFranceHome: React.FC<ServiceFranceHomeProps> = ({
                   }`}
                 >
                   <span>{cat.label}</span>
-                  <span className={`text-[10px] px-1.5 py-0.2 rounded-full ${isActive ? 'bg-white/20 text-white' : 'bg-slate-200 text-slate-600'}`}>
+                  <span className={`text-[0.625rem] px-1.5 py-0.2 rounded-full ${isActive ? 'bg-white/20 text-white' : 'bg-slate-200 text-slate-600'}`}>
                     {cat.count}
                   </span>
                 </button>
@@ -501,7 +501,7 @@ export const ServiceFranceHome: React.FC<ServiceFranceHomeProps> = ({
                       </div>
 
                       <span
-                        className={`text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full border shrink-0 ${tool.badgeStyle}`}
+                        className={`text-[0.625rem] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full border shrink-0 ${tool.badgeStyle}`}
                       >
                         {tool.badge}
                       </span>
@@ -525,7 +525,7 @@ export const ServiceFranceHome: React.FC<ServiceFranceHomeProps> = ({
                     {/* Feature Micro-Pills */}
                     <div className="space-y-1.5 pt-2 border-t border-slate-100">
                       {tool.features.map((feature, idx) => (
-                        <div key={idx} className="flex items-center gap-1.5 text-[11px] text-slate-700">
+                        <div key={idx} className="flex items-center gap-1.5 text-[0.6875rem] text-slate-700">
                           <CheckCircle2 className="w-3 h-3 text-emerald-600 shrink-0" />
                           <span className="truncate">{feature}</span>
                         </div>
@@ -554,7 +554,7 @@ export const ServiceFranceHome: React.FC<ServiceFranceHomeProps> = ({
             <div className="w-8 h-8 rounded-xl bg-emerald-500/20 text-emerald-400 border border-emerald-400/30 flex items-center justify-center font-bold">
               <ShieldCheck className="w-5 h-5 text-emerald-400" />
             </div>
-            <span className="text-[11px] uppercase tracking-wider font-black text-emerald-300">
+            <span className="text-[0.6875rem] uppercase tracking-wider font-black text-emerald-300">
               Engagement Solennel Zero-Knowledge
             </span>
           </div>
@@ -602,7 +602,7 @@ export const ServiceFranceHome: React.FC<ServiceFranceHomeProps> = ({
               <span className="text-sm sm:text-base font-black text-white">
                 🚨 Urgences Vitales & Balise SMS 114
               </span>
-              <span className="text-[10px] uppercase font-bold text-emerald-300 bg-emerald-950/80 px-2 py-0.5 rounded-full border border-emerald-500/30">
+              <span className="text-[0.625rem] uppercase font-bold text-emerald-300 bg-emerald-950/80 px-2 py-0.5 rounded-full border border-emerald-500/30">
                 100% Hors-ligne
               </span>
             </div>
@@ -633,11 +633,11 @@ export const ServiceFranceHome: React.FC<ServiceFranceHomeProps> = ({
                 <span className="w-1 bg-white" />
                 <span className="w-1.5 bg-[#CE1126]" />
               </span>
-              <span className="text-[11px] font-black uppercase tracking-wider text-blue-300">
+              <span className="text-[0.6875rem] font-black uppercase tracking-wider text-blue-300">
                 Écosystème Logiciel Alphabette · Hub Central http://alphabette.fr
               </span>
               <span className="text-slate-500">•</span>
-              <span className="text-[11px] font-bold text-emerald-400 bg-emerald-950/80 px-2 py-0.5 rounded-full border border-emerald-500/30 flex items-center gap-1">
+              <span className="text-[0.6875rem] font-bold text-emerald-400 bg-emerald-950/80 px-2 py-0.5 rounded-full border border-emerald-500/30 flex items-center gap-1">
                 <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
                 <span>Mistral AI Exclusif (RGPD Natif · UE)</span>
               </span>
@@ -656,20 +656,20 @@ export const ServiceFranceHome: React.FC<ServiceFranceHomeProps> = ({
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
               <div className="bg-white/5 border border-white/10 rounded-2xl p-3 space-y-1">
                 <div className="flex items-center gap-1.5 text-amber-400 font-bold text-xs">
-                  <span className="w-5 h-5 rounded-full bg-amber-400/20 flex items-center justify-center text-[10px]">1</span>
+                  <span className="w-5 h-5 rounded-full bg-amber-400/20 flex items-center justify-center text-[0.625rem]">1</span>
                   <span>Gratuit</span>
                 </div>
-                <p className="text-[11px] text-slate-300 leading-snug">
+                <p className="text-[0.6875rem] text-slate-300 leading-snug">
                   Guides, modèles et numéros utiles, sans compte et sans clé.
                 </p>
               </div>
 
               <div className="bg-white/5 border border-white/10 rounded-2xl p-3 space-y-1">
                 <div className="flex items-center gap-1.5 text-blue-400 font-bold text-xs">
-                  <span className="w-5 h-5 rounded-full bg-blue-400/20 flex items-center justify-center text-[10px]">2</span>
+                  <span className="w-5 h-5 rounded-full bg-blue-400/20 flex items-center justify-center text-[0.625rem]">2</span>
                   <span>Avec votre propre clé IA</span>
                 </div>
-                <p className="text-[11px] text-slate-300 leading-snug">
+                <p className="text-[0.6875rem] text-slate-300 leading-snug">
                   Renseignez votre clé Mistral perso ou connectez votre Ollama Mac local à 0 €.
                 </p>
               </div>
@@ -679,7 +679,7 @@ export const ServiceFranceHome: React.FC<ServiceFranceHomeProps> = ({
                   <Crown className="w-4 h-4 text-amber-400" />
                   <span>{membre ? `Membre : ${membre.prenom}` : 'Bouquet Alphabette'}</span>
                 </div>
-                <p className="text-[11px] text-amber-200 leading-snug">
+                <p className="text-[0.6875rem] text-amber-200 leading-snug">
                   {membre ? (
                     <>Vous êtes inscrit(e) avec un code d'invitation : l'accès à toutes les applications Alphabette vous est offert.</>
                   ) : (
@@ -716,7 +716,7 @@ export const ServiceFranceHome: React.FC<ServiceFranceHomeProps> = ({
               {onOpenByok && (
                 <button
                   onClick={onOpenByok}
-                  className="flex-1 py-2 px-3 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold text-[11px] rounded-xl flex items-center justify-center gap-1.5 transition-colors"
+                  className="flex-1 py-2 px-3 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold text-[0.6875rem] rounded-xl flex items-center justify-center gap-1.5 transition-colors"
                 >
                   <Key className="w-3.5 h-3.5 text-blue-400" />
                   <span>Clé Mistral (BYOK)</span>
@@ -726,7 +726,7 @@ export const ServiceFranceHome: React.FC<ServiceFranceHomeProps> = ({
               {onOpenSynergy && (
                 <button
                   onClick={onOpenSynergy}
-                  className="flex-1 py-2 px-3 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold text-[11px] rounded-xl flex items-center justify-center gap-1.5 transition-colors"
+                  className="flex-1 py-2 px-3 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold text-[0.6875rem] rounded-xl flex items-center justify-center gap-1.5 transition-colors"
                 >
                   <Layers className="w-3.5 h-3.5 text-indigo-400" />
                   <span>Synergie</span>
@@ -791,7 +791,7 @@ export const ServiceFranceHome: React.FC<ServiceFranceHomeProps> = ({
         <div>
           <h4 className="text-base font-bold text-white flex items-center justify-center sm:justify-start gap-2">
             <span>Écosystème Logiciel Alphabette</span>
-            <span className="text-[10px] bg-blue-500/30 text-blue-300 border border-blue-400/30 font-black px-2 py-0.5 rounded-full">
+            <span className="text-[0.625rem] bg-blue-500/30 text-blue-300 border border-blue-400/30 font-black px-2 py-0.5 rounded-full">
               Souverain & RGPD
             </span>
           </h4>

@@ -106,21 +106,21 @@ export const LetterResultView: React.FC<LetterResultViewProps> = ({
             <div className="flex items-center gap-2">
               <span className="text-xl">✍️</span>
               <div>
-                <span className="text-[10px] font-bold uppercase tracking-wider text-amber-400">
+                <span className="text-[0.625rem] font-bold uppercase tracking-wider text-amber-400">
                   Courrier Officiel Formulé par l'Écrivain Public
                 </span>
                 <h3 className="text-sm font-bold text-white line-clamp-1">{letter.letterTitle}</h3>
               </div>
             </div>
 
-            <span className="text-[11px] font-semibold text-emerald-400 bg-emerald-950/70 px-2 py-0.5 rounded border border-emerald-800">
+            <span className="text-[0.6875rem] font-semibold text-emerald-400 bg-emerald-950/70 px-2 py-0.5 rounded border border-emerald-800">
               Conforme au droit français
             </span>
           </div>
 
           {/* Legal references pill box */}
           <div className="bg-amber-50/70 border-b border-amber-200/80 p-4 space-y-1.5 print:hidden">
-            <span className="text-[11px] font-bold uppercase tracking-wider text-amber-900 flex items-center gap-1.5">
+            <span className="text-[0.6875rem] font-bold uppercase tracking-wider text-amber-900 flex items-center gap-1.5">
               <Scale className="w-3.5 h-3.5 text-amber-700" />
               Articles de loi et textes officiels visés dans ce courrier :
             </span>
@@ -163,7 +163,7 @@ export const LetterResultView: React.FC<LetterResultViewProps> = ({
           {/* Target Counter Card */}
           <div className="bg-slate-900 text-white rounded-2xl p-6 shadow-md border border-slate-800 space-y-4">
             <div className="flex items-center justify-between">
-              <span className="text-[10px] font-bold uppercase tracking-wider text-amber-400 bg-amber-950/70 px-2 py-0.5 rounded border border-amber-800">
+              <span className="text-[0.625rem] font-bold uppercase tracking-wider text-amber-400 bg-amber-950/70 px-2 py-0.5 rounded border border-amber-800">
                 Guichet de destination
               </span>
               <Building className="w-4 h-4 text-slate-400" />

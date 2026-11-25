@@ -163,7 +163,7 @@ export const AdministrativeCountersGuide: React.FC = () => {
                     <Building2 className="w-5 h-5 text-slate-800" />
                   </div>
                   <div>
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-amber-800 bg-amber-50 px-2 py-0.5 rounded border border-amber-200">
+                    <span className="text-[0.625rem] font-bold uppercase tracking-wider text-amber-800 bg-amber-50 px-2 py-0.5 rounded border border-amber-200">
                       {counter.category}
                     </span>
                     <h3 className="text-base font-bold text-slate-900 mt-0.5">{counter.name}</h3>

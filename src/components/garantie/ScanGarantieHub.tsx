@@ -179,23 +179,23 @@ export const ScanGarantieHub: React.FC<ScanGarantieHubProps> = ({
         {/* Quick Stats Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-6 pt-6 border-t border-slate-800/80 text-xs">
           <div className="bg-slate-800/50 p-3 rounded-2xl border border-slate-700/60">
-            <span className="text-slate-400 block text-[10px] uppercase font-bold">
+            <span className="text-slate-400 block text-[0.625rem] uppercase font-bold">
               Appareils protégés
             </span>
             <span className="text-xl font-black text-white">{stats.totalCount}</span>
-            <span className="text-[10px] text-slate-400 block mt-0.5">
+            <span className="text-[0.625rem] text-slate-400 block mt-0.5">
               {stats.activeCount} sous garantie
             </span>
           </div>
 
           <div className="bg-slate-800/50 p-3 rounded-2xl border border-slate-700/60">
-            <span className="text-slate-400 block text-[10px] uppercase font-bold">
+            <span className="text-slate-400 block text-[0.625rem] uppercase font-bold">
               Valeur protégée
             </span>
             <span className="text-xl font-black text-emerald-400">
               {stats.totalValue.toFixed(0)} €
             </span>
-            <span className="text-[10px] text-slate-400 block mt-0.5">
+            <span className="text-[0.625rem] text-slate-400 block mt-0.5">
               Prix d'achat d'origine
             </span>
           </div>
@@ -208,7 +208,7 @@ export const ScanGarantieHub: React.FC<ScanGarantieHubProps> = ({
             }`}
           >
             <span
-              className={`block text-[10px] uppercase font-bold ${
+              className={`block text-[0.625rem] uppercase font-bold ${
                 stats.expiringSoonCount > 0 ? 'text-amber-300' : 'text-slate-400'
               }`}
             >
@@ -221,19 +221,19 @@ export const ScanGarantieHub: React.FC<ScanGarantieHubProps> = ({
             >
               {stats.expiringSoonCount}
             </span>
-            <span className="text-[10px] text-slate-400 block mt-0.5">
+            <span className="text-[0.625rem] text-slate-400 block mt-0.5">
               Échéance imminente
             </span>
           </div>
 
           <div className="bg-slate-800/50 p-3 rounded-2xl border border-slate-700/60">
-            <span className="text-slate-400 block text-[10px] uppercase font-bold">
+            <span className="text-slate-400 block text-[0.625rem] uppercase font-bold">
               Bonus QualiRépar
             </span>
             <span className="text-xl font-black text-amber-300">
               jusqu'à {stats.potentialBonusTotal} €
             </span>
-            <span className="text-[10px] text-slate-400 block mt-0.5">
+            <span className="text-[0.625rem] text-slate-400 block mt-0.5">
               Aides hors garantie (AGEC)
             </span>
           </div>
@@ -275,7 +275,7 @@ export const ScanGarantieHub: React.FC<ScanGarantieHubProps> = ({
               <p>
                 Tout bien meuble neuf acheté auprès d'un professionnel est couvert pendant <strong>24 mois</strong> de plein droit. Le vendeur ne peut pas réduire cette durée, même dans ses conditions générales de vente.
               </p>
-              <div className="text-[11px] text-slate-500 bg-white p-2 rounded-lg border border-slate-200">
+              <div className="text-[0.6875rem] text-slate-500 bg-white p-2 rounded-lg border border-slate-200">
                 <strong>Attention au piège :</strong> Les « extensions de garantie » vendues 50€ à 150€ en caisse doublent souvent inutilement les droits déjà garantis gratuitement par la loi.
               </div>
             </div>
@@ -288,7 +288,7 @@ export const ScanGarantieHub: React.FC<ScanGarantieHubProps> = ({
               <p>
                 L'article L. 217-11 interdit formellement au vendeur de facturer des « frais de dossier », un « devis obligatoire » ou des frais d'expédition pour envoyer l'appareil au centre technique national.
               </p>
-              <div className="text-[11px] text-slate-500 bg-white p-2 rounded-lg border border-slate-200">
+              <div className="text-[0.6875rem] text-slate-500 bg-white p-2 rounded-lg border border-slate-200">
                 <strong>Délai maximal :</strong> Le vendeur dispose de <strong>30 jours</strong> calendaires maximum pour réparer ou remplacer l'appareil.
               </div>
             </div>
@@ -301,7 +301,7 @@ export const ScanGarantieHub: React.FC<ScanGarantieHubProps> = ({
               <p>
                 Grâce à la loi AGEC (Art. L. 217-13), tout appareil réparé sous garantie légale de conformité bénéficie d'une <strong>prolongation automatique de 6 mois</strong> de sa garantie légale.
               </p>
-              <div className="text-[11px] text-slate-500 bg-white p-2 rounded-lg border border-slate-200">
+              <div className="text-[0.6875rem] text-slate-500 bg-white p-2 rounded-lg border border-slate-200">
                 <strong>Bonus Réparation QualiRépar :</strong> Pour les appareils hors garantie, une aide de 15€ à 60€ est déduite directement chez les réparateurs agréés.
               </div>
             </div>
@@ -345,7 +345,7 @@ export const ScanGarantieHub: React.FC<ScanGarantieHubProps> = ({
             }`}
           >
             <span>Actifs</span>
-            <span className="font-mono text-[10px] opacity-80">({stats.activeCount})</span>
+            <span className="font-mono text-[0.625rem] opacity-80">({stats.activeCount})</span>
           </button>
 
           <button
@@ -358,7 +358,7 @@ export const ScanGarantieHub: React.FC<ScanGarantieHubProps> = ({
           >
             <AlertTriangle className="w-3.5 h-3.5 text-amber-600" />
             <span>&lt; 30 jours</span>
-            <span className="font-mono text-[10px] font-bold">({stats.expiringSoonCount})</span>
+            <span className="font-mono text-[0.625rem] font-bold">({stats.expiringSoonCount})</span>
           </button>
 
           <button

@@ -109,7 +109,7 @@ export const SiteDetailModal: React.FC<SiteDetailModalProps> = ({
           <div className="flex items-center gap-2">
             <span className="text-xl">🏛️</span>
             <div>
-              <span className="text-[11px] font-semibold uppercase tracking-wider text-amber-400">
+              <span className="text-[0.6875rem] font-semibold uppercase tracking-wider text-amber-400">
                 {site.commune} • {site.style}
               </span>
               <h2 className="text-base sm:text-lg font-bold text-white line-clamp-1">{site.name}</h2>

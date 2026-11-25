@@ -38,16 +38,16 @@ export const SamplesView: React.FC<SamplesViewProps> = ({
                   : 'border-slate-200 bg-white hover:border-slate-300'
               }`}
             >
-              <div className="text-[11px] text-slate-500 font-medium">
+              <div className="text-[0.6875rem] text-slate-500 font-medium">
                 {sample.category}
               </div>
               <h3 className="text-xs font-bold text-slate-900 mt-1">
                 {sample.title}
               </h3>
-              <p className="text-[11px] text-slate-500 mt-1 line-clamp-2">
+              <p className="text-[0.6875rem] text-slate-500 mt-1 line-clamp-2">
                 {sample.shortDesc}
               </p>
-              <div className="mt-2 text-[11px] text-amber-800 font-mono">
+              <div className="mt-2 text-[0.6875rem] text-amber-800 font-mono">
                 {sample.knownTrapsCount} clauses pièges incluses
               </div>
             </div>

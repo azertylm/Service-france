@@ -128,7 +128,7 @@ export const KeychainByokModal: React.FC<KeychainByokModalProps> = ({
           </button>
 
           <div className="flex items-center gap-2 mb-2">
-            <span className="px-2.5 py-0.5 rounded-full bg-blue-500/20 text-blue-300 text-[11px] font-black uppercase tracking-wider border border-blue-400/30">
+            <span className="px-2.5 py-0.5 rounded-full bg-blue-500/20 text-blue-300 text-[0.6875rem] font-black uppercase tracking-wider border border-blue-400/30">
               Trousseau Centralisé Écosystème Alphabette
             </span>
           </div>
@@ -186,7 +186,7 @@ export const KeychainByokModal: React.FC<KeychainByokModalProps> = ({
                         <span className="w-2 h-2 rounded-full bg-emerald-500" title="Clé renseignée" />
                       )}
                     </div>
-                    <span className="text-[10px] text-slate-500 mt-1 block truncate">
+                    <span className="text-[0.625rem] text-slate-500 mt-1 block truncate">
                       {pMeta.badge}
                     </span>
                   </button>
@@ -200,7 +200,7 @@ export const KeychainByokModal: React.FC<KeychainByokModalProps> = ({
             <div className="flex items-center justify-between border-b border-slate-200 pb-3">
               <div>
                 <h4 className="font-bold text-slate-900 text-sm">{meta.name}</h4>
-                <p className="text-[11px] text-slate-500">
+                <p className="text-[0.6875rem] text-slate-500">
                   Redirection directe vers la console officielle développeur
                 </p>
               </div>
@@ -236,7 +236,7 @@ export const KeychainByokModal: React.FC<KeychainByokModalProps> = ({
                   {showKey ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
                 </button>
               </div>
-              <p className="text-[10px] text-slate-400">
+              <p className="text-[0.625rem] text-slate-400">
                 {STATIQUE
                   ? "Gardée uniquement dans ce navigateur et envoyée directement au fournisseur choisi, jamais à Alphabette."
                   : "Gardée dans ce navigateur et relayée par le serveur uniquement pour vos requêtes."}

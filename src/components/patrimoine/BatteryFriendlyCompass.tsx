@@ -97,7 +97,7 @@ export const BatteryFriendlyCompass: React.FC<BatteryFriendlyCompassProps> = ({
             Guidage sobre & respectueux de la batterie
           </h4>
         </div>
-        <div className="flex items-center gap-1.5 text-[11px] text-emerald-400 bg-emerald-950/60 px-2 py-0.5 rounded border border-emerald-800/60">
+        <div className="flex items-center gap-1.5 text-[0.6875rem] text-emerald-400 bg-emerald-950/60 px-2 py-0.5 rounded border border-emerald-800/60">
           <Zap className="w-3 h-3" />
           <span>0% traçage permanent</span>
         </div>
@@ -166,7 +166,7 @@ export const BatteryFriendlyCompass: React.FC<BatteryFriendlyCompassProps> = ({
         </div>
       )}
 
-      <div className="flex items-center justify-between text-[11px] text-slate-400 border-t border-slate-800/80 pt-2.5">
+      <div className="flex items-center justify-between text-[0.6875rem] text-slate-400 border-t border-slate-800/80 pt-2.5">
         <span className="flex items-center gap-1">
           <ShieldCheck className="w-3 h-3 text-slate-400" />
           Coordonnées GPS : {targetCoords.lat.toFixed(4)}, {targetCoords.lng.toFixed(4)}

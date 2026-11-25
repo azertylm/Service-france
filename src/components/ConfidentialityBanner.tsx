@@ -92,7 +92,7 @@ export const ConfidentialityBanner: React.FC = () => {
                 <blockquote className="italic font-medium">
                   « Vos données ne quittent pas votre appareil de manière lisible. ALPHABETTE n'a aucun moyen technique d'accéder à vos documents, analyses ou courriers. »
                 </blockquote>
-                <div className="text-[10px] text-emerald-800 font-semibold text-right">
+                <div className="text-[0.625rem] text-emerald-800 font-semibold text-right">
                   — Valentin RICHAUD, Fondateur d'ALPHABETTE (La Grande-Motte) · <a href="http://alphabette.fr" target="_blank" rel="noopener noreferrer" className="underline hover:text-emerald-950">alphabette.fr</a>
                 </div>
               </div>

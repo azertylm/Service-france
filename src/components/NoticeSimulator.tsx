@@ -130,7 +130,7 @@ export const NoticeSimulator: React.FC = () => {
                       : 'hover:bg-slate-100 text-slate-700'
                   }`}
                 >
-                  <div className="text-[10px] opacity-75">{rule.category}</div>
+                  <div className="text-[0.625rem] opacity-75">{rule.category}</div>
                   <div>{rule.name}</div>
                 </button>
               ))}
@@ -175,7 +175,7 @@ export const NoticeSimulator: React.FC = () => {
                     year: 'numeric',
                   })}
                 </div>
-                <p className="text-[11px] text-slate-500 mt-1">
+                <p className="text-[0.6875rem] text-slate-500 mt-1">
                   Le préavis démarre le jour où le destinataire signe l'AR (ou le jour de la remise en main propre).
                 </p>
               </div>
@@ -191,7 +191,7 @@ export const NoticeSimulator: React.FC = () => {
                     year: 'numeric',
                   })}
                 </div>
-                <p className="text-[11px] text-amber-800 mt-1">
+                <p className="text-[0.6875rem] text-amber-800 mt-1">
                   Prévoyez 3 à 5 jours d'acheminement postal pour garantir la date de première présentation.
                 </p>
               </div>
