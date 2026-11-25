@@ -450,7 +450,7 @@ export const TuteurHub: React.FC<TuteurHubProps> = ({ onNavigateToPlumeWithPromp
                       </button>
 
                       <div className="space-y-1.5 flex-1 min-w-0">
-                        <div className="flex items-center justify-between gap-2">
+                        <div className="flex flex-wrap items-center justify-between gap-2">
                           <h4
                             className={`text-xs font-bold leading-tight ${
                               isChecked ? 'text-emerald-950 line-through' : 'text-slate-900'
@@ -488,7 +488,7 @@ export const TuteurHub: React.FC<TuteurHubProps> = ({ onNavigateToPlumeWithPromp
                         {doc.tipAntiRejet && (
                           <div className="mt-2 p-2 rounded-xl bg-amber-50/80 border border-amber-200/80 text-[0.6875rem] text-amber-900 flex items-start gap-1.5">
                             <Info className="w-3.5 h-3.5 text-amber-600 shrink-0 mt-0.5" />
-                            <span>
+                            <span className="min-w-0">
                               <strong>Astuce Anti-Rejet :</strong> {doc.tipAntiRejet}
                             </span>
                           </div>

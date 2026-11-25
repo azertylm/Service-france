@@ -442,7 +442,7 @@ ${driverProfile.fullName}`;
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
             {/* Input Form (5 cols) */}
             <div className="lg:col-span-5 bg-white rounded-2xl border border-slate-200 p-5 shadow-xs space-y-4">
-              <div className="flex items-center justify-between border-b border-slate-100 pb-2">
+              <div className="flex flex-wrap items-center justify-between gap-x-2 border-b border-slate-100 pb-2">
                 <h3 className="font-bold text-slate-900 text-sm flex items-center gap-1.5">
                   <FileText className="w-4 h-4 text-indigo-600" />
                   <span>1. Saisie des mentions de l'avis</span>

@@ -678,7 +678,7 @@ ${landlordInfo.fullName}`;
                   {revisionLetterText}
                 </div>
 
-                <div className="flex items-center justify-between pt-1">
+                <div className="flex flex-wrap items-center justify-between gap-2 pt-1">
                   <span className="text-[0.6875rem] text-slate-500">
                     Conseil : Envoyez ce courrier par lettre recommandée ou email avec accusé de lecture.
                   </span>

@@ -71,7 +71,7 @@ export const WarrantyCard: React.FC<WarrantyCardProps> = ({
     >
       <div>
         {/* Header Badges */}
-        <div className="flex items-center justify-between gap-2 mb-3">
+        <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
           <span className="text-[0.625rem] font-bold uppercase tracking-wider text-slate-500 bg-slate-100 px-2 py-0.5 rounded-md">
             {getCategoryLabel(warranty.category)}
           </span>

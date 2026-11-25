@@ -249,7 +249,7 @@ export const MemoSanteHub: React.FC = () => {
               <Heart className="w-6 h-6 fill-white" />
             </div>
             <div>
-              <div className="flex items-center gap-2">
+              <div className="flex flex-wrap items-center gap-2">
                 <h1 className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight">
                   MémoSanté
                 </h1>

@@ -134,7 +134,7 @@ export const DroitsSociauxHub: React.FC<DroitsSociauxHubProps> = ({
 
       {/* Quick Test Presets */}
       <div className="bg-white rounded-2xl border border-slate-200 p-5 shadow-xs space-y-3">
-        <div className="flex items-center justify-between">
+        <div className="flex flex-wrap items-center justify-between gap-2">
           <span className="text-xs font-bold uppercase tracking-wider text-slate-600 flex items-center gap-1.5">
             <Sparkles className="w-3.5 h-3.5 text-amber-600" />
             Profils types à tester immédiatement

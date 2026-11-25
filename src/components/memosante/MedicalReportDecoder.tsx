@@ -145,7 +145,7 @@ export const MedicalReportDecoder: React.FC<MedicalReportDecoderProps> = ({ onSa
 
       {/* FORMAL ZERO-KNOWLEDGE CERTIFICATE BANNER */}
       <div className="p-4 sm:p-5 rounded-2xl bg-emerald-50/80 border-2 border-emerald-600/40 text-emerald-950 space-y-2.5">
-        <div className="flex items-center justify-between">
+        <div className="flex flex-wrap items-center justify-between gap-2">
           <div className="flex items-center gap-2">
             <ShieldCheck className="w-5 h-5 text-emerald-700" />
             <span className="font-black text-xs uppercase tracking-wide">
@@ -167,7 +167,7 @@ export const MedicalReportDecoder: React.FC<MedicalReportDecoderProps> = ({ onSa
 
       {/* Preset test cases */}
       <div className="bg-white rounded-2xl border border-slate-200 p-5 shadow-xs space-y-3">
-        <div className="flex items-center justify-between">
+        <div className="flex flex-wrap items-center justify-between gap-x-2">
           <span className="text-xs font-bold uppercase tracking-wider text-slate-500 flex items-center gap-1.5">
             <Sparkles className="w-3.5 h-3.5 text-emerald-600" />
             Exemples concrets à tester en 1 clic

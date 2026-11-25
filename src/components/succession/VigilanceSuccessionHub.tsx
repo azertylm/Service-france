@@ -478,9 +478,9 @@ export const VigilanceSuccessionHub: React.FC<VigilanceSuccessionHubProps> = ({
                   <div key={tf} className="space-y-3">
                     {/* Timeframe Header */}
                     <div className={`p-3.5 rounded-2xl border-2 flex items-center justify-between ${tfConfig.color}`}>
-                      <div className="flex items-center gap-2.5">
+                      <div className="flex items-center gap-2.5 min-w-0">
                         <Clock className="w-5 h-5 shrink-0" />
-                        <div>
+                        <div className="min-w-0">
                           <h3 className="font-black text-sm uppercase tracking-wide">{tfConfig.label}</h3>
                           <p className="text-xs opacity-90">{tfConfig.sub}</p>
                         </div>
@@ -519,7 +519,7 @@ export const VigilanceSuccessionHub: React.FC<VigilanceSuccessionHubProps> = ({
                                   {isDone && <Check className="w-4 h-4 stroke-[3]" />}
                                 </button>
 
-                                <div className="space-y-1">
+                                <div className="space-y-1 min-w-0">
                                   <div className="flex flex-wrap items-center gap-2">
                                     <h4
                                       className={`text-sm sm:text-base font-bold tracking-tight ${
@@ -570,7 +570,7 @@ export const VigilanceSuccessionHub: React.FC<VigilanceSuccessionHubProps> = ({
                                   {org.documentsRequired.map((doc, idx) => (
                                     <li key={idx} className="flex items-start gap-1.5">
                                       <span className="text-amber-500 font-bold">•</span>
-                                      <span>{doc}</span>
+                                      <span className="min-w-0">{doc}</span>
                                     </li>
                                   ))}
                                 </ul>
@@ -587,7 +587,7 @@ export const VigilanceSuccessionHub: React.FC<VigilanceSuccessionHubProps> = ({
                                   {org.tips.map((tip, idx) => (
                                     <li key={idx} className="flex items-start gap-1.5">
                                       <span className="text-amber-600">💡</span>
-                                      <span>{tip}</span>
+                                      <span className="min-w-0">{tip}</span>
                                     </li>
                                   ))}
                                 </ul>

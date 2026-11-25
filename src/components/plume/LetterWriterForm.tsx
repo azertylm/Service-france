@@ -285,7 +285,7 @@ export const LetterWriterForm: React.FC<LetterWriterFormProps> = ({
 
         {/* Optional citizen references */}
         <div className="space-y-2 pt-1">
-          <div className="flex items-center justify-between">
+          <div className="flex flex-wrap items-center justify-between gap-2">
             <span className="text-[0.6875rem] font-bold text-slate-500 uppercase tracking-wider">
               Coordonnées de l'usager
             </span>

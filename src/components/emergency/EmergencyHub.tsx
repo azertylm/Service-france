@@ -379,12 +379,12 @@ export const EmergencyHub: React.FC<EmergencyHubProps> = ({ onBackToPortal }) =>
                 <div className="space-y-4">
                   {/* Header of card */}
                   <div className="flex items-start justify-between gap-3">
-                    <div className="flex items-center gap-3">
+                    <div className="flex items-center gap-3 min-w-0">
                       <div className="w-12 h-12 rounded-2xl bg-slate-100 flex items-center justify-center shrink-0 border border-slate-200 group-hover:scale-105 transition-transform">
                         {getNumberIcon(item.iconName)}
                       </div>
-                      <div>
-                        <div className="flex items-center gap-1.5">
+                      <div className="min-w-0">
+                        <div className="flex flex-wrap items-center gap-1.5">
                           <span className="text-2xl font-black text-slate-900 tracking-tight">
                             {item.number}
                           </span>
